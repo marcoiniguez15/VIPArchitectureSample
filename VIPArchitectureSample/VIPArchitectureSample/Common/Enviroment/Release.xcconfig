@@ -1,0 +1,14 @@
+//
+//  Release.xcconfig
+//  VIPArchitectureSample
+//
+//  Created by marco.iniguez.ollero on 22/2/22.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+BASE_URL_LASTFM = https:\/\/ws.audioscrobbler.com\/2.0
+BASE_URL_RICK_MORTY = https:\/\/rickandmortyapi.com\/api
+API_KEY_LASTFM = bc1135dd25cef79a188dbbf985d5c850
+PUBLIC_KEY = fe6e459f7ef2d1d7d86b0b0396682899
+PRIVATE_KEY = 6593d488bd27df39ab87a7c2628717549c80955a

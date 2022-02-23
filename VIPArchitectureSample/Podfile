@@ -1,0 +1,23 @@
+platform :ios, '13.0'
+inhibit_all_warnings!
+
+target 'VIPArchitectureSample' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for VIPArchitectureSample
+  pod 'Alamofire', '5.4.0'
+  pod 'Kingfisher'
+  pod 'R.swift'
+
+  target 'VIPArchitectureSampleTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'VIPArchitectureSampleUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
