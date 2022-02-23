@@ -44,6 +44,16 @@
 		DB425F7D27C648D900FFCCB5 /* InitialSelectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425F7627C648D900FFCCB5 /* InitialSelectionModel.swift */; };
 		DB425F7F27C6490600FFCCB5 /* AppInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425F7E27C6490600FFCCB5 /* AppInjector.swift */; };
 		DB425F8227C6492E00FFCCB5 /* InitialSelectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB425F8127C6492E00FFCCB5 /* InitialSelectionView.xib */; };
+		DB425F8D27C6543A00FFCCB5 /* ArtistsListFactorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425F8627C6543A00FFCCB5 /* ArtistsListFactorable.swift */; };
+		DB425F8E27C6543A00FFCCB5 /* ArtistsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425F8727C6543A00FFCCB5 /* ArtistsListPresenter.swift */; };
+		DB425F8F27C6543A00FFCCB5 /* ArtistsListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425F8827C6543A00FFCCB5 /* ArtistsListRouter.swift */; };
+		DB425F9027C6543A00FFCCB5 /* ArtistsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425F8927C6543A00FFCCB5 /* ArtistsListViewController.swift */; };
+		DB425F9127C6543A00FFCCB5 /* ArtistsListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425F8A27C6543A00FFCCB5 /* ArtistsListInteractor.swift */; };
+		DB425F9227C6543A00FFCCB5 /* ArtistsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425F8B27C6543A00FFCCB5 /* ArtistsListView.swift */; };
+		DB425F9327C6543A00FFCCB5 /* ArtistsListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425F8C27C6543A00FFCCB5 /* ArtistsListModel.swift */; };
+		DB425F9627C6545200FFCCB5 /* ArtistsListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB425F9527C6545200FFCCB5 /* ArtistsListView.xib */; };
+		DB425F9A27C659BD00FFCCB5 /* ArtistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425F9827C659BD00FFCCB5 /* ArtistTableViewCell.swift */; };
+		DB425F9B27C659BD00FFCCB5 /* ArtistTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB425F9927C659BD00FFCCB5 /* ArtistTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +123,16 @@
 		DB425F7627C648D900FFCCB5 /* InitialSelectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialSelectionModel.swift; sourceTree = "<group>"; };
 		DB425F7E27C6490600FFCCB5 /* AppInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInjector.swift; sourceTree = "<group>"; };
 		DB425F8127C6492E00FFCCB5 /* InitialSelectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InitialSelectionView.xib; sourceTree = "<group>"; };
+		DB425F8627C6543A00FFCCB5 /* ArtistsListFactorable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsListFactorable.swift; sourceTree = "<group>"; };
+		DB425F8727C6543A00FFCCB5 /* ArtistsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsListPresenter.swift; sourceTree = "<group>"; };
+		DB425F8827C6543A00FFCCB5 /* ArtistsListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsListRouter.swift; sourceTree = "<group>"; };
+		DB425F8927C6543A00FFCCB5 /* ArtistsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsListViewController.swift; sourceTree = "<group>"; };
+		DB425F8A27C6543A00FFCCB5 /* ArtistsListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsListInteractor.swift; sourceTree = "<group>"; };
+		DB425F8B27C6543A00FFCCB5 /* ArtistsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsListView.swift; sourceTree = "<group>"; };
+		DB425F8C27C6543A00FFCCB5 /* ArtistsListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsListModel.swift; sourceTree = "<group>"; };
+		DB425F9527C6545200FFCCB5 /* ArtistsListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArtistsListView.xib; sourceTree = "<group>"; };
+		DB425F9827C659BD00FFCCB5 /* ArtistTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistTableViewCell.swift; sourceTree = "<group>"; };
+		DB425F9927C659BD00FFCCB5 /* ArtistTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArtistTableViewCell.xib; sourceTree = "<group>"; };
 		E51607890E386483BADBBD01 /* Pods-VIPArchitectureSampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPArchitectureSampleUITests.debug.xcconfig"; path = "Target Support Files/Pods-VIPArchitectureSampleUITests/Pods-VIPArchitectureSampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EF8B7FCD7D6C531E8EF3831E /* Pods-VIPArchitectureSampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPArchitectureSampleTests.debug.xcconfig"; path = "Target Support Files/Pods-VIPArchitectureSampleTests/Pods-VIPArchitectureSampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -374,6 +394,7 @@
 		DB425F6E27C6486500FFCCB5 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				DB425F8327C653ED00FFCCB5 /* LastFM */,
 				DB425F6F27C6489C00FFCCB5 /* InitialSelection */,
 			);
 			path = Scenes;
@@ -400,6 +421,55 @@
 				DB425F8127C6492E00FFCCB5 /* InitialSelectionView.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		DB425F8327C653ED00FFCCB5 /* LastFM */ = {
+			isa = PBXGroup;
+			children = (
+				DB425F8527C6541D00FFCCB5 /* ArtistDetail */,
+				DB425F8427C653F800FFCCB5 /* ArtistsList */,
+			);
+			path = LastFM;
+			sourceTree = "<group>";
+		};
+		DB425F8427C653F800FFCCB5 /* ArtistsList */ = {
+			isa = PBXGroup;
+			children = (
+				DB425F9427C6543E00FFCCB5 /* Views */,
+				DB425F8627C6543A00FFCCB5 /* ArtistsListFactorable.swift */,
+				DB425F8727C6543A00FFCCB5 /* ArtistsListPresenter.swift */,
+				DB425F8827C6543A00FFCCB5 /* ArtistsListRouter.swift */,
+				DB425F8927C6543A00FFCCB5 /* ArtistsListViewController.swift */,
+				DB425F8A27C6543A00FFCCB5 /* ArtistsListInteractor.swift */,
+				DB425F8C27C6543A00FFCCB5 /* ArtistsListModel.swift */,
+			);
+			path = ArtistsList;
+			sourceTree = "<group>";
+		};
+		DB425F8527C6541D00FFCCB5 /* ArtistDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ArtistDetail;
+			sourceTree = "<group>";
+		};
+		DB425F9427C6543E00FFCCB5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DB425F9727C659B300FFCCB5 /* Cells */,
+				DB425F8B27C6543A00FFCCB5 /* ArtistsListView.swift */,
+				DB425F9527C6545200FFCCB5 /* ArtistsListView.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DB425F9727C659B300FFCCB5 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				DB425F9827C659BD00FFCCB5 /* ArtistTableViewCell.swift */,
+				DB425F9927C659BD00FFCCB5 /* ArtistTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -513,7 +583,9 @@
 			files = (
 				DB425F8227C6492E00FFCCB5 /* InitialSelectionView.xib in Resources */,
 				DB425EB327C541F600FFCCB5 /* LaunchScreen.storyboard in Resources */,
+				DB425F9627C6545200FFCCB5 /* ArtistsListView.xib in Resources */,
 				DB425EB027C541F600FFCCB5 /* Assets.xcassets in Resources */,
+				DB425F9B27C659BD00FFCCB5 /* ArtistTableViewCell.xib in Resources */,
 				DB425EAE27C541F200FFCCB5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -645,15 +717,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB425F9227C6543A00FFCCB5 /* ArtistsListView.swift in Sources */,
 				DB425F4E27C62CCB00FFCCB5 /* Dictionary+Additions.swift in Sources */,
 				DB425F5527C62CCB00FFCCB5 /* APIRouter.swift in Sources */,
 				DB425F2927C62C2400FFCCB5 /* ErrorModel.swift in Sources */,
+				DB425F8D27C6543A00FFCCB5 /* ArtistsListFactorable.swift in Sources */,
 				DB425F5227C62CCB00FFCCB5 /* CustomNetworkError.swift in Sources */,
 				DB425F4B27C62CCB00FFCCB5 /* UIViewController+AlertController.swift in Sources */,
 				DB425F4D27C62CCB00FFCCB5 /* String+Additions.swift in Sources */,
+				DB425F8E27C6543A00FFCCB5 /* ArtistsListPresenter.swift in Sources */,
 				DB425F6D27C6482800FFCCB5 /* APIClient.swift in Sources */,
 				DB425EAB27C541F200FFCCB5 /* ViewController.swift in Sources */,
 				DB425F4F27C62CCB00FFCCB5 /* BaseViewController.swift in Sources */,
+				DB425F9A27C659BD00FFCCB5 /* ArtistTableViewCell.swift in Sources */,
+				DB425F8F27C6543A00FFCCB5 /* ArtistsListRouter.swift in Sources */,
 				DB425F6B27C6466A00FFCCB5 /* CharactersRickAndMorty.swift in Sources */,
 				DB425F7F27C6490600FFCCB5 /* AppInjector.swift in Sources */,
 				DB425F2627C62AF100FFCCB5 /* LoaderView.swift in Sources */,
@@ -665,12 +742,15 @@
 				DB425F4C27C62CCB00FFCCB5 /* UIView+Additions.swift in Sources */,
 				DB425F7C27C648D900FFCCB5 /* InitialSelectionView.swift in Sources */,
 				DB425F5027C62CCB00FFCCB5 /* BaseView.swift in Sources */,
+				DB425F9127C6543A00FFCCB5 /* ArtistsListInteractor.swift in Sources */,
 				DB425F7727C648D900FFCCB5 /* InitialSelectionFactorable.swift in Sources */,
 				DB425F6927C645F900FFCCB5 /* AlbumsLastFM.swift in Sources */,
 				DB425F6727C6458800FFCCB5 /* ArtistsLastFM.swift in Sources */,
+				DB425F9327C6543A00FFCCB5 /* ArtistsListModel.swift in Sources */,
 				DB425F7B27C648D900FFCCB5 /* InitialSelectionInteractor.swift in Sources */,
 				DB425F7A27C648D900FFCCB5 /* InitialSelectionViewController.swift in Sources */,
 				DB425F7927C648D900FFCCB5 /* InitialSelectionRouter.swift in Sources */,
+				DB425F9027C6543A00FFCCB5 /* ArtistsListViewController.swift in Sources */,
 				DB425EDE27C5478200FFCCB5 /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -779,7 +859,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -835,7 +915,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

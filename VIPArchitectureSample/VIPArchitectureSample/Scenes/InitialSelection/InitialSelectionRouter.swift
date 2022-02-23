@@ -35,7 +35,7 @@ extension InitialSelectionRouter: InitialSelectionRouting {
       switch route {
         
       case .showLastFMFlow:
-        break
+        self.showLastFMFlow()
         
       case .showRickMortyFlow:
         break
@@ -48,8 +48,9 @@ extension InitialSelectionRouter: InitialSelectionRouting {
 // MARK: - Private Zone
 private extension InitialSelectionRouter {
   
-  func dismissInitialSelectionScene() {
-    viewController?.dismiss(animated: true)
+  func showLastFMFlow() {
+    let viewController = ArtistsListViewController(factory: AppInjector.ArtistsListInjector(), mainView: ArtistsListView(), dataSource: ArtistsListModel.DataSource())
+    self.viewController?.navigationController?.pushViewController(viewController, animated: true)
   }
   
   func showXSceneBy(_ data: Int) {
