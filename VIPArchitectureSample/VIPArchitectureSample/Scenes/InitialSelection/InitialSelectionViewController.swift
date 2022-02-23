@@ -62,6 +62,7 @@ extension InitialSelectionViewController: InitialSelectionDisplayLogic {
 
       case .prepareOptions(let viewModel):
         self.navigationItem.title = viewModel.title
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         self.mainView.updateDataSource(with: viewModel)
       }
     }

@@ -38,7 +38,7 @@ extension InitialSelectionRouter: InitialSelectionRouting {
         self.showLastFMFlow()
         
       case .showRickMortyFlow:
-        break
+        self.showRockMortyFlow()
       }
     }
   }
@@ -53,7 +53,9 @@ private extension InitialSelectionRouter {
     self.viewController?.navigationController?.pushViewController(viewController, animated: true)
   }
   
-  func showXSceneBy(_ data: Int) {
-    print("will show the next screen")
+  func showRockMortyFlow() {
+    let viewController = CharactersListViewController(factory: AppInjector.CharactersListInjector(), mainView: CharactersListView(), dataSource: CharactersListModel.DataSource())
+    self.viewController?.navigationController?.pushViewController(viewController, animated: true)
   }
+  
 }

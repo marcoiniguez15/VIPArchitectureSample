@@ -54,6 +54,16 @@
 		DB425F9627C6545200FFCCB5 /* ArtistsListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB425F9527C6545200FFCCB5 /* ArtistsListView.xib */; };
 		DB425F9A27C659BD00FFCCB5 /* ArtistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425F9827C659BD00FFCCB5 /* ArtistTableViewCell.swift */; };
 		DB425F9B27C659BD00FFCCB5 /* ArtistTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB425F9927C659BD00FFCCB5 /* ArtistTableViewCell.xib */; };
+		DB425FA627C660F500FFCCB5 /* CharactersListFactorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425F9F27C660F500FFCCB5 /* CharactersListFactorable.swift */; };
+		DB425FA727C660F500FFCCB5 /* CharactersListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425FA027C660F500FFCCB5 /* CharactersListPresenter.swift */; };
+		DB425FA827C660F500FFCCB5 /* CharactersListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425FA127C660F500FFCCB5 /* CharactersListRouter.swift */; };
+		DB425FA927C660F500FFCCB5 /* CharactersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425FA227C660F500FFCCB5 /* CharactersListViewController.swift */; };
+		DB425FAA27C660F500FFCCB5 /* CharactersListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425FA327C660F500FFCCB5 /* CharactersListInteractor.swift */; };
+		DB425FAB27C660F500FFCCB5 /* CharactersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425FA427C660F500FFCCB5 /* CharactersListView.swift */; };
+		DB425FAC27C660F500FFCCB5 /* CharactersListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425FA527C660F500FFCCB5 /* CharactersListModel.swift */; };
+		DB425FB027C664E100FFCCB5 /* ListCharactersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB425FAE27C664E100FFCCB5 /* ListCharactersTableViewCell.xib */; };
+		DB425FB127C664E100FFCCB5 /* ListCharactersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425FAF27C664E100FFCCB5 /* ListCharactersTableViewCell.swift */; };
+		DB425FB327C6662F00FFCCB5 /* CharactersListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB425FB227C6662F00FFCCB5 /* CharactersListView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,6 +143,16 @@
 		DB425F9527C6545200FFCCB5 /* ArtistsListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArtistsListView.xib; sourceTree = "<group>"; };
 		DB425F9827C659BD00FFCCB5 /* ArtistTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistTableViewCell.swift; sourceTree = "<group>"; };
 		DB425F9927C659BD00FFCCB5 /* ArtistTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArtistTableViewCell.xib; sourceTree = "<group>"; };
+		DB425F9F27C660F500FFCCB5 /* CharactersListFactorable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CharactersListFactorable.swift; path = VIPArchitectureSample/Scenes/RickAndMorty/CharactersList/CharactersListFactorable.swift; sourceTree = SOURCE_ROOT; };
+		DB425FA027C660F500FFCCB5 /* CharactersListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CharactersListPresenter.swift; path = VIPArchitectureSample/Scenes/RickAndMorty/CharactersList/CharactersListPresenter.swift; sourceTree = SOURCE_ROOT; };
+		DB425FA127C660F500FFCCB5 /* CharactersListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CharactersListRouter.swift; path = VIPArchitectureSample/Scenes/RickAndMorty/CharactersList/CharactersListRouter.swift; sourceTree = SOURCE_ROOT; };
+		DB425FA227C660F500FFCCB5 /* CharactersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CharactersListViewController.swift; path = VIPArchitectureSample/Scenes/RickAndMorty/CharactersList/CharactersListViewController.swift; sourceTree = SOURCE_ROOT; };
+		DB425FA327C660F500FFCCB5 /* CharactersListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CharactersListInteractor.swift; path = VIPArchitectureSample/Scenes/RickAndMorty/CharactersList/CharactersListInteractor.swift; sourceTree = SOURCE_ROOT; };
+		DB425FA427C660F500FFCCB5 /* CharactersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CharactersListView.swift; path = VIPArchitectureSample/Scenes/RickAndMorty/CharactersList/CharactersListView.swift; sourceTree = SOURCE_ROOT; };
+		DB425FA527C660F500FFCCB5 /* CharactersListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CharactersListModel.swift; path = VIPArchitectureSample/Scenes/RickAndMorty/CharactersList/CharactersListModel.swift; sourceTree = SOURCE_ROOT; };
+		DB425FAE27C664E100FFCCB5 /* ListCharactersTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListCharactersTableViewCell.xib; sourceTree = "<group>"; };
+		DB425FAF27C664E100FFCCB5 /* ListCharactersTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCharactersTableViewCell.swift; sourceTree = "<group>"; };
+		DB425FB227C6662F00FFCCB5 /* CharactersListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharactersListView.xib; sourceTree = "<group>"; };
 		E51607890E386483BADBBD01 /* Pods-VIPArchitectureSampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPArchitectureSampleUITests.debug.xcconfig"; path = "Target Support Files/Pods-VIPArchitectureSampleUITests/Pods-VIPArchitectureSampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EF8B7FCD7D6C531E8EF3831E /* Pods-VIPArchitectureSampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPArchitectureSampleTests.debug.xcconfig"; path = "Target Support Files/Pods-VIPArchitectureSampleTests/Pods-VIPArchitectureSampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -394,6 +414,7 @@
 		DB425F6E27C6486500FFCCB5 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				DB425F9C27C6603C00FFCCB5 /* RickAndMorty */,
 				DB425F8327C653ED00FFCCB5 /* LastFM */,
 				DB425F6F27C6489C00FFCCB5 /* InitialSelection */,
 			);
@@ -468,6 +489,47 @@
 			children = (
 				DB425F9827C659BD00FFCCB5 /* ArtistTableViewCell.swift */,
 				DB425F9927C659BD00FFCCB5 /* ArtistTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		DB425F9C27C6603C00FFCCB5 /* RickAndMorty */ = {
+			isa = PBXGroup;
+			children = (
+				DB425F9D27C6605D00FFCCB5 /* CharactersList */,
+			);
+			path = RickAndMorty;
+			sourceTree = "<group>";
+		};
+		DB425F9D27C6605D00FFCCB5 /* CharactersList */ = {
+			isa = PBXGroup;
+			children = (
+				DB425F9E27C6606D00FFCCB5 /* Views */,
+				DB425FA027C660F500FFCCB5 /* CharactersListPresenter.swift */,
+				DB425FA127C660F500FFCCB5 /* CharactersListRouter.swift */,
+				DB425FA227C660F500FFCCB5 /* CharactersListViewController.swift */,
+				DB425FA327C660F500FFCCB5 /* CharactersListInteractor.swift */,
+				DB425FA527C660F500FFCCB5 /* CharactersListModel.swift */,
+				DB425F9F27C660F500FFCCB5 /* CharactersListFactorable.swift */,
+			);
+			path = CharactersList;
+			sourceTree = "<group>";
+		};
+		DB425F9E27C6606D00FFCCB5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DB425FAD27C664A000FFCCB5 /* Cells */,
+				DB425FA427C660F500FFCCB5 /* CharactersListView.swift */,
+				DB425FB227C6662F00FFCCB5 /* CharactersListView.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DB425FAD27C664A000FFCCB5 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				DB425FAF27C664E100FFCCB5 /* ListCharactersTableViewCell.swift */,
+				DB425FAE27C664E100FFCCB5 /* ListCharactersTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -586,6 +648,8 @@
 				DB425F9627C6545200FFCCB5 /* ArtistsListView.xib in Resources */,
 				DB425EB027C541F600FFCCB5 /* Assets.xcassets in Resources */,
 				DB425F9B27C659BD00FFCCB5 /* ArtistTableViewCell.xib in Resources */,
+				DB425FB027C664E100FFCCB5 /* ListCharactersTableViewCell.xib in Resources */,
+				DB425FB327C6662F00FFCCB5 /* CharactersListView.xib in Resources */,
 				DB425EAE27C541F200FFCCB5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -721,12 +785,17 @@
 				DB425F4E27C62CCB00FFCCB5 /* Dictionary+Additions.swift in Sources */,
 				DB425F5527C62CCB00FFCCB5 /* APIRouter.swift in Sources */,
 				DB425F2927C62C2400FFCCB5 /* ErrorModel.swift in Sources */,
+				DB425FB127C664E100FFCCB5 /* ListCharactersTableViewCell.swift in Sources */,
 				DB425F8D27C6543A00FFCCB5 /* ArtistsListFactorable.swift in Sources */,
 				DB425F5227C62CCB00FFCCB5 /* CustomNetworkError.swift in Sources */,
 				DB425F4B27C62CCB00FFCCB5 /* UIViewController+AlertController.swift in Sources */,
 				DB425F4D27C62CCB00FFCCB5 /* String+Additions.swift in Sources */,
+				DB425FAA27C660F500FFCCB5 /* CharactersListInteractor.swift in Sources */,
+				DB425FA627C660F500FFCCB5 /* CharactersListFactorable.swift in Sources */,
 				DB425F8E27C6543A00FFCCB5 /* ArtistsListPresenter.swift in Sources */,
+				DB425FA727C660F500FFCCB5 /* CharactersListPresenter.swift in Sources */,
 				DB425F6D27C6482800FFCCB5 /* APIClient.swift in Sources */,
+				DB425FA827C660F500FFCCB5 /* CharactersListRouter.swift in Sources */,
 				DB425EAB27C541F200FFCCB5 /* ViewController.swift in Sources */,
 				DB425F4F27C62CCB00FFCCB5 /* BaseViewController.swift in Sources */,
 				DB425F9A27C659BD00FFCCB5 /* ArtistTableViewCell.swift in Sources */,
@@ -740,6 +809,7 @@
 				DB425EA727C541F200FFCCB5 /* AppDelegate.swift in Sources */,
 				DB425F7827C648D900FFCCB5 /* InitialSelectionPresenter.swift in Sources */,
 				DB425F4C27C62CCB00FFCCB5 /* UIView+Additions.swift in Sources */,
+				DB425FA927C660F500FFCCB5 /* CharactersListViewController.swift in Sources */,
 				DB425F7C27C648D900FFCCB5 /* InitialSelectionView.swift in Sources */,
 				DB425F5027C62CCB00FFCCB5 /* BaseView.swift in Sources */,
 				DB425F9127C6543A00FFCCB5 /* ArtistsListInteractor.swift in Sources */,
@@ -749,7 +819,9 @@
 				DB425F9327C6543A00FFCCB5 /* ArtistsListModel.swift in Sources */,
 				DB425F7B27C648D900FFCCB5 /* InitialSelectionInteractor.swift in Sources */,
 				DB425F7A27C648D900FFCCB5 /* InitialSelectionViewController.swift in Sources */,
+				DB425FAC27C660F500FFCCB5 /* CharactersListModel.swift in Sources */,
 				DB425F7927C648D900FFCCB5 /* InitialSelectionRouter.swift in Sources */,
+				DB425FAB27C660F500FFCCB5 /* CharactersListView.swift in Sources */,
 				DB425F9027C6543A00FFCCB5 /* ArtistsListViewController.swift in Sources */,
 				DB425EDE27C5478200FFCCB5 /* R.generated.swift in Sources */,
 			);
