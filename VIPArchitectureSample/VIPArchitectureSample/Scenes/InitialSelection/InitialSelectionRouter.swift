@@ -38,7 +38,10 @@ extension InitialSelectionRouter: InitialSelectionRouting {
         self.showLastFMFlow()
         
       case .showRickMortyFlow:
-        self.showRockMortyFlow()
+        self.showRickMortyFlow()
+        
+      case .showMarvelFlow:
+        self.showMarvelFlow()
       }
     }
   }
@@ -53,8 +56,12 @@ private extension InitialSelectionRouter {
     self.viewController?.navigationController?.pushViewController(viewController, animated: true)
   }
   
-  func showRockMortyFlow() {
-    let viewController = CharactersListViewController(factory: AppInjector.CharactersListInjector(), mainView: CharactersListView(), dataSource: CharactersListModel.DataSource())
+  func showRickMortyFlow() {
+    let viewController = CharactersListRickMortyViewController(factory: AppInjector.CharactersListRickMortyInjector(), mainView: CharactersListRickMortyView(), dataSource: CharactersListRickMortyModel.DataSource())
+    self.viewController?.navigationController?.pushViewController(viewController, animated: true)
+  }
+  func showMarvelFlow() {
+    let viewController = CharactersListMarvelViewController(factory: AppInjector.CharactersListMarvelInjector(), mainView: CharactersListMarvelView(), dataSource: CharactersListMarvelModel.DataSource())
     self.viewController?.navigationController?.pushViewController(viewController, animated: true)
   }
   

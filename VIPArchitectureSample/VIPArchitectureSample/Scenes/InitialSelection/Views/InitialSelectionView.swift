@@ -15,6 +15,8 @@ import UIKit
 protocol InitialSelectionViewDelegate where Self: UIViewController {
   func lastFMPressed()
   func rickMortyPressed()
+  func marvelPressed()
+
 }
 
 final class InitialSelectionView: BaseView {
@@ -25,6 +27,8 @@ final class InitialSelectionView: BaseView {
   
   @IBOutlet weak var lastFMButton: UIButton!
   @IBOutlet weak var rickMortyButton: UIButton!
+  @IBOutlet weak var marvelButton: UIButton!
+
   @IBOutlet weak var questionLabel: UILabel!
 
 
@@ -41,6 +45,8 @@ final class InitialSelectionView: BaseView {
     self.dataSource = dataSource
     self.lastFMButton.setTitle(dataSource.titleLastFMButton, for: .normal)
     self.rickMortyButton.setTitle(dataSource.titleRickMortyButton, for: .normal)
+    self.marvelButton.setTitle(dataSource.titleMarvelButton, for: .normal)
+
     self.questionLabel.text = dataSource.questionTitle
   }
   @IBAction func lastFMAction () {
@@ -48,6 +54,9 @@ final class InitialSelectionView: BaseView {
   }
   @IBAction func rickMortyAction () {
     delegate?.rickMortyPressed()
+  }
+  @IBAction func marvelAction () {
+    delegate?.marvelPressed()
   }
   
 }

@@ -8,28 +8,33 @@ import Foundation
 import Alamofire
 
 enum APIRouter {
-  case getCharactersListLastFM(limit: Int, page: Int)
+  case getCharactersListRickMortyRickMortyLastFM(limit: Int, page: Int)
   case getAlbumsListLastFM(characterId: Int, limit: Int, page: Int)
   case getAllCharactersRickAndMorty(page: Int)
+  case getCharactersListMarvel(page: Int)
+  case getCharacterDetailMarvel(id: Int)
 }
 
 
 private extension APIRouter {
   var baseURLKey: EnvironmentService.Keys {
     switch self {
-    case .getCharactersListLastFM, .getAlbumsListLastFM:
+    case .getCharactersListRickMortyRickMortyLastFM, .getAlbumsListLastFM:
         return .URL(.baseURLLastFM)
       
     case .getAllCharactersRickAndMorty:
       return .URL(.baseURLRickMorty)
+      
+    case .getCharacterDetailMarvel, .getCharactersListMarvel:
+      return .URL(.baseURLMarvel)
     }
   }
   
   // MARK: - HTTPMethod
   var method: HTTPMethod {
     switch self {
-    case .getCharactersListLastFM,
-        .getAlbumsListLastFM, .getAllCharactersRickAndMorty:
+    case .getCharactersListRickMortyRickMortyLastFM,
+        .getAlbumsListLastFM, .getAllCharactersRickAndMorty, .getCharacterDetailMarvel, .getCharactersListMarvel:
       return .get
     
     }
@@ -38,7 +43,7 @@ private extension APIRouter {
   // MARK: - Path
   var path: String {
     switch self {
-    case let .getCharactersListLastFM(limit, page):
+    case let .getCharactersListRickMortyRickMortyLastFM(limit, page):
       let apiKey = EnvironmentService.getValue(for: .URL(.apiKeyLASTFM))
       let method = "chart.gettopartists"
       
@@ -58,6 +63,28 @@ private extension APIRouter {
     case let .getAllCharactersRickAndMorty(page):
       
       return "/character/?page=\(page)"
+      
+    case let .getCharactersListMarvel(page):
+      let timestamp = Int(Date().timeIntervalSince1970)
+      let publicKey = EnvironmentService.getValue(for: .URL(.publicKeyMarvel))
+      let privateKey = EnvironmentService.getValue(for: .URL(.privateKeyMarvel))
+      let hash = "\(timestamp)\(privateKey)\(publicKey)"
+      let limit = 20
+      let offset = limit * page
+      return "/v1/public/characters" + "?\(APIParameterKey.timestamp.rawValue)=\(timestamp)"
+        + "&\(APIParameterKey.hash.rawValue)=\(hash.md5())"
+        + "&\(APIParameterKey.apiKey.rawValue)=\(publicKey)"
+        + "&\(APIParameterKey.limit.rawValue)=\(limit)"
+        + "&\(APIParameterKey.offset.rawValue)=\(offset)"
+      
+    case let .getCharacterDetailMarvel(id):
+      let timestamp = Int(Date().timeIntervalSince1970)
+      let publicKey = EnvironmentService.getValue(for: .URL(.publicKeyMarvel))
+      let privateKey = EnvironmentService.getValue(for: .URL(.privateKeyMarvel))
+      let hash = "\(timestamp)\(privateKey)\(publicKey)"
+      return "/v1/public/characters/\(id)" + "?\(APIParameterKey.timestamp.rawValue)=\(timestamp)"
+        + "&\(APIParameterKey.hash.rawValue)=\(hash.md5())"
+        + "&\(APIParameterKey.apiKey.rawValue)=\(publicKey)"
 
     }
     
@@ -66,9 +93,9 @@ private extension APIRouter {
   // MARK: - Parameters
   var parameters: Parameters? {
     switch self {
-    case .getCharactersListLastFM,
+    case .getCharactersListRickMortyRickMortyLastFM,
          .getAlbumsListLastFM,
-         .getAllCharactersRickAndMorty:
+         .getAllCharactersRickAndMorty, .getCharacterDetailMarvel, .getCharactersListMarvel:
       return nil
     }
   }
@@ -76,9 +103,11 @@ private extension APIRouter {
   // MARK: - ContentType
   var contentType: ContentType {
     switch self {
-    case .getCharactersListLastFM,
+    case .getCharactersListRickMortyRickMortyLastFM,
          .getAlbumsListLastFM,
-         .getAllCharactersRickAndMorty:
+         .getAllCharactersRickAndMorty,
+         .getCharacterDetailMarvel,
+         .getCharactersListMarvel:
       return .formUrlEncoded
     }
   }

@@ -1,5 +1,5 @@
 //
-//  InitialSelectionModel.swift
+//  CharactersListRickMortyModel.swift
 //  VIPArchitectureSample
 //
 //  Created by marco.iniguez.ollero on 23/2/22.
@@ -13,37 +13,40 @@
 
 import Foundation
 
-enum InitialSelectionModel {
+enum CharactersListRickMortyModel {
   
   enum Request {
-    case prepareOptions
-
+    case prepareCharactersListRickMorty(page: Int)
   }
   
   enum Response {
-    case prepareOptions
+    case prepareCharactersListRickMorty(data: [ResultRickAndMorty])
+    case showError(model: ErrorModel)
   }
   
   enum ViewModel {
-    case prepareOptions(viewModelData: ViewDataSource)
+    case showError(model: ErrorModel)
+    case prepareCharactersListRickMorty(viewModelData: ViewDataSource)
   }
   
   enum Route {
-    case showLastFMFlow
-    case showRickMortyFlow
-    case showMarvelFlow
-
+    case showError(model: ErrorModel)
   }
   
   struct ViewDataSource {
     let title: String
-    let questionTitle: String
-    let titleLastFMButton: String
-    let titleRickMortyButton: String
-    let titleMarvelButton: String
+    let items: [CellModel]
   }
   
+  struct CellModel {
+    let name: String
+    let imageURL: URL?
+    let status: String?
+    let species: String?
+  }
+
+  
   struct DataSource {
-    
+    var characterList: [ResultRickAndMorty] = []
   }
 }

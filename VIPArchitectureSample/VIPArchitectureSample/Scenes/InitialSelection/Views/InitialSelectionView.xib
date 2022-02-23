@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -10,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InitialSelectionView" customModule="VIPArchitectureSample" customModuleProvider="target">
             <connections>
                 <outlet property="lastFMButton" destination="fme-iQ-7K4" id="4q5-du-OUI"/>
+                <outlet property="marvelButton" destination="MJl-Xm-27g" id="1JX-Rw-iMB"/>
                 <outlet property="questionLabel" destination="9TO-T2-c5b" id="kfE-70-Rz5"/>
                 <outlet property="rickMortyButton" destination="AIt-5a-KgQ" id="3sQ-Nl-rYM"/>
             </connections>
@@ -39,7 +41,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fme-iQ-7K4">
-                    <rect key="frame" x="132" y="547" width="150" height="30"/>
+                    <rect key="frame" x="132" y="523" width="150" height="30"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="150" id="3W2-Yc-Trm"/>
@@ -51,18 +53,33 @@
                         <action selector="lastFMAction" destination="-1" eventType="touchUpInside" id="J3n-LC-uel"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MJl-Xm-27g">
+                    <rect key="frame" x="132" y="613" width="150" height="30"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="dt5-1W-8gl"/>
+                    </constraints>
+                    <state key="normal" title="Marvel">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="marvelAction" destination="-1" eventType="touchUpInside" id="8gU-7F-o1X"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="03C-Le-jYf"/>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="03C-Le-jYf" firstAttribute="trailing" secondItem="9TO-T2-c5b" secondAttribute="trailing" constant="16" id="9fY-if-vAH"/>
+                <constraint firstItem="MJl-Xm-27g" firstAttribute="centerX" secondItem="fme-iQ-7K4" secondAttribute="centerX" id="BrD-0u-L8a"/>
                 <constraint firstItem="AIt-5a-KgQ" firstAttribute="centerX" secondItem="tOa-WF-oy2" secondAttribute="centerX" id="GTL-sv-SUW"/>
                 <constraint firstItem="9TO-T2-c5b" firstAttribute="leading" secondItem="03C-Le-jYf" secondAttribute="leading" constant="16" id="Jrg-XZ-hpp"/>
                 <constraint firstItem="9TO-T2-c5b" firstAttribute="centerX" secondItem="tOa-WF-oy2" secondAttribute="centerX" id="PPs-t5-TJ8"/>
+                <constraint firstItem="MJl-Xm-27g" firstAttribute="top" secondItem="fme-iQ-7K4" secondAttribute="bottom" constant="60" id="SsF-ya-qFq"/>
                 <constraint firstItem="AIt-5a-KgQ" firstAttribute="centerY" secondItem="tOa-WF-oy2" secondAttribute="centerY" id="W45-d9-vYA"/>
                 <constraint firstItem="9TO-T2-c5b" firstAttribute="top" secondItem="03C-Le-jYf" secondAttribute="top" constant="80" id="af5-Lc-FKc"/>
                 <constraint firstItem="fme-iQ-7K4" firstAttribute="centerX" secondItem="tOa-WF-oy2" secondAttribute="centerX" id="qJX-Dk-0j4"/>
-                <constraint firstItem="fme-iQ-7K4" firstAttribute="top" secondItem="AIt-5a-KgQ" secondAttribute="bottom" constant="84" id="sS7-6o-7lX"/>
+                <constraint firstItem="fme-iQ-7K4" firstAttribute="top" secondItem="AIt-5a-KgQ" secondAttribute="bottom" constant="60" id="sS7-6o-7lX"/>
             </constraints>
             <point key="canvasLocation" x="-78" y="-400"/>
         </view>

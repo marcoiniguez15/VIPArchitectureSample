@@ -1,6 +1,6 @@
 //
 //  ItemTableViewCell.swift
-//  BaseVIPArchitectureProject
+//  VIPArchitectureSample
 //
 //  Created by Iniguez Ollero, Marco on 14/11/18.
 //  Copyright © 2018 Iniguez Ollero, Marco. All rights reserved.

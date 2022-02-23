@@ -48,9 +48,7 @@ extension InitialSelectionInteractor: InitialSelectionBusinessLogic {
         
       case .prepareOptions:
         self.presenter.presentResponse(.prepareOptions)
-        
-      default:
-        break
+
       }
     }
   }

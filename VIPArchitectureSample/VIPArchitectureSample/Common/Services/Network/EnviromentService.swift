@@ -23,8 +23,9 @@ enum EnvironmentService {
     case baseURLLastFM = "BASE_URL_LASTFM"
     case baseURLRickMorty = "BASE_URL_RICK_MORTY"
     case apiKeyLASTFM = "API_KEY_LASTFM"
-    case privateKey = "PRIVATE_KEY"
-    case publicKey = "PUBLIC_KEY"
+    case baseURLMarvel = "BASE_URL_MARVEL"
+    case privateKeyMarvel = "PRIVATE_KEY_MARVEL"
+    case publicKeyMarvel = "PUBLIC_KEY_MARVEL"
   }
 
   static func getValue(for key: Keys) -> String {

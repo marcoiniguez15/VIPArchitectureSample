@@ -1,5 +1,5 @@
 //
-//  CharactersListViewController.swift
+//  CharactersListRickMortyViewController.swift
 //  VIPArchitectureSample
 //
 //  Created by marco.iniguez.ollero on 23/2/22.
@@ -12,34 +12,34 @@
 
 import UIKit
 
-protocol CharactersListDisplayLogic where Self: UIViewController {
+protocol CharactersListRickMortyDisplayLogic where Self: UIViewController {
   
-  func displayViewModel(_ viewModel: CharactersListModel.ViewModel)
+  func displayViewModel(_ viewModel: CharactersListRickMortyModel.ViewModel)
 }
 
-final class CharactersListViewController: BaseViewController {
+final class CharactersListRickMortyViewController: BaseViewController {
   
-  typealias CharactersListFactory = CharactersListInteractorFactorable & CharactersListRouterFactorable
+  typealias CharactersListRickMortyFactory = CharactersListRickMortyInteractorFactorable & CharactersListRickMortyRouterFactorable
 
-  private let mainView: CharactersListView
-  private var interactor: CharactersListInteractable!
-  private var router: CharactersListRouting!
+  private let mainView: CharactersListRickMortyView
+  private var interactor: CharactersListRickMortyInteractable!
+  private var router: CharactersListRickMortyRouting!
   override var isNavigationBarHidden: Bool { false }
 
   
-  required init(factory: CharactersListFactory, mainView: CharactersListView, dataSource: CharactersListModel.DataSource) {
+  required init(factory: CharactersListRickMortyFactory, mainView: CharactersListRickMortyView, dataSource: CharactersListRickMortyModel.DataSource) {
     self.mainView = mainView
     
     super.init(nibName: nil, bundle: nil)
     
-    let interactorFactory = factory as! CharactersListInteractorFactorable.InteractableFactory
+    let interactorFactory = factory as! CharactersListRickMortyInteractorFactorable.InteractableFactory
     interactor = factory.makeInteractor(factory: interactorFactory, viewController: self, dataSource: dataSource)
     router = factory.makeRouter(viewController: self)
   }
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    interactor.doRequest(.prepareCharactersList(page: 0))
+    interactor.doRequest(.prepareCharactersListRickMorty(page: 0))
   }
   
   override func loadView() {
@@ -53,14 +53,14 @@ final class CharactersListViewController: BaseViewController {
   }
 }
 
-// MARK: - CharactersListDisplayLogic
-extension CharactersListViewController: CharactersListDisplayLogic {
+// MARK: - CharactersListRickMortyDisplayLogic
+extension CharactersListRickMortyViewController: CharactersListRickMortyDisplayLogic {
 
-  func displayViewModel(_ viewModel: CharactersListModel.ViewModel) {
+  func displayViewModel(_ viewModel: CharactersListRickMortyModel.ViewModel) {
     DispatchQueue.main.async {
       switch viewModel {
 
-      case let .prepareCharactersList(viewModelData):
+      case let .prepareCharactersListRickMorty(viewModelData):
         self.navigationItem.title = viewModelData.title
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         self.mainView.updateDataSource(with: viewModelData)
@@ -78,17 +78,17 @@ extension CharactersListViewController: CharactersListDisplayLogic {
 }
 
 
-// MARK: - CharactersListViewDelegate
-extension CharactersListViewController: CharactersListViewDelegate {
+// MARK: - CharactersListRickMortyViewDelegate
+extension CharactersListRickMortyViewController: CharactersListRickMortyViewDelegate {
   
   func nextPage(page: Int) {
-    interactor.doRequest(.prepareCharactersList(page: page))
+    interactor.doRequest(.prepareCharactersListRickMorty(page: page))
   }
   
 }
 
 
 // MARK: - Private Zone
-private extension CharactersListViewController {
+private extension CharactersListRickMortyViewController {
   
 }

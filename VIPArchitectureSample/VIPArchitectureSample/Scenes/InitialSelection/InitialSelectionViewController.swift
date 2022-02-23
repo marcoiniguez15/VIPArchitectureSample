@@ -79,6 +79,9 @@ extension InitialSelectionViewController: InitialSelectionViewDelegate {
   func rickMortyPressed() {
     router.routeTo(.showRickMortyFlow)
   }
+  func marvelPressed() {
+    router.routeTo(.showMarvelFlow)
+  }
 }
 
 

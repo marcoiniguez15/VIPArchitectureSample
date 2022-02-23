@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CharacterDetailMarvelView" customModule="VIPArchitectureSample" customModuleProvider="target">
+            <connections>
+                <outlet property="characterTableView" destination="98X-4U-1uI" id="QUa-k1-0Tw"/>
+                <outlet property="imageCharacter" destination="9O9-Iz-oNj" id="aSU-Wd-rVH"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="irq-Bb-qPL">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9O9-Iz-oNj">
+                    <rect key="frame" x="0.0" y="44" width="414" height="200"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="itp-Ra-3bU"/>
+                    </constraints>
+                </imageView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="insetGrouped" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="98X-4U-1uI">
+                    <rect key="frame" x="0.0" y="244" width="414" height="618"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="LpC-ba-gGm"/>
+                        <outlet property="delegate" destination="-1" id="G1d-hu-6HJ"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="8Ze-hz-jCJ"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="98X-4U-1uI" firstAttribute="leading" secondItem="8Ze-hz-jCJ" secondAttribute="leading" id="14O-E7-y1l"/>
+                <constraint firstItem="98X-4U-1uI" firstAttribute="width" secondItem="irq-Bb-qPL" secondAttribute="width" id="3gi-Rh-jdH"/>
+                <constraint firstItem="9O9-Iz-oNj" firstAttribute="centerX" secondItem="8Ze-hz-jCJ" secondAttribute="centerX" id="BNf-UT-plO"/>
+                <constraint firstItem="8Ze-hz-jCJ" firstAttribute="bottom" secondItem="98X-4U-1uI" secondAttribute="bottom" id="Fd7-1l-aHS"/>
+                <constraint firstItem="9O9-Iz-oNj" firstAttribute="width" secondItem="irq-Bb-qPL" secondAttribute="width" id="KL0-Dv-EOH"/>
+                <constraint firstItem="8Ze-hz-jCJ" firstAttribute="trailing" secondItem="98X-4U-1uI" secondAttribute="trailing" id="RJu-w1-LjW"/>
+                <constraint firstItem="9O9-Iz-oNj" firstAttribute="top" secondItem="8Ze-hz-jCJ" secondAttribute="top" id="T2N-Dv-jUS"/>
+                <constraint firstItem="98X-4U-1uI" firstAttribute="top" secondItem="9O9-Iz-oNj" secondAttribute="bottom" id="fMA-cj-mFV"/>
+            </constraints>
+            <point key="canvasLocation" x="106" y="81"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

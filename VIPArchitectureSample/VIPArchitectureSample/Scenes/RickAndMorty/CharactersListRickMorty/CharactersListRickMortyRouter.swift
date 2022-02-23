@@ -1,5 +1,5 @@
 //
-//  CharactersListRouter.swift
+//  CharactersListRickMortyRouter.swift
 //  VIPArchitectureSample
 //
 //  Created by marco.iniguez.ollero on 23/2/22.
@@ -12,12 +12,12 @@
 
 import UIKit
 
-protocol CharactersListRouting {
+protocol CharactersListRickMortyRouting {
   
-  func routeTo(_ route: CharactersListModel.Route)
+  func routeTo(_ route: CharactersListRickMortyModel.Route)
 }
 
-final class CharactersListRouter {
+final class CharactersListRickMortyRouter {
   
   private weak var viewController: UIViewController?
   
@@ -27,10 +27,10 @@ final class CharactersListRouter {
 }
 
 
-// MARK: - CharactersListRouting
-extension CharactersListRouter: CharactersListRouting {
+// MARK: - CharactersListRickMortyRouting
+extension CharactersListRickMortyRouter: CharactersListRickMortyRouting {
   
-  func routeTo(_ route: CharactersListModel.Route) {
+  func routeTo(_ route: CharactersListRickMortyModel.Route) {
     DispatchQueue.main.async {
       switch route {
         
@@ -43,7 +43,7 @@ extension CharactersListRouter: CharactersListRouting {
 
 
 // MARK: - Private Zone
-private extension CharactersListRouter {
+private extension CharactersListRickMortyRouter {
   
   func showErrorAlert(viewModel: ErrorModel) {
     self.viewController?.showAlertWithCompletion(
@@ -53,7 +53,7 @@ private extension CharactersListRouter {
       cancelTitle: nil,
       completionBlock: { (done) in
         if done {
-            if let vc = self.viewController as? CharactersListViewController {
+            if let vc = self.viewController as? CharactersListRickMortyViewController {
               vc.errorRetryRequest()
             }
         }

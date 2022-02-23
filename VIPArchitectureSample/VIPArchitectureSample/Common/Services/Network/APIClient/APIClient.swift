@@ -10,9 +10,11 @@ import Alamofire
 typealias NetworkError = AFError
 
 protocol APIClientProtocol {
-  func getCharactersListLastFM(limit: Int, page: Int, completion:@escaping (Result<ArtistsLastFM, NetworkError>, Int?) -> Void)
+  func getCharactersListRickMortyRickMortyLastFM(limit: Int, page: Int, completion:@escaping (Result<ArtistsLastFM, NetworkError>, Int?) -> Void)
   func getAlbumsListLastFM(characterId: Int, limit: Int, page: Int, completion:@escaping (Result<AlbumsLastFM, NetworkError>, Int?) -> Void)
   func getAllCharactersRickAndMorty(page: Int, completion:@escaping (Result<CharactersRickAndMorty, NetworkError>, Int?) -> Void)
+  func getCharactersListMarvel(page: Int, completion:@escaping (Result<CharactersListMarvel, NetworkError>, Int?) -> Void)
+  func getCharacterDetailMarvel(id: Int, completion:@escaping (Result<CharactersListMarvel, NetworkError>, Int?) -> Void)
 }
 final class APIClient {
   private static var instance: APIClient?
@@ -40,11 +42,18 @@ extension APIClient: APIClientProtocol {
     performRequest(route: .getAllCharactersRickAndMorty(page: page), completion: completion)
   }
   
-  func getCharactersListLastFM(limit: Int, page: Int, completion:@escaping (Result<ArtistsLastFM, NetworkError>, Int?) -> Void) {
-    performRequest(route: .getCharactersListLastFM(limit: limit, page: page), completion: completion)
+  func getCharactersListRickMortyRickMortyLastFM(limit: Int, page: Int, completion:@escaping (Result<ArtistsLastFM, NetworkError>, Int?) -> Void) {
+    performRequest(route: .getCharactersListRickMortyRickMortyLastFM(limit: limit, page: page), completion: completion)
   }
   func getAlbumsListLastFM(characterId: Int, limit: Int, page: Int, completion:@escaping (Result<AlbumsLastFM, NetworkError>, Int?) -> Void) {
     performRequest(route: .getAlbumsListLastFM(characterId: characterId, limit: limit, page: page), completion: completion)
+  }
+  
+  func getCharactersListMarvel(page: Int, completion:@escaping (Result<CharactersListMarvel, NetworkError>, Int?) -> Void) {
+    performRequest(route: .getCharactersListMarvel(page: page), completion: completion)
+  }
+  func getCharacterDetailMarvel(id: Int, completion:@escaping (Result<CharactersListMarvel, NetworkError>, Int?) -> Void) {
+    performRequest(route: .getCharacterDetailMarvel(id: id), completion: completion)
   }
   
 }

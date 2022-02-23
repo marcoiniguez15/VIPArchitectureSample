@@ -4,8 +4,12 @@
 <dict>
 	<key>API_KEY_LASTFM</key>
 	<string>$(API_KEY_LASTFM)</string>
+	<key>API_KEY_MARVEL</key>
+	<string>$(API_KEY_MARVEL)</string>
 	<key>BASE_URL_LASTFM</key>
 	<string>$(BASE_URL_LASTFM)</string>
+	<key>BASE_URL_MARVEL</key>
+	<string>$(BASE_URL_MARVEL)</string>
 	<key>BASE_URL_RICK_MORTY</key>
 	<string>$(BASE_URL_RICK_MORTY)</string>
 	<key>CFBundleDevelopmentRegion</key>
@@ -31,10 +35,10 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
-	<key>PRIVATE_KEY</key>
-	<string>$(PRIVATE_KEY)</string>
-	<key>PUBLIC_KEY</key>
-	<string>$(PUBLIC_KEY)</string>
+	<key>PRIVATE_KEY_MARVEL</key>
+	<string>$(PRIVATE_KEY_MARVEL)</string>
+	<key>PUBLIC_KEY_MARVEL</key>
+	<string>$(PUBLIC_KEY_MARVEL)</string>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>

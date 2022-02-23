@@ -1,5 +1,5 @@
 //
-//  CharactersListView.swift
+//  CharactersListRickMortyView.swift
 //  VIPArchitectureSample
 //
 //  Created by marco.iniguez.ollero on 23/2/22.
@@ -12,20 +12,20 @@
 
 import UIKit
 
-protocol CharactersListViewDelegate where Self: UIViewController {
+protocol CharactersListRickMortyViewDelegate where Self: UIViewController {
   func nextPage(page:Int)
 }
 
-final class CharactersListView: BaseView {
+final class CharactersListRickMortyView: BaseView {
   
-  weak var delegate: CharactersListViewDelegate?
+  weak var delegate: CharactersListRickMortyViewDelegate?
   
   let minItemsToReload: Int = 2
   var reloadingList: Bool = false
   var page = 0
   
   @IBOutlet weak var charactersTableView: UITableView!
-  private var dataSource: CharactersListModel.ViewDataSource?
+  private var dataSource: CharactersListRickMortyModel.ViewDataSource?
 
   override init(frame: CGRect) {
     super.init(frame: frame)
@@ -36,7 +36,7 @@ final class CharactersListView: BaseView {
     super.init(coder: aDecoder)
     setupUIComponents()
   }
-  func updateDataSource(with dataSource: CharactersListModel.ViewDataSource) {
+  func updateDataSource(with dataSource: CharactersListRickMortyModel.ViewDataSource) {
     self.dataSource = dataSource
     self.charactersTableView.reloadData()
     self.reloadingList = false
@@ -51,15 +51,15 @@ final class CharactersListView: BaseView {
   
 }
 
-private extension CharactersListView {
+private extension CharactersListRickMortyView {
   func setupUIComponents() {
     charactersTableView.allowsMultipleSelection = false
     self.reloadUIComponents()
-    self.charactersTableView.register(R.nib.listCharactersTableViewCell)
+    self.charactersTableView.register(R.nib.charactersListRickMortyTableViewCell)
   }
 }
 // MARK: - UITableview
-extension CharactersListView:  UITableViewDataSource, UITableViewDelegate {
+extension CharactersListRickMortyView:  UITableViewDataSource, UITableViewDelegate {
   func numberOfSections(in tableView: UITableView) -> Int {
     1
   }
@@ -71,7 +71,7 @@ extension CharactersListView:  UITableViewDataSource, UITableViewDelegate {
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    guard let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.listCharactersTableViewCell, for: indexPath) else {
+    guard let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.charactersListRickMortyTableViewCell, for: indexPath) else {
       return UITableViewCell()
     }
     if let data = dataSource  {

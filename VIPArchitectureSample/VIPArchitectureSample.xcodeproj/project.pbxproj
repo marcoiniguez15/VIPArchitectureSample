@@ -54,16 +54,49 @@
 		DB425F9627C6545200FFCCB5 /* ArtistsListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB425F9527C6545200FFCCB5 /* ArtistsListView.xib */; };
 		DB425F9A27C659BD00FFCCB5 /* ArtistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425F9827C659BD00FFCCB5 /* ArtistTableViewCell.swift */; };
 		DB425F9B27C659BD00FFCCB5 /* ArtistTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB425F9927C659BD00FFCCB5 /* ArtistTableViewCell.xib */; };
-		DB425FA627C660F500FFCCB5 /* CharactersListFactorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425F9F27C660F500FFCCB5 /* CharactersListFactorable.swift */; };
-		DB425FA727C660F500FFCCB5 /* CharactersListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425FA027C660F500FFCCB5 /* CharactersListPresenter.swift */; };
-		DB425FA827C660F500FFCCB5 /* CharactersListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425FA127C660F500FFCCB5 /* CharactersListRouter.swift */; };
-		DB425FA927C660F500FFCCB5 /* CharactersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425FA227C660F500FFCCB5 /* CharactersListViewController.swift */; };
-		DB425FAA27C660F500FFCCB5 /* CharactersListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425FA327C660F500FFCCB5 /* CharactersListInteractor.swift */; };
-		DB425FAB27C660F500FFCCB5 /* CharactersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425FA427C660F500FFCCB5 /* CharactersListView.swift */; };
-		DB425FAC27C660F500FFCCB5 /* CharactersListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425FA527C660F500FFCCB5 /* CharactersListModel.swift */; };
-		DB425FB027C664E100FFCCB5 /* ListCharactersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB425FAE27C664E100FFCCB5 /* ListCharactersTableViewCell.xib */; };
-		DB425FB127C664E100FFCCB5 /* ListCharactersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425FAF27C664E100FFCCB5 /* ListCharactersTableViewCell.swift */; };
-		DB425FB327C6662F00FFCCB5 /* CharactersListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB425FB227C6662F00FFCCB5 /* CharactersListView.xib */; };
+		DB425FB027C664E100FFCCB5 /* CharactersListRickMortyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB425FAE27C664E100FFCCB5 /* CharactersListRickMortyTableViewCell.xib */; };
+		DB425FB127C664E100FFCCB5 /* CharactersListRickMortyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425FAF27C664E100FFCCB5 /* CharactersListRickMortyTableViewCell.swift */; };
+		DB425FB327C6662F00FFCCB5 /* CharactersListRickMortyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB425FB227C6662F00FFCCB5 /* CharactersListRickMortyView.xib */; };
+		DB425FBC27C66BC800FFCCB5 /* CharactersListRickMortyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425FB527C66BC800FFCCB5 /* CharactersListRickMortyView.swift */; };
+		DB425FBD27C66BC800FFCCB5 /* CharactersListRickMortyInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425FB627C66BC800FFCCB5 /* CharactersListRickMortyInteractor.swift */; };
+		DB425FBE27C66BC800FFCCB5 /* CharactersListRickMortyRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425FB727C66BC800FFCCB5 /* CharactersListRickMortyRouter.swift */; };
+		DB425FBF27C66BC800FFCCB5 /* CharactersListRickMortyPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425FB827C66BC800FFCCB5 /* CharactersListRickMortyPresenter.swift */; };
+		DB425FC027C66BC800FFCCB5 /* CharactersListRickMortyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425FB927C66BC800FFCCB5 /* CharactersListRickMortyViewController.swift */; };
+		DB425FC127C66BC800FFCCB5 /* CharactersListRickMortyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425FBA27C66BC800FFCCB5 /* CharactersListRickMortyModel.swift */; };
+		DB425FC227C66BC800FFCCB5 /* CharactersListRickMortyFactorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425FBB27C66BC800FFCCB5 /* CharactersListRickMortyFactorable.swift */; };
+		DB425FD127C66E3F00FFCCB5 /* ItemComic.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425FC427C66E3F00FFCCB5 /* ItemComic.swift */; };
+		DB425FD227C66E3F00FFCCB5 /* ItemSeries.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425FC527C66E3F00FFCCB5 /* ItemSeries.swift */; };
+		DB425FD327C66E3F00FFCCB5 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425FC627C66E3F00FFCCB5 /* Event.swift */; };
+		DB425FD427C66E3F00FFCCB5 /* Thumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425FC727C66E3F00FFCCB5 /* Thumbnail.swift */; };
+		DB425FD527C66E3F00FFCCB5 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425FC827C66E3F00FFCCB5 /* Result.swift */; };
+		DB425FD627C66E3F00FFCCB5 /* Comic.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425FC927C66E3F00FFCCB5 /* Comic.swift */; };
+		DB425FD727C66E3F00FFCCB5 /* Series.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425FCA27C66E3F00FFCCB5 /* Series.swift */; };
+		DB425FD827C66E3F00FFCCB5 /* ItemEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425FCB27C66E3F00FFCCB5 /* ItemEvent.swift */; };
+		DB425FD927C66E3F00FFCCB5 /* ItemStory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425FCC27C66E3F00FFCCB5 /* ItemStory.swift */; };
+		DB425FDA27C66E3F00FFCCB5 /* Datum.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425FCD27C66E3F00FFCCB5 /* Datum.swift */; };
+		DB425FDB27C66E3F00FFCCB5 /* Url.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425FCE27C66E3F00FFCCB5 /* Url.swift */; };
+		DB425FDC27C66E3F00FFCCB5 /* CharactersListMarvel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425FCF27C66E3F00FFCCB5 /* CharactersListMarvel.swift */; };
+		DB425FDD27C66E3F00FFCCB5 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425FD027C66E3F00FFCCB5 /* Story.swift */; };
+		DB425FF827C66FD900FFCCB5 /* CharacterDetailMarvelPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425FDF27C66FD800FFCCB5 /* CharacterDetailMarvelPresenter.swift */; };
+		DB425FF927C66FD900FFCCB5 /* CharacterDetailMarvelFactorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425FE027C66FD800FFCCB5 /* CharacterDetailMarvelFactorable.swift */; };
+		DB425FFA27C66FD900FFCCB5 /* CharacterDetailMarvelRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425FE127C66FD800FFCCB5 /* CharacterDetailMarvelRouter.swift */; };
+		DB425FFB27C66FD900FFCCB5 /* CharacterDetailMarvelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425FE227C66FD800FFCCB5 /* CharacterDetailMarvelViewController.swift */; };
+		DB425FFC27C66FD900FFCCB5 /* CharacterDetailMarvelInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425FE327C66FD800FFCCB5 /* CharacterDetailMarvelInteractor.swift */; };
+		DB425FFD27C66FD900FFCCB5 /* CharacterDetailMarvelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425FE427C66FD800FFCCB5 /* CharacterDetailMarvelModel.swift */; };
+		DB425FFE27C66FD900FFCCB5 /* CharacterDetailMarvelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB425FE627C66FD800FFCCB5 /* CharacterDetailMarvelView.xib */; };
+		DB425FFF27C66FD900FFCCB5 /* CharacterDetailMarvelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB425FE827C66FD800FFCCB5 /* CharacterDetailMarvelTableViewCell.xib */; };
+		DB42600027C66FD900FFCCB5 /* CharacterDetailMarvelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425FE927C66FD800FFCCB5 /* CharacterDetailMarvelTableViewCell.swift */; };
+		DB42600127C66FD900FFCCB5 /* CharacterDetailMarvelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425FEA27C66FD800FFCCB5 /* CharacterDetailMarvelView.swift */; };
+		DB42600227C66FD900FFCCB5 /* CharactersListMarvelFactorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425FEC27C66FD900FFCCB5 /* CharactersListMarvelFactorable.swift */; };
+		DB42600327C66FD900FFCCB5 /* CharactersListMarvelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425FED27C66FD900FFCCB5 /* CharactersListMarvelViewController.swift */; };
+		DB42600427C66FD900FFCCB5 /* CharactersListMarvelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425FEE27C66FD900FFCCB5 /* CharactersListMarvelModel.swift */; };
+		DB42600527C66FD900FFCCB5 /* CharactersListMarvelInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425FEF27C66FD900FFCCB5 /* CharactersListMarvelInteractor.swift */; };
+		DB42600627C66FD900FFCCB5 /* CharactersListMarvelPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425FF027C66FD900FFCCB5 /* CharactersListMarvelPresenter.swift */; };
+		DB42600727C66FD900FFCCB5 /* CharactersListMarvelRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425FF127C66FD900FFCCB5 /* CharactersListMarvelRouter.swift */; };
+		DB42600827C66FD900FFCCB5 /* CharactersListMarvelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425FF327C66FD900FFCCB5 /* CharactersListMarvelView.swift */; };
+		DB42600927C66FD900FFCCB5 /* CharacterListMarvelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB425FF527C66FD900FFCCB5 /* CharacterListMarvelTableViewCell.xib */; };
+		DB42600A27C66FD900FFCCB5 /* CharacterListMarvelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425FF627C66FD900FFCCB5 /* CharacterListMarvelTableViewCell.swift */; };
+		DB42600B27C66FD900FFCCB5 /* CharactersListMarvelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB425FF727C66FD900FFCCB5 /* CharactersListMarvelView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,16 +176,49 @@
 		DB425F9527C6545200FFCCB5 /* ArtistsListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArtistsListView.xib; sourceTree = "<group>"; };
 		DB425F9827C659BD00FFCCB5 /* ArtistTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistTableViewCell.swift; sourceTree = "<group>"; };
 		DB425F9927C659BD00FFCCB5 /* ArtistTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArtistTableViewCell.xib; sourceTree = "<group>"; };
-		DB425F9F27C660F500FFCCB5 /* CharactersListFactorable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CharactersListFactorable.swift; path = VIPArchitectureSample/Scenes/RickAndMorty/CharactersList/CharactersListFactorable.swift; sourceTree = SOURCE_ROOT; };
-		DB425FA027C660F500FFCCB5 /* CharactersListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CharactersListPresenter.swift; path = VIPArchitectureSample/Scenes/RickAndMorty/CharactersList/CharactersListPresenter.swift; sourceTree = SOURCE_ROOT; };
-		DB425FA127C660F500FFCCB5 /* CharactersListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CharactersListRouter.swift; path = VIPArchitectureSample/Scenes/RickAndMorty/CharactersList/CharactersListRouter.swift; sourceTree = SOURCE_ROOT; };
-		DB425FA227C660F500FFCCB5 /* CharactersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CharactersListViewController.swift; path = VIPArchitectureSample/Scenes/RickAndMorty/CharactersList/CharactersListViewController.swift; sourceTree = SOURCE_ROOT; };
-		DB425FA327C660F500FFCCB5 /* CharactersListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CharactersListInteractor.swift; path = VIPArchitectureSample/Scenes/RickAndMorty/CharactersList/CharactersListInteractor.swift; sourceTree = SOURCE_ROOT; };
-		DB425FA427C660F500FFCCB5 /* CharactersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CharactersListView.swift; path = VIPArchitectureSample/Scenes/RickAndMorty/CharactersList/CharactersListView.swift; sourceTree = SOURCE_ROOT; };
-		DB425FA527C660F500FFCCB5 /* CharactersListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CharactersListModel.swift; path = VIPArchitectureSample/Scenes/RickAndMorty/CharactersList/CharactersListModel.swift; sourceTree = SOURCE_ROOT; };
-		DB425FAE27C664E100FFCCB5 /* ListCharactersTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListCharactersTableViewCell.xib; sourceTree = "<group>"; };
-		DB425FAF27C664E100FFCCB5 /* ListCharactersTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCharactersTableViewCell.swift; sourceTree = "<group>"; };
-		DB425FB227C6662F00FFCCB5 /* CharactersListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharactersListView.xib; sourceTree = "<group>"; };
+		DB425FAE27C664E100FFCCB5 /* CharactersListRickMortyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CharactersListRickMortyTableViewCell.xib; sourceTree = "<group>"; };
+		DB425FAF27C664E100FFCCB5 /* CharactersListRickMortyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharactersListRickMortyTableViewCell.swift; sourceTree = "<group>"; };
+		DB425FB227C6662F00FFCCB5 /* CharactersListRickMortyView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharactersListRickMortyView.xib; sourceTree = "<group>"; };
+		DB425FB527C66BC800FFCCB5 /* CharactersListRickMortyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharactersListRickMortyView.swift; sourceTree = "<group>"; };
+		DB425FB627C66BC800FFCCB5 /* CharactersListRickMortyInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharactersListRickMortyInteractor.swift; sourceTree = "<group>"; };
+		DB425FB727C66BC800FFCCB5 /* CharactersListRickMortyRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharactersListRickMortyRouter.swift; sourceTree = "<group>"; };
+		DB425FB827C66BC800FFCCB5 /* CharactersListRickMortyPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharactersListRickMortyPresenter.swift; sourceTree = "<group>"; };
+		DB425FB927C66BC800FFCCB5 /* CharactersListRickMortyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharactersListRickMortyViewController.swift; sourceTree = "<group>"; };
+		DB425FBA27C66BC800FFCCB5 /* CharactersListRickMortyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharactersListRickMortyModel.swift; sourceTree = "<group>"; };
+		DB425FBB27C66BC800FFCCB5 /* CharactersListRickMortyFactorable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharactersListRickMortyFactorable.swift; sourceTree = "<group>"; };
+		DB425FC427C66E3F00FFCCB5 /* ItemComic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemComic.swift; sourceTree = "<group>"; };
+		DB425FC527C66E3F00FFCCB5 /* ItemSeries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemSeries.swift; sourceTree = "<group>"; };
+		DB425FC627C66E3F00FFCCB5 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		DB425FC727C66E3F00FFCCB5 /* Thumbnail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Thumbnail.swift; sourceTree = "<group>"; };
+		DB425FC827C66E3F00FFCCB5 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		DB425FC927C66E3F00FFCCB5 /* Comic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comic.swift; sourceTree = "<group>"; };
+		DB425FCA27C66E3F00FFCCB5 /* Series.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Series.swift; sourceTree = "<group>"; };
+		DB425FCB27C66E3F00FFCCB5 /* ItemEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemEvent.swift; sourceTree = "<group>"; };
+		DB425FCC27C66E3F00FFCCB5 /* ItemStory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemStory.swift; sourceTree = "<group>"; };
+		DB425FCD27C66E3F00FFCCB5 /* Datum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Datum.swift; sourceTree = "<group>"; };
+		DB425FCE27C66E3F00FFCCB5 /* Url.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Url.swift; sourceTree = "<group>"; };
+		DB425FCF27C66E3F00FFCCB5 /* CharactersListMarvel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharactersListMarvel.swift; sourceTree = "<group>"; };
+		DB425FD027C66E3F00FFCCB5 /* Story.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
+		DB425FDF27C66FD800FFCCB5 /* CharacterDetailMarvelPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterDetailMarvelPresenter.swift; sourceTree = "<group>"; };
+		DB425FE027C66FD800FFCCB5 /* CharacterDetailMarvelFactorable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterDetailMarvelFactorable.swift; sourceTree = "<group>"; };
+		DB425FE127C66FD800FFCCB5 /* CharacterDetailMarvelRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterDetailMarvelRouter.swift; sourceTree = "<group>"; };
+		DB425FE227C66FD800FFCCB5 /* CharacterDetailMarvelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterDetailMarvelViewController.swift; sourceTree = "<group>"; };
+		DB425FE327C66FD800FFCCB5 /* CharacterDetailMarvelInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterDetailMarvelInteractor.swift; sourceTree = "<group>"; };
+		DB425FE427C66FD800FFCCB5 /* CharacterDetailMarvelModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterDetailMarvelModel.swift; sourceTree = "<group>"; };
+		DB425FE627C66FD800FFCCB5 /* CharacterDetailMarvelView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CharacterDetailMarvelView.xib; sourceTree = "<group>"; };
+		DB425FE827C66FD800FFCCB5 /* CharacterDetailMarvelTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CharacterDetailMarvelTableViewCell.xib; sourceTree = "<group>"; };
+		DB425FE927C66FD800FFCCB5 /* CharacterDetailMarvelTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterDetailMarvelTableViewCell.swift; sourceTree = "<group>"; };
+		DB425FEA27C66FD800FFCCB5 /* CharacterDetailMarvelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterDetailMarvelView.swift; sourceTree = "<group>"; };
+		DB425FEC27C66FD900FFCCB5 /* CharactersListMarvelFactorable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharactersListMarvelFactorable.swift; sourceTree = "<group>"; };
+		DB425FED27C66FD900FFCCB5 /* CharactersListMarvelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharactersListMarvelViewController.swift; sourceTree = "<group>"; };
+		DB425FEE27C66FD900FFCCB5 /* CharactersListMarvelModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharactersListMarvelModel.swift; sourceTree = "<group>"; };
+		DB425FEF27C66FD900FFCCB5 /* CharactersListMarvelInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharactersListMarvelInteractor.swift; sourceTree = "<group>"; };
+		DB425FF027C66FD900FFCCB5 /* CharactersListMarvelPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharactersListMarvelPresenter.swift; sourceTree = "<group>"; };
+		DB425FF127C66FD900FFCCB5 /* CharactersListMarvelRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharactersListMarvelRouter.swift; sourceTree = "<group>"; };
+		DB425FF327C66FD900FFCCB5 /* CharactersListMarvelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharactersListMarvelView.swift; sourceTree = "<group>"; };
+		DB425FF527C66FD900FFCCB5 /* CharacterListMarvelTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CharacterListMarvelTableViewCell.xib; sourceTree = "<group>"; };
+		DB425FF627C66FD900FFCCB5 /* CharacterListMarvelTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterListMarvelTableViewCell.swift; sourceTree = "<group>"; };
+		DB425FF727C66FD900FFCCB5 /* CharactersListMarvelView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CharactersListMarvelView.xib; sourceTree = "<group>"; };
 		E51607890E386483BADBBD01 /* Pods-VIPArchitectureSampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPArchitectureSampleUITests.debug.xcconfig"; path = "Target Support Files/Pods-VIPArchitectureSampleUITests/Pods-VIPArchitectureSampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EF8B7FCD7D6C531E8EF3831E /* Pods-VIPArchitectureSampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPArchitectureSampleTests.debug.xcconfig"; path = "Target Support Files/Pods-VIPArchitectureSampleTests/Pods-VIPArchitectureSampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -388,6 +454,7 @@
 		DB425F3D27C62CCB00FFCCB5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DB425FC327C66E3F00FFCCB5 /* Marvel */,
 				DB425F6527C6453200FFCCB5 /* Rick&Morty */,
 				DB425F6427C6452B00FFCCB5 /* LastFM */,
 			);
@@ -414,9 +481,10 @@
 		DB425F6E27C6486500FFCCB5 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				DB425F6F27C6489C00FFCCB5 /* InitialSelection */,
+				DB425FB427C66B3600FFCCB5 /* Marvel */,
 				DB425F9C27C6603C00FFCCB5 /* RickAndMorty */,
 				DB425F8327C653ED00FFCCB5 /* LastFM */,
-				DB425F6F27C6489C00FFCCB5 /* InitialSelection */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -496,31 +564,31 @@
 		DB425F9C27C6603C00FFCCB5 /* RickAndMorty */ = {
 			isa = PBXGroup;
 			children = (
-				DB425F9D27C6605D00FFCCB5 /* CharactersList */,
+				DB425F9D27C6605D00FFCCB5 /* CharactersListRickMorty */,
 			);
 			path = RickAndMorty;
 			sourceTree = "<group>";
 		};
-		DB425F9D27C6605D00FFCCB5 /* CharactersList */ = {
+		DB425F9D27C6605D00FFCCB5 /* CharactersListRickMorty */ = {
 			isa = PBXGroup;
 			children = (
+				DB425FBB27C66BC800FFCCB5 /* CharactersListRickMortyFactorable.swift */,
+				DB425FB627C66BC800FFCCB5 /* CharactersListRickMortyInteractor.swift */,
+				DB425FBA27C66BC800FFCCB5 /* CharactersListRickMortyModel.swift */,
+				DB425FB827C66BC800FFCCB5 /* CharactersListRickMortyPresenter.swift */,
+				DB425FB727C66BC800FFCCB5 /* CharactersListRickMortyRouter.swift */,
+				DB425FB927C66BC800FFCCB5 /* CharactersListRickMortyViewController.swift */,
 				DB425F9E27C6606D00FFCCB5 /* Views */,
-				DB425FA027C660F500FFCCB5 /* CharactersListPresenter.swift */,
-				DB425FA127C660F500FFCCB5 /* CharactersListRouter.swift */,
-				DB425FA227C660F500FFCCB5 /* CharactersListViewController.swift */,
-				DB425FA327C660F500FFCCB5 /* CharactersListInteractor.swift */,
-				DB425FA527C660F500FFCCB5 /* CharactersListModel.swift */,
-				DB425F9F27C660F500FFCCB5 /* CharactersListFactorable.swift */,
 			);
-			path = CharactersList;
+			path = CharactersListRickMorty;
 			sourceTree = "<group>";
 		};
 		DB425F9E27C6606D00FFCCB5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DB425FB527C66BC800FFCCB5 /* CharactersListRickMortyView.swift */,
+				DB425FB227C6662F00FFCCB5 /* CharactersListRickMortyView.xib */,
 				DB425FAD27C664A000FFCCB5 /* Cells */,
-				DB425FA427C660F500FFCCB5 /* CharactersListView.swift */,
-				DB425FB227C6662F00FFCCB5 /* CharactersListView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -528,8 +596,103 @@
 		DB425FAD27C664A000FFCCB5 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				DB425FAF27C664E100FFCCB5 /* ListCharactersTableViewCell.swift */,
-				DB425FAE27C664E100FFCCB5 /* ListCharactersTableViewCell.xib */,
+				DB425FAF27C664E100FFCCB5 /* CharactersListRickMortyTableViewCell.swift */,
+				DB425FAE27C664E100FFCCB5 /* CharactersListRickMortyTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		DB425FB427C66B3600FFCCB5 /* Marvel */ = {
+			isa = PBXGroup;
+			children = (
+				DB425FDE27C66FD800FFCCB5 /* CharacterDetailMarvel */,
+				DB425FEB27C66FD900FFCCB5 /* CharactersListMarvel */,
+			);
+			path = Marvel;
+			sourceTree = "<group>";
+		};
+		DB425FC327C66E3F00FFCCB5 /* Marvel */ = {
+			isa = PBXGroup;
+			children = (
+				DB425FC427C66E3F00FFCCB5 /* ItemComic.swift */,
+				DB425FC527C66E3F00FFCCB5 /* ItemSeries.swift */,
+				DB425FC627C66E3F00FFCCB5 /* Event.swift */,
+				DB425FC727C66E3F00FFCCB5 /* Thumbnail.swift */,
+				DB425FC827C66E3F00FFCCB5 /* Result.swift */,
+				DB425FC927C66E3F00FFCCB5 /* Comic.swift */,
+				DB425FCA27C66E3F00FFCCB5 /* Series.swift */,
+				DB425FCB27C66E3F00FFCCB5 /* ItemEvent.swift */,
+				DB425FCC27C66E3F00FFCCB5 /* ItemStory.swift */,
+				DB425FCD27C66E3F00FFCCB5 /* Datum.swift */,
+				DB425FCE27C66E3F00FFCCB5 /* Url.swift */,
+				DB425FCF27C66E3F00FFCCB5 /* CharactersListMarvel.swift */,
+				DB425FD027C66E3F00FFCCB5 /* Story.swift */,
+			);
+			path = Marvel;
+			sourceTree = "<group>";
+		};
+		DB425FDE27C66FD800FFCCB5 /* CharacterDetailMarvel */ = {
+			isa = PBXGroup;
+			children = (
+				DB425FDF27C66FD800FFCCB5 /* CharacterDetailMarvelPresenter.swift */,
+				DB425FE027C66FD800FFCCB5 /* CharacterDetailMarvelFactorable.swift */,
+				DB425FE127C66FD800FFCCB5 /* CharacterDetailMarvelRouter.swift */,
+				DB425FE227C66FD800FFCCB5 /* CharacterDetailMarvelViewController.swift */,
+				DB425FE327C66FD800FFCCB5 /* CharacterDetailMarvelInteractor.swift */,
+				DB425FE427C66FD800FFCCB5 /* CharacterDetailMarvelModel.swift */,
+				DB425FE527C66FD800FFCCB5 /* Views */,
+			);
+			path = CharacterDetailMarvel;
+			sourceTree = "<group>";
+		};
+		DB425FE527C66FD800FFCCB5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DB425FE627C66FD800FFCCB5 /* CharacterDetailMarvelView.xib */,
+				DB425FE727C66FD800FFCCB5 /* Cells */,
+				DB425FEA27C66FD800FFCCB5 /* CharacterDetailMarvelView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DB425FE727C66FD800FFCCB5 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				DB425FE827C66FD800FFCCB5 /* CharacterDetailMarvelTableViewCell.xib */,
+				DB425FE927C66FD800FFCCB5 /* CharacterDetailMarvelTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		DB425FEB27C66FD900FFCCB5 /* CharactersListMarvel */ = {
+			isa = PBXGroup;
+			children = (
+				DB425FEC27C66FD900FFCCB5 /* CharactersListMarvelFactorable.swift */,
+				DB425FED27C66FD900FFCCB5 /* CharactersListMarvelViewController.swift */,
+				DB425FEE27C66FD900FFCCB5 /* CharactersListMarvelModel.swift */,
+				DB425FEF27C66FD900FFCCB5 /* CharactersListMarvelInteractor.swift */,
+				DB425FF027C66FD900FFCCB5 /* CharactersListMarvelPresenter.swift */,
+				DB425FF127C66FD900FFCCB5 /* CharactersListMarvelRouter.swift */,
+				DB425FF227C66FD900FFCCB5 /* Views */,
+			);
+			path = CharactersListMarvel;
+			sourceTree = "<group>";
+		};
+		DB425FF227C66FD900FFCCB5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DB425FF327C66FD900FFCCB5 /* CharactersListMarvelView.swift */,
+				DB425FF427C66FD900FFCCB5 /* Cells */,
+				DB425FF727C66FD900FFCCB5 /* CharactersListMarvelView.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DB425FF427C66FD900FFCCB5 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				DB425FF527C66FD900FFCCB5 /* CharacterListMarvelTableViewCell.xib */,
+				DB425FF627C66FD900FFCCB5 /* CharacterListMarvelTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -645,11 +808,15 @@
 			files = (
 				DB425F8227C6492E00FFCCB5 /* InitialSelectionView.xib in Resources */,
 				DB425EB327C541F600FFCCB5 /* LaunchScreen.storyboard in Resources */,
+				DB425FFE27C66FD900FFCCB5 /* CharacterDetailMarvelView.xib in Resources */,
 				DB425F9627C6545200FFCCB5 /* ArtistsListView.xib in Resources */,
 				DB425EB027C541F600FFCCB5 /* Assets.xcassets in Resources */,
 				DB425F9B27C659BD00FFCCB5 /* ArtistTableViewCell.xib in Resources */,
-				DB425FB027C664E100FFCCB5 /* ListCharactersTableViewCell.xib in Resources */,
-				DB425FB327C6662F00FFCCB5 /* CharactersListView.xib in Resources */,
+				DB42600B27C66FD900FFCCB5 /* CharactersListMarvelView.xib in Resources */,
+				DB42600927C66FD900FFCCB5 /* CharacterListMarvelTableViewCell.xib in Resources */,
+				DB425FFF27C66FD900FFCCB5 /* CharacterDetailMarvelTableViewCell.xib in Resources */,
+				DB425FB027C664E100FFCCB5 /* CharactersListRickMortyTableViewCell.xib in Resources */,
+				DB425FB327C6662F00FFCCB5 /* CharactersListRickMortyView.xib in Resources */,
 				DB425EAE27C541F200FFCCB5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -781,47 +948,76 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB425FFD27C66FD900FFCCB5 /* CharacterDetailMarvelModel.swift in Sources */,
 				DB425F9227C6543A00FFCCB5 /* ArtistsListView.swift in Sources */,
 				DB425F4E27C62CCB00FFCCB5 /* Dictionary+Additions.swift in Sources */,
 				DB425F5527C62CCB00FFCCB5 /* APIRouter.swift in Sources */,
+				DB42600227C66FD900FFCCB5 /* CharactersListMarvelFactorable.swift in Sources */,
 				DB425F2927C62C2400FFCCB5 /* ErrorModel.swift in Sources */,
-				DB425FB127C664E100FFCCB5 /* ListCharactersTableViewCell.swift in Sources */,
+				DB425FB127C664E100FFCCB5 /* CharactersListRickMortyTableViewCell.swift in Sources */,
 				DB425F8D27C6543A00FFCCB5 /* ArtistsListFactorable.swift in Sources */,
+				DB425FD527C66E3F00FFCCB5 /* Result.swift in Sources */,
+				DB425FDD27C66E3F00FFCCB5 /* Story.swift in Sources */,
 				DB425F5227C62CCB00FFCCB5 /* CustomNetworkError.swift in Sources */,
+				DB425FFC27C66FD900FFCCB5 /* CharacterDetailMarvelInteractor.swift in Sources */,
 				DB425F4B27C62CCB00FFCCB5 /* UIViewController+AlertController.swift in Sources */,
+				DB425FD327C66E3F00FFCCB5 /* Event.swift in Sources */,
 				DB425F4D27C62CCB00FFCCB5 /* String+Additions.swift in Sources */,
-				DB425FAA27C660F500FFCCB5 /* CharactersListInteractor.swift in Sources */,
-				DB425FA627C660F500FFCCB5 /* CharactersListFactorable.swift in Sources */,
 				DB425F8E27C6543A00FFCCB5 /* ArtistsListPresenter.swift in Sources */,
-				DB425FA727C660F500FFCCB5 /* CharactersListPresenter.swift in Sources */,
 				DB425F6D27C6482800FFCCB5 /* APIClient.swift in Sources */,
-				DB425FA827C660F500FFCCB5 /* CharactersListRouter.swift in Sources */,
+				DB425FDB27C66E3F00FFCCB5 /* Url.swift in Sources */,
 				DB425EAB27C541F200FFCCB5 /* ViewController.swift in Sources */,
+				DB425FD727C66E3F00FFCCB5 /* Series.swift in Sources */,
+				DB425FF827C66FD900FFCCB5 /* CharacterDetailMarvelPresenter.swift in Sources */,
 				DB425F4F27C62CCB00FFCCB5 /* BaseViewController.swift in Sources */,
 				DB425F9A27C659BD00FFCCB5 /* ArtistTableViewCell.swift in Sources */,
 				DB425F8F27C6543A00FFCCB5 /* ArtistsListRouter.swift in Sources */,
+				DB42600427C66FD900FFCCB5 /* CharactersListMarvelModel.swift in Sources */,
 				DB425F6B27C6466A00FFCCB5 /* CharactersRickAndMorty.swift in Sources */,
+				DB425FC027C66BC800FFCCB5 /* CharactersListRickMortyViewController.swift in Sources */,
+				DB425FBD27C66BC800FFCCB5 /* CharactersListRickMortyInteractor.swift in Sources */,
 				DB425F7F27C6490600FFCCB5 /* AppInjector.swift in Sources */,
+				DB425FFB27C66FD900FFCCB5 /* CharacterDetailMarvelViewController.swift in Sources */,
+				DB425FD227C66E3F00FFCCB5 /* ItemSeries.swift in Sources */,
 				DB425F2627C62AF100FFCCB5 /* LoaderView.swift in Sources */,
+				DB42600027C66FD900FFCCB5 /* CharacterDetailMarvelTableViewCell.swift in Sources */,
+				DB425FBC27C66BC800FFCCB5 /* CharactersListRickMortyView.swift in Sources */,
+				DB425FBF27C66BC800FFCCB5 /* CharactersListRickMortyPresenter.swift in Sources */,
+				DB42600827C66FD900FFCCB5 /* CharactersListMarvelView.swift in Sources */,
 				DB425F5427C62CCB00FFCCB5 /* APIConstants.swift in Sources */,
 				DB425F5627C62CCB00FFCCB5 /* EnviromentService.swift in Sources */,
+				DB42600A27C66FD900FFCCB5 /* CharacterListMarvelTableViewCell.swift in Sources */,
+				DB425FF927C66FD900FFCCB5 /* CharacterDetailMarvelFactorable.swift in Sources */,
+				DB425FD427C66E3F00FFCCB5 /* Thumbnail.swift in Sources */,
 				DB425F7D27C648D900FFCCB5 /* InitialSelectionModel.swift in Sources */,
 				DB425EA727C541F200FFCCB5 /* AppDelegate.swift in Sources */,
+				DB425FD627C66E3F00FFCCB5 /* Comic.swift in Sources */,
 				DB425F7827C648D900FFCCB5 /* InitialSelectionPresenter.swift in Sources */,
+				DB425FDC27C66E3F00FFCCB5 /* CharactersListMarvel.swift in Sources */,
 				DB425F4C27C62CCB00FFCCB5 /* UIView+Additions.swift in Sources */,
-				DB425FA927C660F500FFCCB5 /* CharactersListViewController.swift in Sources */,
+				DB42600327C66FD900FFCCB5 /* CharactersListMarvelViewController.swift in Sources */,
+				DB425FD827C66E3F00FFCCB5 /* ItemEvent.swift in Sources */,
+				DB425FC227C66BC800FFCCB5 /* CharactersListRickMortyFactorable.swift in Sources */,
 				DB425F7C27C648D900FFCCB5 /* InitialSelectionView.swift in Sources */,
 				DB425F5027C62CCB00FFCCB5 /* BaseView.swift in Sources */,
+				DB42600627C66FD900FFCCB5 /* CharactersListMarvelPresenter.swift in Sources */,
+				DB42600127C66FD900FFCCB5 /* CharacterDetailMarvelView.swift in Sources */,
 				DB425F9127C6543A00FFCCB5 /* ArtistsListInteractor.swift in Sources */,
+				DB425FBE27C66BC800FFCCB5 /* CharactersListRickMortyRouter.swift in Sources */,
 				DB425F7727C648D900FFCCB5 /* InitialSelectionFactorable.swift in Sources */,
 				DB425F6927C645F900FFCCB5 /* AlbumsLastFM.swift in Sources */,
+				DB425FD927C66E3F00FFCCB5 /* ItemStory.swift in Sources */,
 				DB425F6727C6458800FFCCB5 /* ArtistsLastFM.swift in Sources */,
 				DB425F9327C6543A00FFCCB5 /* ArtistsListModel.swift in Sources */,
 				DB425F7B27C648D900FFCCB5 /* InitialSelectionInteractor.swift in Sources */,
+				DB425FC127C66BC800FFCCB5 /* CharactersListRickMortyModel.swift in Sources */,
+				DB42600527C66FD900FFCCB5 /* CharactersListMarvelInteractor.swift in Sources */,
 				DB425F7A27C648D900FFCCB5 /* InitialSelectionViewController.swift in Sources */,
-				DB425FAC27C660F500FFCCB5 /* CharactersListModel.swift in Sources */,
+				DB425FFA27C66FD900FFCCB5 /* CharacterDetailMarvelRouter.swift in Sources */,
+				DB425FD127C66E3F00FFCCB5 /* ItemComic.swift in Sources */,
 				DB425F7927C648D900FFCCB5 /* InitialSelectionRouter.swift in Sources */,
-				DB425FAB27C660F500FFCCB5 /* CharactersListView.swift in Sources */,
+				DB42600727C66FD900FFCCB5 /* CharactersListMarvelRouter.swift in Sources */,
+				DB425FDA27C66E3F00FFCCB5 /* Datum.swift in Sources */,
 				DB425F9027C6543A00FFCCB5 /* ArtistsListViewController.swift in Sources */,
 				DB425EDE27C5478200FFCCB5 /* R.generated.swift in Sources */,
 			);

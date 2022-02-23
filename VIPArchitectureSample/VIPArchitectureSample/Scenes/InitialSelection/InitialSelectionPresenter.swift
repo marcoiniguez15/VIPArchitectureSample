@@ -44,7 +44,7 @@ private extension InitialSelectionPresenter {
   
   func presentOptions() {
     
-    let viewModel = InitialSelectionModel.ViewDataSource(title: "Selection", questionTitle: "What do you want to see?", titleLastFMButton: "LastFM", titleRickMortyButton: "Rick and Morty")
+    let viewModel = InitialSelectionModel.ViewDataSource(title: "Selection", questionTitle: "What do you want to see?", titleLastFMButton: "LastFM", titleRickMortyButton: "Rick and Morty", titleMarvelButton: "Marvel")
     
     viewController?.displayViewModel(.prepareOptions(viewModelData: viewModel))
   }
