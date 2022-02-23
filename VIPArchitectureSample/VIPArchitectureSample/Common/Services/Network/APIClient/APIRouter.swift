@@ -10,7 +10,7 @@ import Alamofire
 enum APIRouter {
   case getCharactersListRickMortyRickMortyLastFM(limit: Int, page: Int)
   case getAlbumsListLastFM(characterId: Int, limit: Int, page: Int)
-  case getAllCharactersRickAndMorty(page: Int)
+  case getAllCharactersRickAndMorty(page: Int, nameFilter: String?)
   case getCharactersListMarvel(page: Int)
   case getCharacterDetailMarvel(id: Int)
 }
@@ -60,9 +60,12 @@ private extension APIRouter {
       + "&\(APIParameterKey.page.rawValue)=\(page)"
       
       
-    case let .getAllCharactersRickAndMorty(page):
-      
-      return "/character/?page=\(page)"
+    case let .getAllCharactersRickAndMorty(page, nameFilter):
+      var pathUrl = "/character/?page=\(page)"
+      if let name = nameFilter {
+        pathUrl += "&name=\(name)"
+      }
+      return pathUrl
       
     case let .getCharactersListMarvel(page):
       let timestamp = Int(Date().timeIntervalSince1970)

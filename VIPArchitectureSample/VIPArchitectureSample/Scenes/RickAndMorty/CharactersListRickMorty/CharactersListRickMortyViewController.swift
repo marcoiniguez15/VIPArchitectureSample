@@ -80,6 +80,10 @@ extension CharactersListRickMortyViewController: CharactersListRickMortyDisplayL
 
 // MARK: - CharactersListRickMortyViewDelegate
 extension CharactersListRickMortyViewController: CharactersListRickMortyViewDelegate {
+  func filterCharacters(page: Int, nameFilter: String) {
+    interactor.doRequest(.prepareCharactersListRickMorty(page: page, nameFilter: nameFilter))
+  }
+  
   
   func nextPage(page: Int) {
     interactor.doRequest(.prepareCharactersListRickMorty(page: page))

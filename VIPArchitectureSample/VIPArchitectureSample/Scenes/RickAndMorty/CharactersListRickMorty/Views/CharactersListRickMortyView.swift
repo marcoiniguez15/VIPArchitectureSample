@@ -14,17 +14,24 @@ import UIKit
 
 protocol CharactersListRickMortyViewDelegate where Self: UIViewController {
   func nextPage(page:Int)
+  func filterCharacters(page:Int, nameFilter:String)
 }
 
 final class CharactersListRickMortyView: BaseView {
   
   weak var delegate: CharactersListRickMortyViewDelegate?
   
+  
   let minItemsToReload: Int = 2
   var reloadingList: Bool = false
   var page = 0
+  var searching = false
+  var nameFilter: String? = nil
+
   
   @IBOutlet weak var charactersTableView: UITableView!
+  @IBOutlet var searchBar: UISearchBar!
+
   private var dataSource: CharactersListRickMortyModel.ViewDataSource?
 
   override init(frame: CGRect) {
@@ -56,6 +63,23 @@ private extension CharactersListRickMortyView {
     charactersTableView.allowsMultipleSelection = false
     self.reloadUIComponents()
     self.charactersTableView.register(R.nib.charactersListRickMortyTableViewCell)
+    // Change the Tint Color
+    self.searchBar.barTintColor = UIColor.colorFromHex("#275AD8")
+    self.searchBar.tintColor = UIColor.white
+    // Show/Hide Cancel Button
+    self.searchBar.showsCancelButton = false
+    // Change TextField Colors
+    let searchTextField = self.searchBar.searchTextField
+    searchTextField.textColor = UIColor.white
+    searchTextField.clearButtonMode = .never
+    searchTextField.backgroundColor = UIColor.colorFromHex("#1C419E")
+    // Change Glass Icon Color
+    let glassIconView = searchTextField.leftView as! UIImageView
+    glassIconView.image = glassIconView.image?.withRenderingMode(.alwaysTemplate)
+    glassIconView.tintColor = UIColor.colorFromHex("#275AD8")
+    
+    
+    self.searchBar.keyboardAppearance = .dark
   }
 }
 // MARK: - UITableview
@@ -91,11 +115,47 @@ extension CharactersListRickMortyView:  UITableViewDataSource, UITableViewDelega
             if !self.reloadingList &&  data.items.count - (indexPath as NSIndexPath).row < minItemsToReload {
                   self.reloadingList = true
                   page += 1
-                  delegate?.nextPage(page: page)
+              if let name = nameFilter {
+                delegate?.filterCharacters(page: page, nameFilter: name)
+              } else {
+                delegate?.nextPage(page: page)
+              }
               }
           }
         }
           
       }
+  }
+}
+
+extension CharactersListRickMortyView: UISearchBarDelegate {
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        searchBar.showsCancelButton = true
+        searching = true
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searching = false
+        searchBar.text = ""
+        charactersTableView.reloadData()
+    }
+  func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+    page = 0
+    searching = false
+    searchBar.showsCancelButton = false
+    searchBar.endEditing(true)
+    if let searchText = searchBar.text {
+      if let name = nameFilter {
+        if name != searchText {
+          nameFilter = searchText.trimmingCharacters(in: .whitespaces)
+          delegate?.filterCharacters(page: page, nameFilter: nameFilter ?? "")
+        }
+      } else {
+        nameFilter = searchText.trimmingCharacters(in: .whitespaces)
+        delegate?.filterCharacters(page: page, nameFilter: nameFilter ?? "")
+      }
+    }
+   
   }
 }

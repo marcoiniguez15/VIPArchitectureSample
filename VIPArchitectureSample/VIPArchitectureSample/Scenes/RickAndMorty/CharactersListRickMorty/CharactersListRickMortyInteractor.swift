@@ -46,8 +46,8 @@ extension CharactersListRickMortyInteractor: CharactersListRickMortyBusinessLogi
       
       switch request {
         
-      case let .prepareCharactersListRickMorty(page):
-        self.prepareCharactersListRickMorty(page: page)
+      case let .prepareCharactersListRickMorty(page, nameFilter):
+        self.prepareCharactersListRickMorty(page: page, nameFilter: nameFilter)
       }
     }
   }
@@ -57,23 +57,37 @@ extension CharactersListRickMortyInteractor: CharactersListRickMortyBusinessLogi
 // MARK: - Private Zone
 private extension CharactersListRickMortyInteractor {
   
-  func prepareCharactersListRickMorty(page: Int) {
-    let service = factory.makeApiService()
-    if page == 0 {
-      LoaderView.toggleUniversalLoadingView(true)
-    }
-    service.getAllCharactersRickAndMorty(page: page) { (result, _) in
-      LoaderView.toggleUniversalLoadingView(false)
-      switch result {
-      case let .success(list):
-        if let data = list.results {
-          self.dataSource.characterList.append(contentsOf: data)
-          self.presenter.presentResponse(.prepareCharactersListRickMorty(data: self.dataSource.characterList))
+  func prepareCharactersListRickMorty(page: Int, nameFilter: String?) {
+    if page <= (self.dataSource.numberPages - 1) {
+      let service = factory.makeApiService()
+      if page == 0 {
+        LoaderView.toggleUniversalLoadingView(true)
+      }
+      if let name = nameFilter {
+        if let nameFilterDataSource = dataSource.nameFilter, nameFilterDataSource != name {
+          self.dataSource.characterList.removeAll()
         }
-      case .failure:
-        let errorModel = ErrorHelper.createGenericError()
-        self.presenter.presentResponse(.showError(model: errorModel))
+        
+        if dataSource.nameFilter == nil {
+          self.dataSource.characterList.removeAll()
+        }
+        dataSource.nameFilter = name
+      }
+      service.getAllCharactersRickAndMorty(page: page, nameFilter: nameFilter) { (result, _) in
+        LoaderView.toggleUniversalLoadingView(false)
+        switch result {
+        case let .success(list):
+          if let data = list.results, let info = list.info, let numberPages =  info.pages {
+            self.dataSource.numberPages = numberPages
+            self.dataSource.characterList.append(contentsOf: data)
+            self.presenter.presentResponse(.prepareCharactersListRickMorty(data: self.dataSource.characterList))
+          }
+        case .failure:
+          let errorModel = ErrorHelper.createGenericError()
+          self.presenter.presentResponse(.showError(model: errorModel))
+        }
       }
     }
+  
   }
 }

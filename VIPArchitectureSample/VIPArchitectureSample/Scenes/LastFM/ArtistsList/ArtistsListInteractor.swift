@@ -68,7 +68,7 @@ private extension ArtistsListInteractor {
     if page == 1 {
       LoaderView.toggleUniversalLoadingView(true)
     }
-    service.getCharactersListRickMortyRickMortyLastFM(limit: 50, page: page) { (result, _) in
+    service.getCharactersListLastFM(limit: 50, page: page) { (result, _) in
       LoaderView.toggleUniversalLoadingView(false)
       switch result {
       case let .success(list):

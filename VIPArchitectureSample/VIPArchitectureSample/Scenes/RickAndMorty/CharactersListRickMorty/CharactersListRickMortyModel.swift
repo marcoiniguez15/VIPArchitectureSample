@@ -16,7 +16,7 @@ import Foundation
 enum CharactersListRickMortyModel {
   
   enum Request {
-    case prepareCharactersListRickMorty(page: Int)
+    case prepareCharactersListRickMorty(page: Int, nameFilter: String? = nil)
   }
   
   enum Response {
@@ -48,5 +48,7 @@ enum CharactersListRickMortyModel {
   
   struct DataSource {
     var characterList: [ResultRickAndMorty] = []
+    var nameFilter: String? = nil
+    var numberPages = 1
   }
 }

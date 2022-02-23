@@ -97,6 +97,7 @@
 		DB42600927C66FD900FFCCB5 /* CharacterListMarvelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB425FF527C66FD900FFCCB5 /* CharacterListMarvelTableViewCell.xib */; };
 		DB42600A27C66FD900FFCCB5 /* CharacterListMarvelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425FF627C66FD900FFCCB5 /* CharacterListMarvelTableViewCell.swift */; };
 		DB42600B27C66FD900FFCCB5 /* CharactersListMarvelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB425FF727C66FD900FFCCB5 /* CharactersListMarvelView.xib */; };
+		DB7D59A727C68E680093370A /* UIColor+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7D59A627C68E680093370A /* UIColor+Additions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -219,6 +220,7 @@
 		DB425FF527C66FD900FFCCB5 /* CharacterListMarvelTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CharacterListMarvelTableViewCell.xib; sourceTree = "<group>"; };
 		DB425FF627C66FD900FFCCB5 /* CharacterListMarvelTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterListMarvelTableViewCell.swift; sourceTree = "<group>"; };
 		DB425FF727C66FD900FFCCB5 /* CharactersListMarvelView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CharactersListMarvelView.xib; sourceTree = "<group>"; };
+		DB7D59A627C68E680093370A /* UIColor+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Additions.swift"; sourceTree = "<group>"; };
 		E51607890E386483BADBBD01 /* Pods-VIPArchitectureSampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPArchitectureSampleUITests.debug.xcconfig"; path = "Target Support Files/Pods-VIPArchitectureSampleUITests/Pods-VIPArchitectureSampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EF8B7FCD7D6C531E8EF3831E /* Pods-VIPArchitectureSampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPArchitectureSampleTests.debug.xcconfig"; path = "Target Support Files/Pods-VIPArchitectureSampleTests/Pods-VIPArchitectureSampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -409,6 +411,7 @@
 				DB425F2D27C62CCA00FFCCB5 /* UIView+Additions.swift */,
 				DB425F2E27C62CCA00FFCCB5 /* String+Additions.swift */,
 				DB425F2F27C62CCA00FFCCB5 /* Dictionary+Additions.swift */,
+				DB7D59A627C68E680093370A /* UIColor+Additions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -989,6 +992,7 @@
 				DB42600A27C66FD900FFCCB5 /* CharacterListMarvelTableViewCell.swift in Sources */,
 				DB425FF927C66FD900FFCCB5 /* CharacterDetailMarvelFactorable.swift in Sources */,
 				DB425FD427C66E3F00FFCCB5 /* Thumbnail.swift in Sources */,
+				DB7D59A727C68E680093370A /* UIColor+Additions.swift in Sources */,
 				DB425F7D27C648D900FFCCB5 /* InitialSelectionModel.swift in Sources */,
 				DB425EA727C541F200FFCCB5 /* AppDelegate.swift in Sources */,
 				DB425FD627C66E3F00FFCCB5 /* Comic.swift in Sources */,

@@ -10,9 +10,9 @@ import Alamofire
 typealias NetworkError = AFError
 
 protocol APIClientProtocol {
-  func getCharactersListRickMortyRickMortyLastFM(limit: Int, page: Int, completion:@escaping (Result<ArtistsLastFM, NetworkError>, Int?) -> Void)
+  func getCharactersListLastFM(limit: Int, page: Int, completion:@escaping (Result<ArtistsLastFM, NetworkError>, Int?) -> Void)
   func getAlbumsListLastFM(characterId: Int, limit: Int, page: Int, completion:@escaping (Result<AlbumsLastFM, NetworkError>, Int?) -> Void)
-  func getAllCharactersRickAndMorty(page: Int, completion:@escaping (Result<CharactersRickAndMorty, NetworkError>, Int?) -> Void)
+  func getAllCharactersRickAndMorty(page: Int, nameFilter: String?, completion:@escaping (Result<CharactersRickAndMorty, NetworkError>, Int?) -> Void)
   func getCharactersListMarvel(page: Int, completion:@escaping (Result<CharactersListMarvel, NetworkError>, Int?) -> Void)
   func getCharacterDetailMarvel(id: Int, completion:@escaping (Result<CharactersListMarvel, NetworkError>, Int?) -> Void)
 }
@@ -38,11 +38,11 @@ final class APIClient {
 
 // MARK: - Public
 extension APIClient: APIClientProtocol {
-  func getAllCharactersRickAndMorty(page: Int, completion: @escaping (Result<CharactersRickAndMorty, NetworkError>, Int?) -> Void) {
-    performRequest(route: .getAllCharactersRickAndMorty(page: page), completion: completion)
+  func getAllCharactersRickAndMorty(page: Int, nameFilter: String? = nil, completion: @escaping (Result<CharactersRickAndMorty, NetworkError>, Int?) -> Void) {
+    performRequest(route: .getAllCharactersRickAndMorty(page: page, nameFilter: nameFilter), completion: completion)
   }
   
-  func getCharactersListRickMortyRickMortyLastFM(limit: Int, page: Int, completion:@escaping (Result<ArtistsLastFM, NetworkError>, Int?) -> Void) {
+  func getCharactersListLastFM(limit: Int, page: Int, completion:@escaping (Result<ArtistsLastFM, NetworkError>, Int?) -> Void) {
     performRequest(route: .getCharactersListRickMortyRickMortyLastFM(limit: limit, page: page), completion: completion)
   }
   func getAlbumsListLastFM(characterId: Int, limit: Int, page: Int, completion:@escaping (Result<AlbumsLastFM, NetworkError>, Int?) -> Void) {
