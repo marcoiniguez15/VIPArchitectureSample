@@ -9,7 +9,7 @@ import Alamofire
 
 enum APIRouter {
   case getCharactersListRickMortyRickMortyLastFM(limit: Int, page: Int)
-  case getAlbumsListLastFM(characterId: Int, limit: Int, page: Int)
+  case getAlbumsListLastFM(characterId: String, limit: Int)
   case getAllCharactersRickAndMorty(page: Int, nameFilter: String?)
   case getCharactersListMarvel(page: Int)
   case getCharacterDetailMarvel(id: Int)
@@ -51,14 +51,12 @@ private extension APIRouter {
       + "&\(APIParameterKey.limit.rawValue)=\(limit)"
       + "&\(APIParameterKey.page.rawValue)=\(page)"
       
-    case let .getAlbumsListLastFM(id, limit, page):
+    case let .getAlbumsListLastFM(id, limit):
       let apiKey = EnvironmentService.getValue(for: .URL(.apiKeyLASTFM))
       let method = "artist.gettopalbums"
       
       return "/?method=\(method)&api_key=\(apiKey)&mbid=\(id)&format=json"
       + "&\(APIParameterKey.limit.rawValue)=\(limit)"
-      + "&\(APIParameterKey.page.rawValue)=\(page)"
-      
       
     case let .getAllCharactersRickAndMorty(page, nameFilter):
       var pathUrl = "/character/?page=\(page)"

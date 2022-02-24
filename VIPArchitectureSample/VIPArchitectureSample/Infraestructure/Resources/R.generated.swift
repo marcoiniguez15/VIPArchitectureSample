@@ -139,8 +139,12 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.nib` struct is generated, and contains static references to 9 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 11 nibs.
   struct nib {
+    /// Nib `ArtistDetailTableViewCell`.
+    static let artistDetailTableViewCell = _R.nib._ArtistDetailTableViewCell()
+    /// Nib `ArtistDetailView`.
+    static let artistDetailView = _R.nib._ArtistDetailView()
     /// Nib `ArtistTableViewCell`.
     static let artistTableViewCell = _R.nib._ArtistTableViewCell()
     /// Nib `ArtistsListView`.
@@ -159,6 +163,22 @@ struct R: Rswift.Validatable {
     static let charactersListRickMortyView = _R.nib._CharactersListRickMortyView()
     /// Nib `InitialSelectionView`.
     static let initialSelectionView = _R.nib._InitialSelectionView()
+
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "ArtistDetailTableViewCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.artistDetailTableViewCell) instead")
+    static func artistDetailTableViewCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.artistDetailTableViewCell)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "ArtistDetailView", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.artistDetailView) instead")
+    static func artistDetailView(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.artistDetailView)
+    }
+    #endif
 
     #if os(iOS) || os(tvOS)
     /// `UINib(name: "ArtistTableViewCell", in: bundle)`
@@ -232,6 +252,14 @@ struct R: Rswift.Validatable {
     }
     #endif
 
+    static func artistDetailTableViewCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> ArtistDetailTableViewCell? {
+      return R.nib.artistDetailTableViewCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? ArtistDetailTableViewCell
+    }
+
+    static func artistDetailView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+      return R.nib.artistDetailView.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+    }
+
     static func artistTableViewCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> ArtistTableViewCell? {
       return R.nib.artistTableViewCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? ArtistTableViewCell
     }
@@ -271,8 +299,10 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.reuseIdentifier` struct is generated, and contains static references to 4 reuse identifiers.
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 5 reuse identifiers.
   struct reuseIdentifier {
+    /// Reuse identifier `ArtistDetailTableViewCell`.
+    static let artistDetailTableViewCell: Rswift.ReuseIdentifier<ArtistDetailTableViewCell> = Rswift.ReuseIdentifier(identifier: "ArtistDetailTableViewCell")
     /// Reuse identifier `ArtistTableViewCell`.
     static let artistTableViewCell: Rswift.ReuseIdentifier<ArtistTableViewCell> = Rswift.ReuseIdentifier(identifier: "ArtistTableViewCell")
     /// Reuse identifier `CharacterDetailMarvelTableViewCell`.
@@ -307,6 +337,31 @@ struct _R: Rswift.Validatable {
 
   #if os(iOS) || os(tvOS)
   struct nib {
+    struct _ArtistDetailTableViewCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType {
+      typealias ReusableType = ArtistDetailTableViewCell
+
+      let bundle = R.hostingBundle
+      let identifier = "ArtistDetailTableViewCell"
+      let name = "ArtistDetailTableViewCell"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> ArtistDetailTableViewCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? ArtistDetailTableViewCell
+      }
+
+      fileprivate init() {}
+    }
+
+    struct _ArtistDetailView: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "ArtistDetailView"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+      }
+
+      fileprivate init() {}
+    }
+
     struct _ArtistTableViewCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType {
       typealias ReusableType = ArtistTableViewCell
 

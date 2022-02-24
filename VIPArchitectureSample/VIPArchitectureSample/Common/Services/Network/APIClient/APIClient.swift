@@ -11,7 +11,7 @@ typealias NetworkError = AFError
 
 protocol APIClientProtocol {
   func getCharactersListLastFM(limit: Int, page: Int, completion:@escaping (Result<ArtistsLastFM, NetworkError>, Int?) -> Void)
-  func getAlbumsListLastFM(characterId: Int, limit: Int, page: Int, completion:@escaping (Result<AlbumsLastFM, NetworkError>, Int?) -> Void)
+  func getAlbumsListLastFM(characterId: String, limit: Int, completion:@escaping (Result<AlbumsLastFM, NetworkError>, Int?) -> Void)
   func getAllCharactersRickAndMorty(page: Int, nameFilter: String?, completion:@escaping (Result<CharactersRickAndMorty, NetworkError>, Int?) -> Void)
   func getCharactersListMarvel(page: Int, completion:@escaping (Result<CharactersListMarvel, NetworkError>, Int?) -> Void)
   func getCharacterDetailMarvel(id: Int, completion:@escaping (Result<CharactersListMarvel, NetworkError>, Int?) -> Void)
@@ -45,8 +45,8 @@ extension APIClient: APIClientProtocol {
   func getCharactersListLastFM(limit: Int, page: Int, completion:@escaping (Result<ArtistsLastFM, NetworkError>, Int?) -> Void) {
     performRequest(route: .getCharactersListRickMortyRickMortyLastFM(limit: limit, page: page), completion: completion)
   }
-  func getAlbumsListLastFM(characterId: Int, limit: Int, page: Int, completion:@escaping (Result<AlbumsLastFM, NetworkError>, Int?) -> Void) {
-    performRequest(route: .getAlbumsListLastFM(characterId: characterId, limit: limit, page: page), completion: completion)
+  func getAlbumsListLastFM(characterId: String, limit: Int, completion:@escaping (Result<AlbumsLastFM, NetworkError>, Int?) -> Void) {
+    performRequest(route: .getAlbumsListLastFM(characterId: characterId, limit: limit), completion: completion)
   }
   
   func getCharactersListMarvel(page: Int, completion:@escaping (Result<CharactersListMarvel, NetworkError>, Int?) -> Void) {

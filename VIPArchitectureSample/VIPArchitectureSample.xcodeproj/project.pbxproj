@@ -98,6 +98,16 @@
 		DB42600A27C66FD900FFCCB5 /* CharacterListMarvelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425FF627C66FD900FFCCB5 /* CharacterListMarvelTableViewCell.swift */; };
 		DB42600B27C66FD900FFCCB5 /* CharactersListMarvelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB425FF727C66FD900FFCCB5 /* CharactersListMarvelView.xib */; };
 		DB7D59A727C68E680093370A /* UIColor+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7D59A627C68E680093370A /* UIColor+Additions.swift */; };
+		DB7D59AF27C799370093370A /* ArtistDetailFactorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7D59A827C799370093370A /* ArtistDetailFactorable.swift */; };
+		DB7D59B027C799370093370A /* ArtistDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7D59A927C799370093370A /* ArtistDetailPresenter.swift */; };
+		DB7D59B127C799370093370A /* ArtistDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7D59AA27C799370093370A /* ArtistDetailRouter.swift */; };
+		DB7D59B227C799370093370A /* ArtistDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7D59AB27C799370093370A /* ArtistDetailViewController.swift */; };
+		DB7D59B327C799370093370A /* ArtistDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7D59AC27C799370093370A /* ArtistDetailInteractor.swift */; };
+		DB7D59B427C799370093370A /* ArtistDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7D59AD27C799370093370A /* ArtistDetailView.swift */; };
+		DB7D59B527C799370093370A /* ArtistDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7D59AE27C799370093370A /* ArtistDetailModel.swift */; };
+		DB7D59BA27C79E680093370A /* ArtistDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7D59B827C79E680093370A /* ArtistDetailTableViewCell.swift */; };
+		DB7D59BB27C79E680093370A /* ArtistDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB7D59B927C79E680093370A /* ArtistDetailTableViewCell.xib */; };
+		DB7D59BD27C79EEA0093370A /* ArtistDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB7D59BC27C79EEA0093370A /* ArtistDetailView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -221,6 +231,16 @@
 		DB425FF627C66FD900FFCCB5 /* CharacterListMarvelTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterListMarvelTableViewCell.swift; sourceTree = "<group>"; };
 		DB425FF727C66FD900FFCCB5 /* CharactersListMarvelView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CharactersListMarvelView.xib; sourceTree = "<group>"; };
 		DB7D59A627C68E680093370A /* UIColor+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Additions.swift"; sourceTree = "<group>"; };
+		DB7D59A827C799370093370A /* ArtistDetailFactorable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetailFactorable.swift; sourceTree = "<group>"; };
+		DB7D59A927C799370093370A /* ArtistDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetailPresenter.swift; sourceTree = "<group>"; };
+		DB7D59AA27C799370093370A /* ArtistDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetailRouter.swift; sourceTree = "<group>"; };
+		DB7D59AB27C799370093370A /* ArtistDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetailViewController.swift; sourceTree = "<group>"; };
+		DB7D59AC27C799370093370A /* ArtistDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetailInteractor.swift; sourceTree = "<group>"; };
+		DB7D59AD27C799370093370A /* ArtistDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetailView.swift; sourceTree = "<group>"; };
+		DB7D59AE27C799370093370A /* ArtistDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetailModel.swift; sourceTree = "<group>"; };
+		DB7D59B827C79E680093370A /* ArtistDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistDetailTableViewCell.swift; sourceTree = "<group>"; };
+		DB7D59B927C79E680093370A /* ArtistDetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArtistDetailTableViewCell.xib; sourceTree = "<group>"; };
+		DB7D59BC27C79EEA0093370A /* ArtistDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArtistDetailView.xib; sourceTree = "<group>"; };
 		E51607890E386483BADBBD01 /* Pods-VIPArchitectureSampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPArchitectureSampleUITests.debug.xcconfig"; path = "Target Support Files/Pods-VIPArchitectureSampleUITests/Pods-VIPArchitectureSampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EF8B7FCD7D6C531E8EF3831E /* Pods-VIPArchitectureSampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPArchitectureSampleTests.debug.xcconfig"; path = "Target Support Files/Pods-VIPArchitectureSampleTests/Pods-VIPArchitectureSampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -541,6 +561,13 @@
 		DB425F8527C6541D00FFCCB5 /* ArtistDetail */ = {
 			isa = PBXGroup;
 			children = (
+				DB7D59B627C7993B0093370A /* Views */,
+				DB7D59A827C799370093370A /* ArtistDetailFactorable.swift */,
+				DB7D59A927C799370093370A /* ArtistDetailPresenter.swift */,
+				DB7D59AA27C799370093370A /* ArtistDetailRouter.swift */,
+				DB7D59AB27C799370093370A /* ArtistDetailViewController.swift */,
+				DB7D59AC27C799370093370A /* ArtistDetailInteractor.swift */,
+				DB7D59AE27C799370093370A /* ArtistDetailModel.swift */,
 			);
 			path = ArtistDetail;
 			sourceTree = "<group>";
@@ -700,6 +727,25 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		DB7D59B627C7993B0093370A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DB7D59AD27C799370093370A /* ArtistDetailView.swift */,
+				DB7D59BC27C79EEA0093370A /* ArtistDetailView.xib */,
+				DB7D59B727C79E570093370A /* Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DB7D59B727C79E570093370A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				DB7D59B827C79E680093370A /* ArtistDetailTableViewCell.swift */,
+				DB7D59B927C79E680093370A /* ArtistDetailTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -815,8 +861,10 @@
 				DB425F9627C6545200FFCCB5 /* ArtistsListView.xib in Resources */,
 				DB425EB027C541F600FFCCB5 /* Assets.xcassets in Resources */,
 				DB425F9B27C659BD00FFCCB5 /* ArtistTableViewCell.xib in Resources */,
+				DB7D59BD27C79EEA0093370A /* ArtistDetailView.xib in Resources */,
 				DB42600B27C66FD900FFCCB5 /* CharactersListMarvelView.xib in Resources */,
 				DB42600927C66FD900FFCCB5 /* CharacterListMarvelTableViewCell.xib in Resources */,
+				DB7D59BB27C79E680093370A /* ArtistDetailTableViewCell.xib in Resources */,
 				DB425FFF27C66FD900FFCCB5 /* CharacterDetailMarvelTableViewCell.xib in Resources */,
 				DB425FB027C664E100FFCCB5 /* CharactersListRickMortyTableViewCell.xib in Resources */,
 				DB425FB327C6662F00FFCCB5 /* CharactersListRickMortyView.xib in Resources */,
@@ -965,14 +1013,18 @@
 				DB425FFC27C66FD900FFCCB5 /* CharacterDetailMarvelInteractor.swift in Sources */,
 				DB425F4B27C62CCB00FFCCB5 /* UIViewController+AlertController.swift in Sources */,
 				DB425FD327C66E3F00FFCCB5 /* Event.swift in Sources */,
+				DB7D59B127C799370093370A /* ArtistDetailRouter.swift in Sources */,
+				DB7D59AF27C799370093370A /* ArtistDetailFactorable.swift in Sources */,
 				DB425F4D27C62CCB00FFCCB5 /* String+Additions.swift in Sources */,
 				DB425F8E27C6543A00FFCCB5 /* ArtistsListPresenter.swift in Sources */,
 				DB425F6D27C6482800FFCCB5 /* APIClient.swift in Sources */,
+				DB7D59B027C799370093370A /* ArtistDetailPresenter.swift in Sources */,
 				DB425FDB27C66E3F00FFCCB5 /* Url.swift in Sources */,
 				DB425EAB27C541F200FFCCB5 /* ViewController.swift in Sources */,
 				DB425FD727C66E3F00FFCCB5 /* Series.swift in Sources */,
 				DB425FF827C66FD900FFCCB5 /* CharacterDetailMarvelPresenter.swift in Sources */,
 				DB425F4F27C62CCB00FFCCB5 /* BaseViewController.swift in Sources */,
+				DB7D59B227C799370093370A /* ArtistDetailViewController.swift in Sources */,
 				DB425F9A27C659BD00FFCCB5 /* ArtistTableViewCell.swift in Sources */,
 				DB425F8F27C6543A00FFCCB5 /* ArtistsListRouter.swift in Sources */,
 				DB42600427C66FD900FFCCB5 /* CharactersListMarvelModel.swift in Sources */,
@@ -992,6 +1044,7 @@
 				DB42600A27C66FD900FFCCB5 /* CharacterListMarvelTableViewCell.swift in Sources */,
 				DB425FF927C66FD900FFCCB5 /* CharacterDetailMarvelFactorable.swift in Sources */,
 				DB425FD427C66E3F00FFCCB5 /* Thumbnail.swift in Sources */,
+				DB7D59BA27C79E680093370A /* ArtistDetailTableViewCell.swift in Sources */,
 				DB7D59A727C68E680093370A /* UIColor+Additions.swift in Sources */,
 				DB425F7D27C648D900FFCCB5 /* InitialSelectionModel.swift in Sources */,
 				DB425EA727C541F200FFCCB5 /* AppDelegate.swift in Sources */,
@@ -1008,15 +1061,18 @@
 				DB42600127C66FD900FFCCB5 /* CharacterDetailMarvelView.swift in Sources */,
 				DB425F9127C6543A00FFCCB5 /* ArtistsListInteractor.swift in Sources */,
 				DB425FBE27C66BC800FFCCB5 /* CharactersListRickMortyRouter.swift in Sources */,
+				DB7D59B527C799370093370A /* ArtistDetailModel.swift in Sources */,
 				DB425F7727C648D900FFCCB5 /* InitialSelectionFactorable.swift in Sources */,
 				DB425F6927C645F900FFCCB5 /* AlbumsLastFM.swift in Sources */,
 				DB425FD927C66E3F00FFCCB5 /* ItemStory.swift in Sources */,
 				DB425F6727C6458800FFCCB5 /* ArtistsLastFM.swift in Sources */,
 				DB425F9327C6543A00FFCCB5 /* ArtistsListModel.swift in Sources */,
+				DB7D59B427C799370093370A /* ArtistDetailView.swift in Sources */,
 				DB425F7B27C648D900FFCCB5 /* InitialSelectionInteractor.swift in Sources */,
 				DB425FC127C66BC800FFCCB5 /* CharactersListRickMortyModel.swift in Sources */,
 				DB42600527C66FD900FFCCB5 /* CharactersListMarvelInteractor.swift in Sources */,
 				DB425F7A27C648D900FFCCB5 /* InitialSelectionViewController.swift in Sources */,
+				DB7D59B327C799370093370A /* ArtistDetailInteractor.swift in Sources */,
 				DB425FFA27C66FD900FFCCB5 /* CharacterDetailMarvelRouter.swift in Sources */,
 				DB425FD127C66E3F00FFCCB5 /* ItemComic.swift in Sources */,
 				DB425F7927C648D900FFCCB5 /* InitialSelectionRouter.swift in Sources */,

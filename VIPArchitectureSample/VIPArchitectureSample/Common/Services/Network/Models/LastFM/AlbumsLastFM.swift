@@ -11,22 +11,25 @@ struct AlbumsLastFM: Codable {
 }
 
 struct Topalbums: Codable {
-    let artist: String?
-    let album: [Album]?
+      let album: [Album]?
+      let attr: AttrAlbum?
     
     enum CodingKeys: String, CodingKey {
-        case artist = "-artist"
+        case attr = "@attr"
         case album
     }
 }
 
 struct Album: Codable {
-    let rank, name, mbid, listeners: String?
+    let name: String?
+    let playcount: Int?
+    let mbid: String?
     let url: String?
+    let artist: Artist?
     let image: [Image]?
-    
-    enum CodingKeys: String, CodingKey {
-        case rank = "-rank"
-        case name, mbid, listeners, url, image
-    }
+}
+
+// MARK: - AttrAlbum
+struct AttrAlbum: Codable {
+    let artist: String?
 }
