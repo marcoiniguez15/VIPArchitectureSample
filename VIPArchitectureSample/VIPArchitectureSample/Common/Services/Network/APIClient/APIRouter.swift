@@ -8,7 +8,7 @@ import Foundation
 import Alamofire
 
 enum APIRouter {
-  case getCharactersListRickMortyRickMortyLastFM(limit: Int, page: Int)
+  case getCharactersListLastFM(limit: Int, page: Int)
   case getAlbumsListLastFM(characterId: String, limit: Int)
   case getAllCharactersRickAndMorty(page: Int, nameFilter: String?)
   case getCharactersListMarvel(page: Int)
@@ -19,7 +19,7 @@ enum APIRouter {
 private extension APIRouter {
   var baseURLKey: EnvironmentService.Keys {
     switch self {
-    case .getCharactersListRickMortyRickMortyLastFM, .getAlbumsListLastFM:
+    case .getCharactersListLastFM, .getAlbumsListLastFM:
         return .URL(.baseURLLastFM)
       
     case .getAllCharactersRickAndMorty:
@@ -33,7 +33,7 @@ private extension APIRouter {
   // MARK: - HTTPMethod
   var method: HTTPMethod {
     switch self {
-    case .getCharactersListRickMortyRickMortyLastFM,
+    case .getCharactersListLastFM,
         .getAlbumsListLastFM, .getAllCharactersRickAndMorty, .getCharacterDetailMarvel, .getCharactersListMarvel:
       return .get
     
@@ -43,7 +43,7 @@ private extension APIRouter {
   // MARK: - Path
   var path: String {
     switch self {
-    case let .getCharactersListRickMortyRickMortyLastFM(limit, page):
+    case let .getCharactersListLastFM(limit, page):
       let apiKey = EnvironmentService.getValue(for: .URL(.apiKeyLASTFM))
       let method = "chart.gettopartists"
       
@@ -94,7 +94,7 @@ private extension APIRouter {
   // MARK: - Parameters
   var parameters: Parameters? {
     switch self {
-    case .getCharactersListRickMortyRickMortyLastFM,
+    case .getCharactersListLastFM,
          .getAlbumsListLastFM,
          .getAllCharactersRickAndMorty, .getCharacterDetailMarvel, .getCharactersListMarvel:
       return nil
@@ -104,7 +104,7 @@ private extension APIRouter {
   // MARK: - ContentType
   var contentType: ContentType {
     switch self {
-    case .getCharactersListRickMortyRickMortyLastFM,
+    case .getCharactersListLastFM,
          .getAlbumsListLastFM,
          .getAllCharactersRickAndMorty,
          .getCharacterDetailMarvel,

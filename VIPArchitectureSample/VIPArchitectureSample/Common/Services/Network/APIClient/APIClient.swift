@@ -43,7 +43,7 @@ extension APIClient: APIClientProtocol {
   }
   
   func getCharactersListLastFM(limit: Int, page: Int, completion:@escaping (Result<ArtistsLastFM, NetworkError>, Int?) -> Void) {
-    performRequest(route: .getCharactersListRickMortyRickMortyLastFM(limit: limit, page: page), completion: completion)
+    performRequest(route: .getCharactersListLastFM(limit: limit, page: page), completion: completion)
   }
   func getAlbumsListLastFM(characterId: String, limit: Int, completion:@escaping (Result<AlbumsLastFM, NetworkError>, Int?) -> Void) {
     performRequest(route: .getAlbumsListLastFM(characterId: characterId, limit: limit), completion: completion)
