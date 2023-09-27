@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>NSExtension</key>
+	<dict>
+		<key>NSExtensionAttributes</key>
+		<dict>
+			<key>XCSourceEditorCommandDefinitions</key>
+			<array>
+				<dict>
+					<key>XCSourceEditorCommandClassName</key>
+					<string>$(PRODUCT_MODULE_NAME).JSON2SwiftEditorCommand</string>
+					<key>XCSourceEditorCommandIdentifier</key>
+					<string>$(PRODUCT_BUNDLE_IDENTIFIER).JSON2SwiftEditorCommand</string>
+					<key>XCSourceEditorCommandName</key>
+					<string>JSON to Swift</string>
+				</dict>
+				<dict>
+					<key>XCSourceEditorCommandClassName</key>
+					<string>$(PRODUCT_MODULE_NAME).CodeSmellsEditorCommand</string>
+					<key>XCSourceEditorCommandIdentifier</key>
+					<string>$(PRODUCT_BUNDLE_IDENTIFIER).CodeSmellsEditorCommand</string>
+					<key>XCSourceEditorCommandName</key>
+					<string>Check for Code Smells</string>
+				</dict>
+				<dict>
+					<key>XCSourceEditorCommandClassName</key>
+					<string>$(PRODUCT_MODULE_NAME).ExplainCodeCommand</string>
+					<key>XCSourceEditorCommandIdentifier</key>
+					<string>$(PRODUCT_BUNDLE_IDENTIFIER).ExplainCodeCommand</string>
+					<key>XCSourceEditorCommandName</key>
+					<string>Explain me this code</string>
+				</dict>
+				<dict>
+					<key>XCSourceEditorCommandClassName</key>
+					<string>$(PRODUCT_MODULE_NAME).UnitTestEditorCommand</string>
+					<key>XCSourceEditorCommandIdentifier</key>
+					<string>$(PRODUCT_BUNDLE_IDENTIFIER).UnitTestEditorCommand</string>
+					<key>XCSourceEditorCommandName</key>
+					<string>Generate tests for this function</string>
+				</dict>
+				<dict>
+					<key>XCSourceEditorCommandClassName</key>
+					<string>$(PRODUCT_MODULE_NAME).RegexCommand</string>
+					<key>XCSourceEditorCommandIdentifier</key>
+					<string>$(PRODUCT_BUNDLE_IDENTIFIER).RegexCommand</string>
+					<key>XCSourceEditorCommandName</key>
+					<string>Generate regular expression based on a sample string</string>
+				</dict>
+				<dict>
+					<key>XCSourceEditorCommandClassName</key>
+					<string>$(PRODUCT_MODULE_NAME).CommentCommand</string>
+					<key>XCSourceEditorCommandIdentifier</key>
+					<string>$(PRODUCT_BUNDLE_IDENTIFIER).CommentCommand</string>
+					<key>XCSourceEditorCommandName</key>
+					<string>Add Swift comments</string>
+				</dict>
+			</array>
+			<key>XCSourceEditorExtensionPrincipalClass</key>
+			<string>$(PRODUCT_MODULE_NAME).SourceEditorExtension</string>
+		</dict>
+		<key>NSExtensionPointIdentifier</key>
+		<string>com.apple.dt.Xcode.extension.source-editor</string>
+	</dict>
+</dict>
+</plist>
