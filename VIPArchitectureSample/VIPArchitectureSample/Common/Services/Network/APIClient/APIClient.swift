@@ -43,13 +43,16 @@ final class APIClient: APIClientProtocol {
             )
             .validate(statusCode: 200..<300)
             .responseDecodable(of: responseModel.self) { response in
-                print("🔵🔵🔵")
-                debugPrint(response)
-                print("🔵🔵🔵")
                 switch(response.result) {
                 case let .success(data):
+                    guard let json = response.data,  let output = String(data: json, encoding: .utf8)
+                        else { fatalError( "Error converting \(data) to JSON string") }
+                    print("🛜🛜🛜" + "JSON string = \(output)")
                     continuation.resume(returning: data)
-                case .failure(_):
+                case let .failure(error):
+                    print("🔵🔵🔵")
+                    debugPrint(error)
+                    print("🔵🔵🔵")
                     if response.response?.statusCode == 401 {
                         continuation.resume(throwing: CustomNetworkError.unauthorized)
                     } else {
