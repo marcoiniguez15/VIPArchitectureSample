@@ -72,6 +72,7 @@ private extension CharactersListMarvelInteractor {
             self.dataSource.characterList.append(contentsOf: model.items)
             self.presenter.presentResponse(.prepareCharactersListMarvel(data: self.dataSource.characterList))
           } catch {
+              LoaderView.toggleUniversalLoadingView(false)
               let errorModel = ErrorHelper.createGenericError()
               self.presenter.presentResponse(.showError(model: errorModel))
           }

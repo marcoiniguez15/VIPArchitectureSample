@@ -14,8 +14,8 @@ import UIKit
 
 
 extension AppInjector {
-  
-  struct ArtistDetailInjector {}
+
+    struct ArtistDetailInjector {}
 }
 
 extension AppInjector.ArtistDetailInjector: ArtistDetailFactorable {}
@@ -23,45 +23,44 @@ extension AppInjector.ArtistDetailInjector: ArtistDetailFactorable {}
 protocol ArtistDetailFactorable: ArtistDetailInteractorFactorable, ArtistDetailPresenterFactorable, ArtistDetailRouterFactorable, ArtistDetailServicesFactorable { }
 
 protocol ArtistDetailInteractorFactorable {
-  typealias InteractableFactory = ArtistDetailPresenterFactorable & ArtistDetailServicesFactorable
-  
-  func makeInteractor(factory: InteractableFactory, viewController: ArtistDetailDisplayLogic?, dataSource: ArtistDetailModel.DataSource) -> ArtistDetailInteractable
+    typealias InteractableFactory = ArtistDetailPresenterFactorable & ArtistDetailServicesFactorable
+
+    func makeInteractor(factory: InteractableFactory, viewController: ArtistDetailDisplayLogic?, dataSource: ArtistDetailModel.DataSource) -> ArtistDetailInteractable
 }
 
 protocol ArtistDetailPresenterFactorable {
-  func makePresenter(viewController: ArtistDetailDisplayLogic?) -> ArtistDetailPresentationLogic
+    func makePresenter(viewController: ArtistDetailDisplayLogic?) -> ArtistDetailPresentationLogic
 }
 
 protocol ArtistDetailRouterFactorable {
-  func makeRouter(viewController: UIViewController?) -> ArtistDetailRouting
+    func makeRouter(viewController: UIViewController?) -> ArtistDetailRouting
 }
 
 extension ArtistDetailFactorable {
-  
-  func makeInteractor(factory: InteractableFactory, viewController: ArtistDetailDisplayLogic?, dataSource: ArtistDetailModel.DataSource) -> ArtistDetailInteractable {
-    ArtistDetailInteractor(factory: factory, viewController: viewController, dataSource: dataSource)
-  }
-  
-  func makePresenter(viewController: ArtistDetailDisplayLogic?) -> ArtistDetailPresentationLogic {
-    ArtistDetailPresenter(viewController: viewController)
-  }
-  
-  func makeRouter(viewController: UIViewController?) -> ArtistDetailRouting {
-    ArtistDetailRouter(viewController: viewController)
-  }
+
+    func makeInteractor(factory: InteractableFactory, viewController: ArtistDetailDisplayLogic?, dataSource: ArtistDetailModel.DataSource) -> ArtistDetailInteractable {
+        ArtistDetailInteractor(factory: factory, viewController: viewController, dataSource: dataSource)
+    }
+
+    func makePresenter(viewController: ArtistDetailDisplayLogic?) -> ArtistDetailPresentationLogic {
+        ArtistDetailPresenter(viewController: viewController)
+    }
+
+    func makeRouter(viewController: UIViewController?) -> ArtistDetailRouting {
+        ArtistDetailRouter(viewController: viewController)
+    }
 }
 
 
 // MARK: - Service Factorable
 protocol ArtistDetailServicesFactorable {
-  
-  func makeApiService() -> APIClientProtocol
+
+    func makeFetchCharacterDetailUseCase() -> FetchArtistDetailUseCaseContract
 }
 
 extension ArtistDetailServicesFactorable {
-  
-  
-  func makeApiService() -> APIClientProtocol {
-    APIClient.shared
-  }
+
+    func makeFetchCharacterDetailUseCase() -> FetchArtistDetailUseCaseContract {
+        FetchArtistDetailUseCase()
+    }
 }

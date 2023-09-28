@@ -57,37 +57,36 @@ extension CharactersListRickMortyInteractor: CharactersListRickMortyBusinessLogi
 // MARK: - Private Zone
 private extension CharactersListRickMortyInteractor {
   
-  func prepareCharactersListRickMorty(page: Int, nameFilter: String?) {
-    if page <= (self.dataSource.numberPages - 1) {
-      let service = factory.makeApiService()
-      if page == 0 {
-        LoaderView.toggleUniversalLoadingView(true)
-      }
-      if let name = nameFilter {
-        if let nameFilterDataSource = dataSource.nameFilter, nameFilterDataSource != name {
-          self.dataSource.characterList.removeAll()
+    func prepareCharactersListRickMorty(page: Int, nameFilter: String?) {
+        if page <= (self.dataSource.numberPages - 1) {
+            let useCase = factory.makeFetchCharactersUseCase()
+            if page == 0 {
+                LoaderView.toggleUniversalLoadingView(true)
+            }
+            if let name = nameFilter {
+                if let nameFilterDataSource = dataSource.nameFilter, nameFilterDataSource != name {
+                    self.dataSource.characterList.removeAll()
+                }
+                
+                if dataSource.nameFilter == nil {
+                    self.dataSource.characterList.removeAll()
+                }
+                dataSource.nameFilter = name
+            }
+            
+            Task { @MainActor in
+                do {
+                    let result = try await useCase.execute(FetchCharacterListRickMortyUseCaseParameters(page: page, nameFilter: nameFilter))
+                    LoaderView.toggleUniversalLoadingView(false)
+                    self.dataSource.numberPages = result.numberPages
+                    self.dataSource.characterList.append(contentsOf: result.items)
+                    self.presenter.presentResponse(.prepareCharactersListRickMorty(data: self.dataSource.characterList))
+                } catch {
+                    LoaderView.toggleUniversalLoadingView(false)
+                    let errorModel = ErrorHelper.createGenericError()
+                    self.presenter.presentResponse(.showError(model: errorModel))
+                }
+            }
         }
-        
-        if dataSource.nameFilter == nil {
-          self.dataSource.characterList.removeAll()
-        }
-        dataSource.nameFilter = name
-      }
-      service.getAllCharactersRickAndMorty(page: page, nameFilter: nameFilter) { (result, _) in
-        LoaderView.toggleUniversalLoadingView(false)
-        switch result {
-        case let .success(list):
-          if let data = list.results, let info = list.info, let numberPages =  info.pages {
-            self.dataSource.numberPages = numberPages
-            self.dataSource.characterList.append(contentsOf: data)
-            self.presenter.presentResponse(.prepareCharactersListRickMorty(data: self.dataSource.characterList))
-          }
-        case .failure:
-          let errorModel = ErrorHelper.createGenericError()
-          self.presenter.presentResponse(.showError(model: errorModel))
-        }
-      }
     }
-  
-  }
 }

@@ -20,7 +20,7 @@ enum ArtistDetailModel {
   }
   
   enum Response {
-    case prepareView(info: AlbumsLastFM)
+    case prepareView(info: ArtistDetailEntity)
     case showError(model: ErrorModel)
   }
   

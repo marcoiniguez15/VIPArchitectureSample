@@ -44,14 +44,10 @@ extension CharactersListRickMortyPresenter: CharactersListRickMortyPresentationL
 
 // MARK: - Private Zone
 private extension CharactersListRickMortyPresenter {
-  func prepareCharactersListRickMorty(data: [ResultRickAndMorty]) {
+  func prepareCharactersListRickMorty(data: [CharactersListRickMortyItemEntity]) {
     let title = "Characters List"
     let items = data.compactMap { character -> CharactersListRickMortyModel.CellModel in
-        var imageURL = URL(string: "")
-        if let img = character.image {
-            imageURL = URL(string: img)
-        }
-        return CharactersListRickMortyModel.CellModel(name: character.name ?? "", imageURL: imageURL, status: character.status?.rawValue, species: character.species)
+        return CharactersListRickMortyModel.CellModel(name: character.name, imageURL: character.imageURL, status: character.status, species: character.species)
     }
     
     self.viewController?.displayViewModel(.prepareCharactersListRickMorty(

@@ -15,71 +15,68 @@ import Foundation
 typealias ArtistsListInteractable = ArtistsListBusinessLogic & ArtistsListDataStore
 
 protocol ArtistsListBusinessLogic {
-  
-  func doRequest(_ request: ArtistsListModel.Request)
+
+    func doRequest(_ request: ArtistsListModel.Request)
 }
 
 protocol ArtistsListDataStore {
-  var dataSource: ArtistsListModel.DataSource { get }
+    var dataSource: ArtistsListModel.DataSource { get }
 }
 
 final class ArtistsListInteractor: ArtistsListDataStore {
-  
-  var dataSource: ArtistsListModel.DataSource
-  
-  private var factory: ArtistsListInteractorFactorable.InteractableFactory
-  private var presenter: ArtistsListPresentationLogic
-  
-  init(factory: ArtistsListInteractorFactorable.InteractableFactory, viewController: ArtistsListDisplayLogic?, dataSource: ArtistsListModel.DataSource) {
-    self.factory = factory
-    self.dataSource = dataSource
-    self.presenter = factory.makePresenter(viewController: viewController)
-  }
+
+    var dataSource: ArtistsListModel.DataSource
+
+    private var factory: ArtistsListInteractorFactorable.InteractableFactory
+    private var presenter: ArtistsListPresentationLogic
+
+    init(factory: ArtistsListInteractorFactorable.InteractableFactory, viewController: ArtistsListDisplayLogic?, dataSource: ArtistsListModel.DataSource) {
+        self.factory = factory
+        self.dataSource = dataSource
+        self.presenter = factory.makePresenter(viewController: viewController)
+    }
 }
 
 
 // MARK: - ArtistsListBusinessLogic
 extension ArtistsListInteractor: ArtistsListBusinessLogic {
-  
-  func doRequest(_ request: ArtistsListModel.Request) {
-    DispatchQueue.global(qos: .userInitiated).async {
-      
-      switch request {
-        
-      case let .prepareArtistList(page):
-        self.prepareArtistList(page: page)
-        
-      case let .itemPressed(index):
-        if let id = self.dataSource.artistList[index].mbid {
-          self.presenter.presentResponse(.showDetail(id: id))
+
+    func doRequest(_ request: ArtistsListModel.Request) {
+        DispatchQueue.global(qos: .userInitiated).async {
+
+            switch request {
+
+            case let .prepareArtistList(page):
+                self.prepareArtistList(page: page)
+
+            case let .itemPressed(index):
+                self.presenter.presentResponse(.showDetail(id: self.dataSource.artistList[index].id))
+            }
         }
-      }
     }
-  }
 }
 
 
 // MARK: - Private Zone
 private extension ArtistsListInteractor {
-  
-  func prepareArtistList(page: Int) {
     
-    let service = factory.makeApiService()
-    if page == 1 {
-      LoaderView.toggleUniversalLoadingView(true)
-    }
-    service.getCharactersListLastFM(limit: 50, page: page) { (result, _) in
-      LoaderView.toggleUniversalLoadingView(false)
-      switch result {
-      case let .success(list):
-        if let data = list.artists, let artists = data.artist {
-          self.dataSource.artistList.append(contentsOf: artists)
-          self.presenter.presentResponse(.prepareArtistList(data: self.dataSource.artistList))
+    func prepareArtistList(page: Int) {
+        let useCase = factory.makeFetchCharactersUseCase()
+        if page == 1 {
+            LoaderView.toggleUniversalLoadingView(true)
         }
-      case .failure:
-        let errorModel = ErrorHelper.createGenericError()
-        self.presenter.presentResponse(.showError(model: errorModel))
-      }
+
+        Task { @MainActor in
+            do {
+                let result = try await useCase.execute(FetchArtistsListUseCaseParameters(page: page, limit: 50))
+                LoaderView.toggleUniversalLoadingView(false)
+                self.dataSource.artistList.append(contentsOf: result.items)
+                self.presenter.presentResponse(.prepareArtistList(data: self.dataSource.artistList))
+            } catch {
+                LoaderView.toggleUniversalLoadingView(false)
+                let errorModel = ErrorHelper.createGenericError()
+                self.presenter.presentResponse(.showError(model: errorModel))
+            }
+        }
     }
-  }
 }

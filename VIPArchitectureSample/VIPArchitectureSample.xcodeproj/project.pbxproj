@@ -16,6 +16,38 @@
 		DB2C6EC62AC435590019CC43 /* MarvelCharacterListMapperContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2C6EC52AC435590019CC43 /* MarvelCharacterListMapperContract.swift */; };
 		DB2C6EC82AC435CA0019CC43 /* MarvelCharacterListMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2C6EC72AC435CA0019CC43 /* MarvelCharacterListMapper.swift */; };
 		DB2C6ECB2AC439E60019CC43 /* FetchCharacterListMarvelUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2C6ECA2AC439E60019CC43 /* FetchCharacterListMarvelUseCase.swift */; };
+		DB2C6ED92AC462110019CC43 /* CharacterDetailMarvelEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2C6ED82AC462110019CC43 /* CharacterDetailMarvelEntity.swift */; };
+		DB2C6EDB2AC463320019CC43 /* CharacterDetailItemEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2C6EDA2AC463320019CC43 /* CharacterDetailItemEntity.swift */; };
+		DB2C6EDD2AC463700019CC43 /* CharacterDetailMarvelRepositoryContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2C6EDC2AC463700019CC43 /* CharacterDetailMarvelRepositoryContract.swift */; };
+		DB2C6EDF2AC463D80019CC43 /* MarvelCharacterDetailMapperContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2C6EDE2AC463D80019CC43 /* MarvelCharacterDetailMapperContract.swift */; };
+		DB2C6EE12AC463E70019CC43 /* MarvelCharacterDetailMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2C6EE02AC463E70019CC43 /* MarvelCharacterDetailMapper.swift */; };
+		DB2C6EE32AC46C830019CC43 /* CharacterDetailMarvelService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2C6EE22AC46C830019CC43 /* CharacterDetailMarvelService.swift */; };
+		DB2C6EE62AC46D260019CC43 /* CharacterDetailMarvelRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2C6EE52AC46D260019CC43 /* CharacterDetailMarvelRepository.swift */; };
+		DB2C6EE82AC46DD10019CC43 /* FetchCharacterDetailMarvelUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2C6EE72AC46DD10019CC43 /* FetchCharacterDetailMarvelUseCase.swift */; };
+		DB2C6EF52AC4731A0019CC43 /* CharactersListRickMortyRepositoryContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2C6EF42AC4731A0019CC43 /* CharactersListRickMortyRepositoryContract.swift */; };
+		DB2C6EF72AC473770019CC43 /* CharactersListRickMortyEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2C6EF62AC473770019CC43 /* CharactersListRickMortyEntity.swift */; };
+		DB2C6EF92AC474140019CC43 /* CharactersListRickMortyItemEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2C6EF82AC474140019CC43 /* CharactersListRickMortyItemEntity.swift */; };
+		DB2C6EFB2AC476590019CC43 /* CharactersListRickMortyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2C6EFA2AC476590019CC43 /* CharactersListRickMortyService.swift */; };
+		DB2C6EFD2AC477C20019CC43 /* CharactersListRickMortyMapperContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2C6EFC2AC477C20019CC43 /* CharactersListRickMortyMapperContract.swift */; };
+		DB2C6EFF2AC477C90019CC43 /* CharactersListRickMortyMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2C6EFE2AC477C90019CC43 /* CharactersListRickMortyMapper.swift */; };
+		DB2C6F012AC479370019CC43 /* CharactersListRickMortyRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2C6F002AC479370019CC43 /* CharactersListRickMortyRepository.swift */; };
+		DB2C6F032AC47A260019CC43 /* FetchCharacterListRickMortyUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2C6F022AC47A260019CC43 /* FetchCharacterListRickMortyUseCase.swift */; };
+		DB2C6F192AC481AB0019CC43 /* ArtistDetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2C6F182AC481AB0019CC43 /* ArtistDetailService.swift */; };
+		DB2C6F1B2AC4823C0019CC43 /* ArtistsListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2C6F1A2AC4823C0019CC43 /* ArtistsListService.swift */; };
+		DB2D11EA2AC57EC20058E577 /* ArtistsListItemEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2D11E92AC57EC20058E577 /* ArtistsListItemEntity.swift */; };
+		DB2D11EC2AC57F0E0058E577 /* ArtistsListEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2D11EB2AC57F0E0058E577 /* ArtistsListEntity.swift */; };
+		DB2D11EE2AC57F550058E577 /* ArtistDetailItemEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2D11ED2AC57F550058E577 /* ArtistDetailItemEntity.swift */; };
+		DB2D11F02AC57F9C0058E577 /* ArtistDetailEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2D11EF2AC57F9C0058E577 /* ArtistDetailEntity.swift */; };
+		DB2D11F22AC57FCA0058E577 /* ArtistDetailRepositoryContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2D11F12AC57FCA0058E577 /* ArtistDetailRepositoryContract.swift */; };
+		DB2D11F42AC580400058E577 /* ArtistsListRepositoryContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2D11F32AC580400058E577 /* ArtistsListRepositoryContract.swift */; };
+		DB2D11F62AC5807C0058E577 /* ArtistsListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2D11F52AC5807C0058E577 /* ArtistsListRepository.swift */; };
+		DB2D11F82AC580C40058E577 /* ArtistsListMapperContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2D11F72AC580C40058E577 /* ArtistsListMapperContract.swift */; };
+		DB2D11FA2AC580D10058E577 /* ArtistsListMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2D11F92AC580D10058E577 /* ArtistsListMapper.swift */; };
+		DB2D11FC2AC583400058E577 /* ArtistDetailRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2D11FB2AC583400058E577 /* ArtistDetailRepository.swift */; };
+		DB2D11FE2AC583580058E577 /* ArtistDetailMapperContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2D11FD2AC583580058E577 /* ArtistDetailMapperContract.swift */; };
+		DB2D12002AC583630058E577 /* ArtistDetailMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2D11FF2AC583630058E577 /* ArtistDetailMapper.swift */; };
+		DB2D12022AC586220058E577 /* FetchArtistsListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2D12012AC586220058E577 /* FetchArtistsListUseCase.swift */; };
+		DB2D12042AC586D30058E577 /* FetchArtistDetailUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2D12032AC586D30058E577 /* FetchArtistDetailUseCase.swift */; };
 		DB425EA727C541F200FFCCB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425EA627C541F200FFCCB5 /* AppDelegate.swift */; };
 		DB425EAB27C541F200FFCCB5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425EAA27C541F200FFCCB5 /* ViewController.swift */; };
 		DB425EAE27C541F200FFCCB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB425EAC27C541F200FFCCB5 /* Main.storyboard */; };
@@ -35,12 +67,10 @@
 		DB425F5027C62CCB00FFCCB5 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425F3227C62CCA00FFCCB5 /* BaseView.swift */; };
 		DB425F5227C62CCB00FFCCB5 /* CustomNetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425F3727C62CCB00FFCCB5 /* CustomNetworkError.swift */; };
 		DB425F5427C62CCB00FFCCB5 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425F3A27C62CCB00FFCCB5 /* APIConstants.swift */; };
-		DB425F5527C62CCB00FFCCB5 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425F3B27C62CCB00FFCCB5 /* APIRouter.swift */; };
 		DB425F5627C62CCB00FFCCB5 /* EnviromentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425F3C27C62CCB00FFCCB5 /* EnviromentService.swift */; };
 		DB425F6727C6458800FFCCB5 /* ArtistsLastFM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425F6627C6458800FFCCB5 /* ArtistsLastFM.swift */; };
 		DB425F6927C645F900FFCCB5 /* AlbumsLastFM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425F6827C645F900FFCCB5 /* AlbumsLastFM.swift */; };
 		DB425F6B27C6466A00FFCCB5 /* CharactersRickAndMorty.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425F6A27C6466A00FFCCB5 /* CharactersRickAndMorty.swift */; };
-		DB425F6D27C6482800FFCCB5 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425F6C27C6482800FFCCB5 /* APIClient.swift */; };
 		DB425F7727C648D900FFCCB5 /* InitialSelectionFactorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425F7027C648D900FFCCB5 /* InitialSelectionFactorable.swift */; };
 		DB425F7827C648D900FFCCB5 /* InitialSelectionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425F7127C648D900FFCCB5 /* InitialSelectionPresenter.swift */; };
 		DB425F7927C648D900FFCCB5 /* InitialSelectionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425F7227C648D900FFCCB5 /* InitialSelectionRouter.swift */; };
@@ -159,7 +189,7 @@
 		DBEEF8512AC310920058DAD1 /* CharacterListMarvelRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEEF8502AC310920058DAD1 /* CharacterListMarvelRepository.swift */; };
 		DBEEF8542AC3126A0058DAD1 /* CharacterListMarvelService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEEF8532AC3126A0058DAD1 /* CharacterListMarvelService.swift */; };
 		DBEEF8562AC313D50058DAD1 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEEF8552AC313D50058DAD1 /* APIEndpoint.swift */; };
-		DBEEF85D2AC321680058DAD1 /* APIClientNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEEF85C2AC321680058DAD1 /* APIClientNew.swift */; };
+		DBEEF85D2AC321680058DAD1 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEEF85C2AC321680058DAD1 /* APIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -229,6 +259,38 @@
 		DB2C6EC52AC435590019CC43 /* MarvelCharacterListMapperContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelCharacterListMapperContract.swift; sourceTree = "<group>"; };
 		DB2C6EC72AC435CA0019CC43 /* MarvelCharacterListMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelCharacterListMapper.swift; sourceTree = "<group>"; };
 		DB2C6ECA2AC439E60019CC43 /* FetchCharacterListMarvelUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchCharacterListMarvelUseCase.swift; sourceTree = "<group>"; };
+		DB2C6ED82AC462110019CC43 /* CharacterDetailMarvelEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailMarvelEntity.swift; sourceTree = "<group>"; };
+		DB2C6EDA2AC463320019CC43 /* CharacterDetailItemEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailItemEntity.swift; sourceTree = "<group>"; };
+		DB2C6EDC2AC463700019CC43 /* CharacterDetailMarvelRepositoryContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailMarvelRepositoryContract.swift; sourceTree = "<group>"; };
+		DB2C6EDE2AC463D80019CC43 /* MarvelCharacterDetailMapperContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelCharacterDetailMapperContract.swift; sourceTree = "<group>"; };
+		DB2C6EE02AC463E70019CC43 /* MarvelCharacterDetailMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelCharacterDetailMapper.swift; sourceTree = "<group>"; };
+		DB2C6EE22AC46C830019CC43 /* CharacterDetailMarvelService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailMarvelService.swift; sourceTree = "<group>"; };
+		DB2C6EE52AC46D260019CC43 /* CharacterDetailMarvelRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailMarvelRepository.swift; sourceTree = "<group>"; };
+		DB2C6EE72AC46DD10019CC43 /* FetchCharacterDetailMarvelUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchCharacterDetailMarvelUseCase.swift; sourceTree = "<group>"; };
+		DB2C6EF42AC4731A0019CC43 /* CharactersListRickMortyRepositoryContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListRickMortyRepositoryContract.swift; sourceTree = "<group>"; };
+		DB2C6EF62AC473770019CC43 /* CharactersListRickMortyEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListRickMortyEntity.swift; sourceTree = "<group>"; };
+		DB2C6EF82AC474140019CC43 /* CharactersListRickMortyItemEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListRickMortyItemEntity.swift; sourceTree = "<group>"; };
+		DB2C6EFA2AC476590019CC43 /* CharactersListRickMortyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListRickMortyService.swift; sourceTree = "<group>"; };
+		DB2C6EFC2AC477C20019CC43 /* CharactersListRickMortyMapperContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListRickMortyMapperContract.swift; sourceTree = "<group>"; };
+		DB2C6EFE2AC477C90019CC43 /* CharactersListRickMortyMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListRickMortyMapper.swift; sourceTree = "<group>"; };
+		DB2C6F002AC479370019CC43 /* CharactersListRickMortyRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListRickMortyRepository.swift; sourceTree = "<group>"; };
+		DB2C6F022AC47A260019CC43 /* FetchCharacterListRickMortyUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchCharacterListRickMortyUseCase.swift; sourceTree = "<group>"; };
+		DB2C6F182AC481AB0019CC43 /* ArtistDetailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetailService.swift; sourceTree = "<group>"; };
+		DB2C6F1A2AC4823C0019CC43 /* ArtistsListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsListService.swift; sourceTree = "<group>"; };
+		DB2D11E92AC57EC20058E577 /* ArtistsListItemEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsListItemEntity.swift; sourceTree = "<group>"; };
+		DB2D11EB2AC57F0E0058E577 /* ArtistsListEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsListEntity.swift; sourceTree = "<group>"; };
+		DB2D11ED2AC57F550058E577 /* ArtistDetailItemEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetailItemEntity.swift; sourceTree = "<group>"; };
+		DB2D11EF2AC57F9C0058E577 /* ArtistDetailEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetailEntity.swift; sourceTree = "<group>"; };
+		DB2D11F12AC57FCA0058E577 /* ArtistDetailRepositoryContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetailRepositoryContract.swift; sourceTree = "<group>"; };
+		DB2D11F32AC580400058E577 /* ArtistsListRepositoryContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsListRepositoryContract.swift; sourceTree = "<group>"; };
+		DB2D11F52AC5807C0058E577 /* ArtistsListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsListRepository.swift; sourceTree = "<group>"; };
+		DB2D11F72AC580C40058E577 /* ArtistsListMapperContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsListMapperContract.swift; sourceTree = "<group>"; };
+		DB2D11F92AC580D10058E577 /* ArtistsListMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsListMapper.swift; sourceTree = "<group>"; };
+		DB2D11FB2AC583400058E577 /* ArtistDetailRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetailRepository.swift; sourceTree = "<group>"; };
+		DB2D11FD2AC583580058E577 /* ArtistDetailMapperContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetailMapperContract.swift; sourceTree = "<group>"; };
+		DB2D11FF2AC583630058E577 /* ArtistDetailMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetailMapper.swift; sourceTree = "<group>"; };
+		DB2D12012AC586220058E577 /* FetchArtistsListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchArtistsListUseCase.swift; sourceTree = "<group>"; };
+		DB2D12032AC586D30058E577 /* FetchArtistDetailUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchArtistDetailUseCase.swift; sourceTree = "<group>"; };
 		DB425EA327C541F200FFCCB5 /* VIPArchitectureSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VIPArchitectureSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB425EA627C541F200FFCCB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB425EAA27C541F200FFCCB5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -254,12 +316,10 @@
 		DB425F3227C62CCA00FFCCB5 /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		DB425F3727C62CCB00FFCCB5 /* CustomNetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNetworkError.swift; sourceTree = "<group>"; };
 		DB425F3A27C62CCB00FFCCB5 /* APIConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
-		DB425F3B27C62CCB00FFCCB5 /* APIRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
 		DB425F3C27C62CCB00FFCCB5 /* EnviromentService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnviromentService.swift; sourceTree = "<group>"; };
 		DB425F6627C6458800FFCCB5 /* ArtistsLastFM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsLastFM.swift; sourceTree = "<group>"; };
 		DB425F6827C645F900FFCCB5 /* AlbumsLastFM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsLastFM.swift; sourceTree = "<group>"; };
 		DB425F6A27C6466A00FFCCB5 /* CharactersRickAndMorty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersRickAndMorty.swift; sourceTree = "<group>"; };
-		DB425F6C27C6482800FFCCB5 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		DB425F7027C648D900FFCCB5 /* InitialSelectionFactorable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialSelectionFactorable.swift; sourceTree = "<group>"; };
 		DB425F7127C648D900FFCCB5 /* InitialSelectionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialSelectionPresenter.swift; sourceTree = "<group>"; };
 		DB425F7227C648D900FFCCB5 /* InitialSelectionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialSelectionRouter.swift; sourceTree = "<group>"; };
@@ -379,7 +439,7 @@
 		DBEEF8502AC310920058DAD1 /* CharacterListMarvelRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListMarvelRepository.swift; sourceTree = "<group>"; };
 		DBEEF8532AC3126A0058DAD1 /* CharacterListMarvelService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListMarvelService.swift; sourceTree = "<group>"; };
 		DBEEF8552AC313D50058DAD1 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
-		DBEEF85C2AC321680058DAD1 /* APIClientNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientNew.swift; sourceTree = "<group>"; };
+		DBEEF85C2AC321680058DAD1 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		E51607890E386483BADBBD01 /* Pods-VIPArchitectureSampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPArchitectureSampleUITests.debug.xcconfig"; path = "Target Support Files/Pods-VIPArchitectureSampleUITests/Pods-VIPArchitectureSampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EF8B7FCD7D6C531E8EF3831E /* Pods-VIPArchitectureSampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPArchitectureSampleTests.debug.xcconfig"; path = "Target Support Files/Pods-VIPArchitectureSampleTests/Pods-VIPArchitectureSampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -490,6 +550,335 @@
 			isa = PBXGroup;
 			children = (
 				DB2C6ECA2AC439E60019CC43 /* FetchCharacterListMarvelUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		DB2C6ED22AC4612C0019CC43 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				DB2C6EE52AC46D260019CC43 /* CharacterDetailMarvelRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		DB2C6ED32AC461380019CC43 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				DB2C6EE22AC46C830019CC43 /* CharacterDetailMarvelService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		DB2C6ED42AC461780019CC43 /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				DB2C6EDE2AC463D80019CC43 /* MarvelCharacterDetailMapperContract.swift */,
+				DB2C6EE02AC463E70019CC43 /* MarvelCharacterDetailMapper.swift */,
+			);
+			path = Mapper;
+			sourceTree = "<group>";
+		};
+		DB2C6ED52AC4618F0019CC43 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				DB2C6EDC2AC463700019CC43 /* CharacterDetailMarvelRepositoryContract.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		DB2C6ED62AC461980019CC43 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				DB2C6ED82AC462110019CC43 /* CharacterDetailMarvelEntity.swift */,
+				DB2C6EDA2AC463320019CC43 /* CharacterDetailItemEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		DB2C6ED72AC461A20019CC43 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				DB2C6EE72AC46DD10019CC43 /* FetchCharacterDetailMarvelUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		DB2C6EE42AC46CE40019CC43 /* NetworkError */ = {
+			isa = PBXGroup;
+			children = (
+				DB425F3727C62CCB00FFCCB5 /* CustomNetworkError.swift */,
+			);
+			path = NetworkError;
+			sourceTree = "<group>";
+		};
+		DB2C6EE92AC472380019CC43 /* RickAndMorty */ = {
+			isa = PBXGroup;
+			children = (
+				DB2C6EEB2AC4727D0019CC43 /* CharactersListRickMorty */,
+			);
+			path = RickAndMorty;
+			sourceTree = "<group>";
+		};
+		DB2C6EEA2AC472460019CC43 /* RickAndMorty */ = {
+			isa = PBXGroup;
+			children = (
+				DB2C6EEC2AC472850019CC43 /* CharactersListRickMorty */,
+			);
+			path = RickAndMorty;
+			sourceTree = "<group>";
+		};
+		DB2C6EEB2AC4727D0019CC43 /* CharactersListRickMorty */ = {
+			isa = PBXGroup;
+			children = (
+				DB2C6EEF2AC472A30019CC43 /* UseCases */,
+				DB2C6EEE2AC4729D0019CC43 /* Entity */,
+				DB2C6EED2AC472940019CC43 /* Repository */,
+			);
+			path = CharactersListRickMorty;
+			sourceTree = "<group>";
+		};
+		DB2C6EEC2AC472850019CC43 /* CharactersListRickMorty */ = {
+			isa = PBXGroup;
+			children = (
+				DB2C6EF32AC472C80019CC43 /* Model */,
+				DB2C6EF22AC472C10019CC43 /* Mapper */,
+				DB2C6EF12AC472BA0019CC43 /* Service */,
+				DB2C6EF02AC472B10019CC43 /* Repository */,
+			);
+			path = CharactersListRickMorty;
+			sourceTree = "<group>";
+		};
+		DB2C6EED2AC472940019CC43 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				DB2C6EF42AC4731A0019CC43 /* CharactersListRickMortyRepositoryContract.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		DB2C6EEE2AC4729D0019CC43 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				DB2C6EF62AC473770019CC43 /* CharactersListRickMortyEntity.swift */,
+				DB2C6EF82AC474140019CC43 /* CharactersListRickMortyItemEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		DB2C6EEF2AC472A30019CC43 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				DB2C6F022AC47A260019CC43 /* FetchCharacterListRickMortyUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		DB2C6EF02AC472B10019CC43 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				DB2C6F002AC479370019CC43 /* CharactersListRickMortyRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		DB2C6EF12AC472BA0019CC43 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				DB2C6EFA2AC476590019CC43 /* CharactersListRickMortyService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		DB2C6EF22AC472C10019CC43 /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				DB2C6EFC2AC477C20019CC43 /* CharactersListRickMortyMapperContract.swift */,
+				DB2C6EFE2AC477C90019CC43 /* CharactersListRickMortyMapper.swift */,
+			);
+			path = Mapper;
+			sourceTree = "<group>";
+		};
+		DB2C6EF32AC472C80019CC43 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DB425F6A27C6466A00FFCCB5 /* CharactersRickAndMorty.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DB2C6F042AC47FFD0019CC43 /* LastFM */ = {
+			isa = PBXGroup;
+			children = (
+				DB2C6F062AC480270019CC43 /* ArtistDetail */,
+				DB2C6F052AC4801C0019CC43 /* ArtistsList */,
+			);
+			path = LastFM;
+			sourceTree = "<group>";
+		};
+		DB2C6F052AC4801C0019CC43 /* ArtistsList */ = {
+			isa = PBXGroup;
+			children = (
+				DB2C6F0E2AC4807B0019CC43 /* Model */,
+				DB2C6F0D2AC480750019CC43 /* Mapper */,
+				DB2C6F0C2AC4806F0019CC43 /* Service */,
+				DB2C6F0B2AC480670019CC43 /* Repository */,
+			);
+			path = ArtistsList;
+			sourceTree = "<group>";
+		};
+		DB2C6F062AC480270019CC43 /* ArtistDetail */ = {
+			isa = PBXGroup;
+			children = (
+				DB2C6F0A2AC480550019CC43 /* Model */,
+				DB2C6F092AC4804E0019CC43 /* Mapper */,
+				DB2C6F082AC480480019CC43 /* Service */,
+				DB2C6F072AC480400019CC43 /* Repository */,
+			);
+			path = ArtistDetail;
+			sourceTree = "<group>";
+		};
+		DB2C6F072AC480400019CC43 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				DB2D11FB2AC583400058E577 /* ArtistDetailRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		DB2C6F082AC480480019CC43 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				DB2C6F182AC481AB0019CC43 /* ArtistDetailService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		DB2C6F092AC4804E0019CC43 /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				DB2D11FD2AC583580058E577 /* ArtistDetailMapperContract.swift */,
+				DB2D11FF2AC583630058E577 /* ArtistDetailMapper.swift */,
+			);
+			path = Mapper;
+			sourceTree = "<group>";
+		};
+		DB2C6F0A2AC480550019CC43 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DB425F6827C645F900FFCCB5 /* AlbumsLastFM.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DB2C6F0B2AC480670019CC43 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				DB2D11F52AC5807C0058E577 /* ArtistsListRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		DB2C6F0C2AC4806F0019CC43 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				DB2C6F1A2AC4823C0019CC43 /* ArtistsListService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		DB2C6F0D2AC480750019CC43 /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				DB2D11F72AC580C40058E577 /* ArtistsListMapperContract.swift */,
+				DB2D11F92AC580D10058E577 /* ArtistsListMapper.swift */,
+			);
+			path = Mapper;
+			sourceTree = "<group>";
+		};
+		DB2C6F0E2AC4807B0019CC43 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DB425F6627C6458800FFCCB5 /* ArtistsLastFM.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DB2C6F0F2AC4809F0019CC43 /* LastFM */ = {
+			isa = PBXGroup;
+			children = (
+				DB2C6F112AC480AF0019CC43 /* ArtisDetail */,
+				DB2C6F102AC480A80019CC43 /* ArtistsList */,
+			);
+			path = LastFM;
+			sourceTree = "<group>";
+		};
+		DB2C6F102AC480A80019CC43 /* ArtistsList */ = {
+			isa = PBXGroup;
+			children = (
+				DB2C6F172AC480DB0019CC43 /* UseCases */,
+				DB2C6F162AC480D40019CC43 /* Entity */,
+				DB2C6F152AC480CE0019CC43 /* Repository */,
+			);
+			path = ArtistsList;
+			sourceTree = "<group>";
+		};
+		DB2C6F112AC480AF0019CC43 /* ArtisDetail */ = {
+			isa = PBXGroup;
+			children = (
+				DB2C6F142AC480C60019CC43 /* UseCases */,
+				DB2C6F132AC480C00019CC43 /* Entity */,
+				DB2C6F122AC480BA0019CC43 /* Repository */,
+			);
+			path = ArtisDetail;
+			sourceTree = "<group>";
+		};
+		DB2C6F122AC480BA0019CC43 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				DB2D11F12AC57FCA0058E577 /* ArtistDetailRepositoryContract.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		DB2C6F132AC480C00019CC43 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				DB2D11ED2AC57F550058E577 /* ArtistDetailItemEntity.swift */,
+				DB2D11EF2AC57F9C0058E577 /* ArtistDetailEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		DB2C6F142AC480C60019CC43 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				DB2D12032AC586D30058E577 /* FetchArtistDetailUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		DB2C6F152AC480CE0019CC43 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				DB2D11F32AC580400058E577 /* ArtistsListRepositoryContract.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		DB2C6F162AC480D40019CC43 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				DB2D11E92AC57EC20058E577 /* ArtistsListItemEntity.swift */,
+				DB2D11EB2AC57F0E0058E577 /* ArtistsListEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		DB2C6F172AC480DB0019CC43 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				DB2D12012AC586220058E577 /* FetchArtistsListUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -657,11 +1046,9 @@
 		DB425F3427C62CCB00FFCCB5 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				DBEEF85B2AC321410058DAD1 /* APIClientNew */,
-				DB425F3727C62CCB00FFCCB5 /* CustomNetworkError.swift */,
+				DB2C6EE42AC46CE40019CC43 /* NetworkError */,
 				DB425F3827C62CCB00FFCCB5 /* APIClient */,
 				DB425F3C27C62CCB00FFCCB5 /* EnviromentService.swift */,
-				DB425F3D27C62CCB00FFCCB5 /* Models */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -669,37 +1056,11 @@
 		DB425F3827C62CCB00FFCCB5 /* APIClient */ = {
 			isa = PBXGroup;
 			children = (
-				DB425F6C27C6482800FFCCB5 /* APIClient.swift */,
+				DBEEF85C2AC321680058DAD1 /* APIClient.swift */,
+				DBEEF8552AC313D50058DAD1 /* APIEndpoint.swift */,
 				DB425F3A27C62CCB00FFCCB5 /* APIConstants.swift */,
-				DB425F3B27C62CCB00FFCCB5 /* APIRouter.swift */,
 			);
 			path = APIClient;
-			sourceTree = "<group>";
-		};
-		DB425F3D27C62CCB00FFCCB5 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				DB425F6527C6453200FFCCB5 /* Rick&Morty */,
-				DB425F6427C6452B00FFCCB5 /* LastFM */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		DB425F6427C6452B00FFCCB5 /* LastFM */ = {
-			isa = PBXGroup;
-			children = (
-				DB425F6627C6458800FFCCB5 /* ArtistsLastFM.swift */,
-				DB425F6827C645F900FFCCB5 /* AlbumsLastFM.swift */,
-			);
-			path = LastFM;
-			sourceTree = "<group>";
-		};
-		DB425F6527C6453200FFCCB5 /* Rick&Morty */ = {
-			isa = PBXGroup;
-			children = (
-				DB425F6A27C6466A00FFCCB5 /* CharactersRickAndMorty.swift */,
-			);
-			path = "Rick&Morty";
 			sourceTree = "<group>";
 		};
 		DB425F6E27C6486500FFCCB5 /* Scenes */ = {
@@ -1177,6 +1538,8 @@
 		DBEEF8412AC2F8690058DAD1 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				DB2C6F042AC47FFD0019CC43 /* LastFM */,
+				DB2C6EEA2AC472460019CC43 /* RickAndMorty */,
 				DBEEF8422AC2F8720058DAD1 /* Marvel */,
 			);
 			path = Scenes;
@@ -1185,6 +1548,7 @@
 		DBEEF8422AC2F8720058DAD1 /* Marvel */ = {
 			isa = PBXGroup;
 			children = (
+				DB2C6EBE2AC433480019CC43 /* Model */,
 				DBEEF8472AC2F8A20058DAD1 /* CharactersListMarvel */,
 				DBEEF8452AC2F8950058DAD1 /* CharacterDetailMarvel */,
 			);
@@ -1194,6 +1558,8 @@
 		DBEEF8432AC2F87B0058DAD1 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				DB2C6F0F2AC4809F0019CC43 /* LastFM */,
+				DB2C6EE92AC472380019CC43 /* RickAndMorty */,
 				DBEEF8442AC2F8810058DAD1 /* Marvel */,
 			);
 			path = Scenes;
@@ -1211,6 +1577,9 @@
 		DBEEF8452AC2F8950058DAD1 /* CharacterDetailMarvel */ = {
 			isa = PBXGroup;
 			children = (
+				DB2C6ED42AC461780019CC43 /* Mapper */,
+				DB2C6ED32AC461380019CC43 /* Service */,
+				DB2C6ED22AC4612C0019CC43 /* Repository */,
 			);
 			path = CharacterDetailMarvel;
 			sourceTree = "<group>";
@@ -1218,6 +1587,9 @@
 		DBEEF8462AC2F89A0058DAD1 /* CharacterDetailMarvel */ = {
 			isa = PBXGroup;
 			children = (
+				DB2C6ED72AC461A20019CC43 /* UseCases */,
+				DB2C6ED62AC461980019CC43 /* Entity */,
+				DB2C6ED52AC4618F0019CC43 /* Repository */,
 			);
 			path = CharacterDetailMarvel;
 			sourceTree = "<group>";
@@ -1226,7 +1598,6 @@
 			isa = PBXGroup;
 			children = (
 				DB2C6EBF2AC433860019CC43 /* Mapper */,
-				DB2C6EBE2AC433480019CC43 /* Model */,
 				DBEEF8522AC312520058DAD1 /* Service */,
 				DBEEF84C2AC2FACA0058DAD1 /* Repository */,
 			);
@@ -1265,15 +1636,6 @@
 				DBEEF8532AC3126A0058DAD1 /* CharacterListMarvelService.swift */,
 			);
 			path = Service;
-			sourceTree = "<group>";
-		};
-		DBEEF85B2AC321410058DAD1 /* APIClientNew */ = {
-			isa = PBXGroup;
-			children = (
-				DBEEF8552AC313D50058DAD1 /* APIEndpoint.swift */,
-				DBEEF85C2AC321680058DAD1 /* APIClientNew.swift */,
-			);
-			path = APIClientNew;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1564,27 +1926,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB2D11FE2AC583580058E577 /* ArtistDetailMapperContract.swift in Sources */,
 				DB425FFD27C66FD900FFCCB5 /* CharacterDetailMarvelModel.swift in Sources */,
 				DB2C6EC62AC435590019CC43 /* MarvelCharacterListMapperContract.swift in Sources */,
 				DB425F9227C6543A00FFCCB5 /* ArtistsListView.swift in Sources */,
 				DB425F4E27C62CCB00FFCCB5 /* Dictionary+Additions.swift in Sources */,
-				DB425F5527C62CCB00FFCCB5 /* APIRouter.swift in Sources */,
 				DB42600227C66FD900FFCCB5 /* CharactersListMarvelFactorable.swift in Sources */,
 				DB425F2927C62C2400FFCCB5 /* ErrorModel.swift in Sources */,
+				DB2D12042AC586D30058E577 /* FetchArtistDetailUseCase.swift in Sources */,
+				DB2C6F192AC481AB0019CC43 /* ArtistDetailService.swift in Sources */,
 				DB425FB127C664E100FFCCB5 /* CharactersListRickMortyTableViewCell.swift in Sources */,
+				DB2C6EE82AC46DD10019CC43 /* FetchCharacterDetailMarvelUseCase.swift in Sources */,
+				DB2D12002AC583630058E577 /* ArtistDetailMapper.swift in Sources */,
 				DB425F8D27C6543A00FFCCB5 /* ArtistsListFactorable.swift in Sources */,
+				DB2D11FA2AC580D10058E577 /* ArtistsListMapper.swift in Sources */,
+				DB2C6EE32AC46C830019CC43 /* CharacterDetailMarvelService.swift in Sources */,
+				DB2C6EFB2AC476590019CC43 /* CharactersListRickMortyService.swift in Sources */,
 				DB425FD527C66E3F00FFCCB5 /* Result.swift in Sources */,
+				DB2C6EF92AC474140019CC43 /* CharactersListRickMortyItemEntity.swift in Sources */,
 				DB425FDD27C66E3F00FFCCB5 /* Story.swift in Sources */,
 				DB425F5227C62CCB00FFCCB5 /* CustomNetworkError.swift in Sources */,
 				DB425FFC27C66FD900FFCCB5 /* CharacterDetailMarvelInteractor.swift in Sources */,
 				DBEEF8542AC3126A0058DAD1 /* CharacterListMarvelService.swift in Sources */,
 				DB425F4B27C62CCB00FFCCB5 /* UIViewController+AlertController.swift in Sources */,
+				DB2D11F62AC5807C0058E577 /* ArtistsListRepository.swift in Sources */,
 				DB425FD327C66E3F00FFCCB5 /* Event.swift in Sources */,
 				DB7D59B127C799370093370A /* ArtistDetailRouter.swift in Sources */,
+				DB2C6EF72AC473770019CC43 /* CharactersListRickMortyEntity.swift in Sources */,
 				DB7D59AF27C799370093370A /* ArtistDetailFactorable.swift in Sources */,
 				DB425F4D27C62CCB00FFCCB5 /* String+Additions.swift in Sources */,
 				DB425F8E27C6543A00FFCCB5 /* ArtistsListPresenter.swift in Sources */,
-				DB425F6D27C6482800FFCCB5 /* APIClient.swift in Sources */,
 				DB7D59B027C799370093370A /* ArtistDetailPresenter.swift in Sources */,
 				DB425FDB27C66E3F00FFCCB5 /* Url.swift in Sources */,
 				DB425EAB27C541F200FFCCB5 /* ViewController.swift in Sources */,
@@ -1594,30 +1965,41 @@
 				DB7D59B227C799370093370A /* ArtistDetailViewController.swift in Sources */,
 				DB425F9A27C659BD00FFCCB5 /* ArtistTableViewCell.swift in Sources */,
 				DB425F8F27C6543A00FFCCB5 /* ArtistsListRouter.swift in Sources */,
+				DB2C6EE62AC46D260019CC43 /* CharacterDetailMarvelRepository.swift in Sources */,
 				DB42600427C66FD900FFCCB5 /* CharactersListMarvelModel.swift in Sources */,
 				DB425F6B27C6466A00FFCCB5 /* CharactersRickAndMorty.swift in Sources */,
 				DB425FC027C66BC800FFCCB5 /* CharactersListRickMortyViewController.swift in Sources */,
 				DB2C6ECB2AC439E60019CC43 /* FetchCharacterListMarvelUseCase.swift in Sources */,
 				DB425FBD27C66BC800FFCCB5 /* CharactersListRickMortyInteractor.swift in Sources */,
+				DB2C6EDD2AC463700019CC43 /* CharacterDetailMarvelRepositoryContract.swift in Sources */,
 				DB425F7F27C6490600FFCCB5 /* AppInjector.swift in Sources */,
+				DB2C6F1B2AC4823C0019CC43 /* ArtistsListService.swift in Sources */,
 				DB425FFB27C66FD900FFCCB5 /* CharacterDetailMarvelViewController.swift in Sources */,
+				DB2D11F42AC580400058E577 /* ArtistsListRepositoryContract.swift in Sources */,
+				DB2D12022AC586220058E577 /* FetchArtistsListUseCase.swift in Sources */,
 				DB425FD227C66E3F00FFCCB5 /* ItemSeries.swift in Sources */,
 				DB425F2627C62AF100FFCCB5 /* LoaderView.swift in Sources */,
+				DB2C6EFF2AC477C90019CC43 /* CharactersListRickMortyMapper.swift in Sources */,
 				DB42600027C66FD900FFCCB5 /* CharacterDetailMarvelTableViewCell.swift in Sources */,
 				DB425FBC27C66BC800FFCCB5 /* CharactersListRickMortyView.swift in Sources */,
+				DB2D11F22AC57FCA0058E577 /* ArtistDetailRepositoryContract.swift in Sources */,
 				DB425FBF27C66BC800FFCCB5 /* CharactersListRickMortyPresenter.swift in Sources */,
+				DB2C6F032AC47A260019CC43 /* FetchCharacterListRickMortyUseCase.swift in Sources */,
 				DB42600827C66FD900FFCCB5 /* CharactersListMarvelView.swift in Sources */,
 				DB425F5427C62CCB00FFCCB5 /* APIConstants.swift in Sources */,
+				DB2C6EF52AC4731A0019CC43 /* CharactersListRickMortyRepositoryContract.swift in Sources */,
 				DB425F5627C62CCB00FFCCB5 /* EnviromentService.swift in Sources */,
 				DB42600A27C66FD900FFCCB5 /* CharacterListMarvelTableViewCell.swift in Sources */,
-				DBEEF85D2AC321680058DAD1 /* APIClientNew.swift in Sources */,
+				DBEEF85D2AC321680058DAD1 /* APIClient.swift in Sources */,
 				DB425FF927C66FD900FFCCB5 /* CharacterDetailMarvelFactorable.swift in Sources */,
 				DB2C6EC82AC435CA0019CC43 /* MarvelCharacterListMapper.swift in Sources */,
 				DB425FD427C66E3F00FFCCB5 /* Thumbnail.swift in Sources */,
 				DB7D59BA27C79E680093370A /* ArtistDetailTableViewCell.swift in Sources */,
 				DB7D59A727C68E680093370A /* UIColor+Additions.swift in Sources */,
+				DB2C6EDB2AC463320019CC43 /* CharacterDetailItemEntity.swift in Sources */,
 				DB425F7D27C648D900FFCCB5 /* InitialSelectionModel.swift in Sources */,
 				DB425EA727C541F200FFCCB5 /* AppDelegate.swift in Sources */,
+				DB2C6EE12AC463E70019CC43 /* MarvelCharacterDetailMapper.swift in Sources */,
 				DB425FD627C66E3F00FFCCB5 /* Comic.swift in Sources */,
 				DB425F7827C648D900FFCCB5 /* InitialSelectionPresenter.swift in Sources */,
 				DB425FDC27C66E3F00FFCCB5 /* CharactersListMarvel.swift in Sources */,
@@ -1627,18 +2009,24 @@
 				DB2C6EC22AC4342B0019CC43 /* CharactersListMarvelEntity.swift in Sources */,
 				DB425FD827C66E3F00FFCCB5 /* ItemEvent.swift in Sources */,
 				DB425FC227C66BC800FFCCB5 /* CharactersListRickMortyFactorable.swift in Sources */,
+				DB2D11EE2AC57F550058E577 /* ArtistDetailItemEntity.swift in Sources */,
 				DBEEF84E2AC2FB9E0058DAD1 /* CharacterListMarvelRepositoryContract.swift in Sources */,
 				DB425F7C27C648D900FFCCB5 /* InitialSelectionView.swift in Sources */,
 				DBEEF8512AC310920058DAD1 /* CharacterListMarvelRepository.swift in Sources */,
 				DB425F5027C62CCB00FFCCB5 /* BaseView.swift in Sources */,
 				DB42600627C66FD900FFCCB5 /* CharactersListMarvelPresenter.swift in Sources */,
+				DB2C6ED92AC462110019CC43 /* CharacterDetailMarvelEntity.swift in Sources */,
 				DB42600127C66FD900FFCCB5 /* CharacterDetailMarvelView.swift in Sources */,
+				DB2D11F02AC57F9C0058E577 /* ArtistDetailEntity.swift in Sources */,
 				DBEEF8562AC313D50058DAD1 /* APIEndpoint.swift in Sources */,
+				DB2C6EFD2AC477C20019CC43 /* CharactersListRickMortyMapperContract.swift in Sources */,
 				DB425F9127C6543A00FFCCB5 /* ArtistsListInteractor.swift in Sources */,
 				DB425FBE27C66BC800FFCCB5 /* CharactersListRickMortyRouter.swift in Sources */,
+				DB2D11EA2AC57EC20058E577 /* ArtistsListItemEntity.swift in Sources */,
 				DB7D59B527C799370093370A /* ArtistDetailModel.swift in Sources */,
 				DB425F7727C648D900FFCCB5 /* InitialSelectionFactorable.swift in Sources */,
 				DB425F6927C645F900FFCCB5 /* AlbumsLastFM.swift in Sources */,
+				DB2C6F012AC479370019CC43 /* CharactersListRickMortyRepository.swift in Sources */,
 				DB425FD927C66E3F00FFCCB5 /* ItemStory.swift in Sources */,
 				DB425F6727C6458800FFCCB5 /* ArtistsLastFM.swift in Sources */,
 				DB425F9327C6543A00FFCCB5 /* ArtistsListModel.swift in Sources */,
@@ -1647,10 +2035,14 @@
 				DB425FC127C66BC800FFCCB5 /* CharactersListRickMortyModel.swift in Sources */,
 				DB42600527C66FD900FFCCB5 /* CharactersListMarvelInteractor.swift in Sources */,
 				DB425F7A27C648D900FFCCB5 /* InitialSelectionViewController.swift in Sources */,
+				DB2C6EDF2AC463D80019CC43 /* MarvelCharacterDetailMapperContract.swift in Sources */,
 				DB7D59B327C799370093370A /* ArtistDetailInteractor.swift in Sources */,
 				DB425FFA27C66FD900FFCCB5 /* CharacterDetailMarvelRouter.swift in Sources */,
 				DB425FD127C66E3F00FFCCB5 /* ItemComic.swift in Sources */,
+				DB2D11FC2AC583400058E577 /* ArtistDetailRepository.swift in Sources */,
 				DB425F7927C648D900FFCCB5 /* InitialSelectionRouter.swift in Sources */,
+				DB2D11EC2AC57F0E0058E577 /* ArtistsListEntity.swift in Sources */,
+				DB2D11F82AC580C40058E577 /* ArtistsListMapperContract.swift in Sources */,
 				DB42600727C66FD900FFCCB5 /* CharactersListMarvelRouter.swift in Sources */,
 				DB425FDA27C66E3F00FFCCB5 /* Datum.swift in Sources */,
 				DB425F9027C6543A00FFCCB5 /* ArtistsListViewController.swift in Sources */,

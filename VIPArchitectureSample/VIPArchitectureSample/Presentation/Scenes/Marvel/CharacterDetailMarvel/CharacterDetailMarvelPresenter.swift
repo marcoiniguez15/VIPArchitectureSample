@@ -13,92 +13,73 @@
 import Foundation
 
 protocol CharacterDetailMarvelPresentationLogic {
-  func presentResponse(_ response: CharacterDetailMarvelModel.Response)
+    func presentResponse(_ response: CharacterDetailMarvelModel.Response)
 }
 
 final class CharacterDetailMarvelPresenter {
-  private weak var viewController: CharacterDetailMarvelDisplayLogic?
-  
-  init(viewController: CharacterDetailMarvelDisplayLogic?) {
-    self.viewController = viewController
-  }
+    private weak var viewController: CharacterDetailMarvelDisplayLogic?
+
+    init(viewController: CharacterDetailMarvelDisplayLogic?) {
+        self.viewController = viewController
+    }
 }
 
 
 // MARK: - CharacterDetailMarvelPresentationLogic
 extension CharacterDetailMarvelPresenter: CharacterDetailMarvelPresentationLogic {
-  
-  func presentResponse(_ response: CharacterDetailMarvelModel.Response) {
-    
-    switch response {
-      
-    case let .prepareCharactersDetail(data):
-      self.prepareCharactersDetail(data: data)
-      
-    case let .showError(model):
-      self.viewController?.displayViewModel(.showError(model: model))
-      
+
+    func presentResponse(_ response: CharacterDetailMarvelModel.Response) {
+
+        switch response {
+
+        case let .prepareCharactersDetail(data):
+            self.prepareCharactersDetail(data: data)
+
+        case let .showError(model):
+            self.viewController?.displayViewModel(.showError(model: model))
+
+        }
     }
-  }
 }
 
 
 // MARK: - Private Zone
 private extension CharacterDetailMarvelPresenter {
-  
-  func prepareCharactersDetail(data: ResultList) {
-    let titleComics = "Comics"
-    var itemsComics = [CharacterDetailMarvelModel.CellModel]()
-    if let comics = data.comics, let items = comics.items {
-      for item in items {
-        if let name = item.name {
-          itemsComics.append(CharacterDetailMarvelModel.CellModel(title: name))
+
+    func prepareCharactersDetail(data: CharacterDetailMarvelEntity) {
+        let titleComics = "Comics"
+        let itemsComics = data.comics.compactMap { item -> CharacterDetailMarvelModel.CellModel in
+            return CharacterDetailMarvelModel.CellModel(title: item.name)
         }
-      }
-    }
-    let sectionComics = CharacterDetailMarvelModel.SectionModel(title: titleComics, items: itemsComics)
-    
-    let titleSeries = "Series"
-    var itemsSeries = [CharacterDetailMarvelModel.CellModel]()
-    if let series = data.series, let items = series.items {
-      for item in items {
-        if let name = item.name {
-          itemsSeries.append(CharacterDetailMarvelModel.CellModel(title: name))
+
+        let sectionComics = CharacterDetailMarvelModel.SectionModel(title: titleComics, items: itemsComics)
+
+        let titleSeries = "Series"
+        let itemsSeries = data.series.compactMap { item -> CharacterDetailMarvelModel.CellModel in
+            return CharacterDetailMarvelModel.CellModel(title: item.name)
         }
-      }
-    }
-    let sectionSeries = CharacterDetailMarvelModel.SectionModel(title: titleSeries, items: itemsSeries)
-    
-    let titleStories = "Stories"
-    var itemsStories = [CharacterDetailMarvelModel.CellModel]()
-    if let stories = data.stories, let items = stories.items {
-      for item in items {
-        if let name = item.name {
-          itemsStories.append(CharacterDetailMarvelModel.CellModel(title: name))
+
+        let sectionSeries = CharacterDetailMarvelModel.SectionModel(title: titleSeries, items: itemsSeries)
+
+        let titleStories = "Stories"
+        let itemsStories = data.stories.compactMap { item -> CharacterDetailMarvelModel.CellModel in
+            return CharacterDetailMarvelModel.CellModel(title: item.name)
         }
-      }
-    }
-    let sectionStories = CharacterDetailMarvelModel.SectionModel(title: titleStories, items: itemsStories)
-    
-    let titleEvents = "Events"
-    var itemsEvents = [CharacterDetailMarvelModel.CellModel]()
-    if let events = data.events, let items = events.items {
-      for item in items {
-        if let name = item.name {
-          itemsEvents.append(CharacterDetailMarvelModel.CellModel(title: name))
+
+        let sectionStories = CharacterDetailMarvelModel.SectionModel(title: titleStories, items: itemsStories)
+
+        let titleEvents = "Events"
+        let itemsEvents = data.events.compactMap { item -> CharacterDetailMarvelModel.CellModel in
+            return CharacterDetailMarvelModel.CellModel(title: item.name)
         }
-      }
+
+        let sectionEvents = CharacterDetailMarvelModel.SectionModel(title: titleEvents, items: itemsEvents)
+
+
+        let viewData = CharacterDetailMarvelModel.ViewDataSource(
+            title: data.name ,
+            imageName: data.imageName,
+            sections: [sectionComics, sectionSeries, sectionStories, sectionEvents])
+        viewController?.displayViewModel(.prepareCharactersDetail(viewModelData: viewData))
     }
-    let sectionEvents = CharacterDetailMarvelModel.SectionModel(title: titleEvents, items: itemsEvents)
-    
-    var imageName: String?
-    if let thumbnail = data.thumbnail, let path = thumbnail.path, let exten = thumbnail.exten {
-      imageName = path + "." + exten
-    }
-    let viewData = CharacterDetailMarvelModel.ViewDataSource(
-      title: data.name ?? "",
-      imageName: imageName,
-      sections: [sectionComics, sectionSeries, sectionStories, sectionEvents])
-    viewController?.displayViewModel(.prepareCharactersDetail(viewModelData: viewData))
-  }
 }

@@ -1,11 +1,11 @@
 import Foundation
 
 struct CharacterListMarvelRepository: CharacterListMarvelRepositoryContract {
-    let apiClient: APIClientNewProtocol
-    let marvelCharacterListMapper: MarvelCharacterListMapper
+    private let apiClient: APIClientProtocol
+    private let marvelCharacterListMapper: MarvelCharacterListMapperContract
 
 
-    init(apiClient: APIClientNew = APIClientNew.shared, mapper:MarvelCharacterListMapper = MarvelCharacterListMapper()) {
+    init(apiClient: APIClient = APIClient.shared, mapper:MarvelCharacterListMapperContract = MarvelCharacterListMapper()) {
         self.apiClient = apiClient
         self.marvelCharacterListMapper = mapper
     }

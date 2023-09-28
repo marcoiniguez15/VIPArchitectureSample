@@ -13,8 +13,7 @@ protocol APIEndpoint {
 
 extension APIEndpoint {
     var scheme: String {
-       //  return "https://"
-        return ""
+        return "https://"
     }
 }
 

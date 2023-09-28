@@ -58,22 +58,19 @@ extension ArtistDetailInteractor: ArtistDetailBusinessLogic {
 private extension ArtistDetailInteractor {
   
   func prepareView() {
-    let service = factory.makeApiService()
+    let useCase = factory.makeFetchCharacterDetailUseCase()
     LoaderView.toggleUniversalLoadingView(true)
-  
-    service.getAlbumsListLastFM(characterId: dataSource.artistId, limit: 50) { (result, _) in
-      LoaderView.toggleUniversalLoadingView(false)
-      switch result {
-      case let .success(info):
-        if let _ = info.topalbums {
-          self.presenter.presentResponse(.prepareView(info: info))
-        }
-        
-      case .failure:
-        let errorModel = ErrorHelper.createGenericError()
-        self.presenter.presentResponse(.showError(model: errorModel))
+
+      Task { @MainActor in
+          do {
+              let result = try await useCase.execute(FetchArtistDetailUseCaseParameters(characterId: dataSource.artistId, limit: 50))
+              LoaderView.toggleUniversalLoadingView(false)
+              self.presenter.presentResponse(.prepareView(info: result))
+          } catch {
+              LoaderView.toggleUniversalLoadingView(false)
+              let errorModel = ErrorHelper.createGenericError()
+              self.presenter.presentResponse(.showError(model: errorModel))
+          }
       }
-    }
-    
   }
 }

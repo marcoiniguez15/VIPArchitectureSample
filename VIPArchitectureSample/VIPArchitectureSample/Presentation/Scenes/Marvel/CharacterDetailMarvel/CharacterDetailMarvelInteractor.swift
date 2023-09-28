@@ -58,21 +58,20 @@ extension CharacterDetailMarvelInteractor: CharacterDetailMarvelBusinessLogic {
 private extension CharacterDetailMarvelInteractor {
   
   func prepareCharactersDetail() {
-    let service = factory.makeApiService()
+      let useCase = factory.makeFetchCharacterUseCase()
       LoaderView.toggleUniversalLoadingView(true)
-      service.getCharacterDetailMarvel(id: dataSource.characterId) { (result, _) in 
-      LoaderView.toggleUniversalLoadingView(false)
-      switch result {
-      case let .success(list):
-        if let data = list.data, let results = data.results, let item = results.first {
-          self.presenter.presentResponse(.prepareCharactersDetail(data: item))
-        }
-        
-      case .failure:
-        let errorModel = ErrorHelper.createGenericError()
-        self.presenter.presentResponse(.showError(model: errorModel))
+
+      Task { @MainActor in
+          do {
+              let model = try await useCase.execute(FetchCharacterDetailMarvelUseCaseParameters(id: dataSource.characterId))
+            LoaderView.toggleUniversalLoadingView(false)
+            self.presenter.presentResponse(.prepareCharactersDetail(data: model))
+          } catch {
+              LoaderView.toggleUniversalLoadingView(false)
+              let errorModel = ErrorHelper.createGenericError()
+              self.presenter.presentResponse(.showError(model: errorModel))
+          }
       }
-    }
     
   }
 }

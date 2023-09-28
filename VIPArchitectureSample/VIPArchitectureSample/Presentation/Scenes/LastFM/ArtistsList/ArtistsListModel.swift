@@ -20,7 +20,7 @@ enum ArtistsListModel {
   }
   
   enum Response {
-    case prepareArtistList(data: [Artist])
+    case prepareArtistList(data: [ArtistsListItemEntity])
     case showError(model: ErrorModel)
     case showDetail(id: String)
   }
@@ -48,6 +48,6 @@ enum ArtistsListModel {
 
   
   struct DataSource {
-    var artistList: [Artist] = []
+    var artistList: [ArtistsListItemEntity] = []
   }
 }

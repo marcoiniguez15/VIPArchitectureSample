@@ -1,92 +1,94 @@
 //
-//  APIClient.swift
-//  VIPArchitectureSample
-//
-//  Created by marco.iniguez.ollero on 23/2/22.
-//
+
 import Foundation
 import Alamofire
 
-typealias NetworkError = AFError
-
 protocol APIClientProtocol {
-  func getCharactersListLastFM(limit: Int, page: Int, completion:@escaping (Result<ArtistsLastFM, NetworkError>, Int?) -> Void)
-  func getAlbumsListLastFM(characterId: String, limit: Int, completion:@escaping (Result<AlbumsLastFM, NetworkError>, Int?) -> Void)
-  func getAllCharactersRickAndMorty(page: Int, nameFilter: String?, completion:@escaping (Result<CharactersRickAndMorty, NetworkError>, Int?) -> Void)
-  func getCharactersListMarvel(page: Int, completion:@escaping (Result<CharactersListMarvel, NetworkError>, Int?) -> Void)
-  func getCharacterDetailMarvel(id: Int, completion:@escaping (Result<CharactersListMarvel, NetworkError>, Int?) -> Void)
+    func performRequest<T: Decodable>(endpoint: APIEndpoint, responseModel: T.Type) async throws -> T
 }
-final class APIClient {
-  private static var instance: APIClient?
-  static var shared: APIClient {
-    if let instance = self.instance {
-      return instance
-    } else {
-      let configuration = URLSessionConfiguration.default
-      configuration.httpAdditionalHeaders = HTTPHeaders.default.dictionary
-      configuration.timeoutIntervalForRequest = 30
-      let manager = Session(configuration: configuration)
-      instance = APIClient(manager: manager)
-      return instance!
+
+final class APIClient: APIClientProtocol {
+    private static var instance: APIClient?
+    static var shared: APIClient {
+      if let instance = self.instance {
+        return instance
+      } else {
+        let configuration = URLSessionConfiguration.default
+        configuration.httpAdditionalHeaders = HTTPHeaders.default.dictionary
+        configuration.timeoutIntervalForRequest = 30
+        let manager = Session(configuration: configuration)
+        instance = APIClient(manager: manager)
+        return instance!
+      }
     }
-  }
-  let manager: Session
-  private init(manager: Session) {
-    self.manager = manager
-  }
+    let manager: Session
+    private init(manager: Session) {
+      self.manager = manager
+    }
+
+    func performRequest<T: Decodable>(endpoint: APIEndpoint, responseModel: T.Type) async throws -> T {
+        return try await withCheckedThrowingContinuation { continuation in
+            var header:[HTTPHeader] = []
+            if let endPointHeader = endpoint.header {
+                header =  endPointHeader.compactMap { item -> HTTPHeader in
+                    return HTTPHeader(name: item.key, value: item.value)
+                }
+            }
+            APIClient.shared.manager.request(
+                endpoint.scheme + endpoint.basePath + endpoint.path,
+                method: HTTPMethod(rawValue: endpoint.method.rawValue),
+                parameters: endpoint.body,
+                headers: HTTPHeaders(header),
+                requestModifier: { $0.timeoutInterval = 30 }
+            )
+            .validate(statusCode: 200..<300)
+            .responseDecodable(of: responseModel.self) { response in
+                print("🔵🔵🔵")
+                debugPrint(response)
+                print("🔵🔵🔵")
+                switch(response.result) {
+                case let .success(data):
+                    continuation.resume(returning: data)
+                case .failure(_):
+                    if response.response?.statusCode == 401 {
+                        continuation.resume(throwing: CustomNetworkError.unauthorized)
+                    } else {
+                        continuation.resume(throwing: CustomNetworkError.serverError)
+                    }
+                }
+
+            }
+        }
+
+    }
 }
 
-// MARK: - Public
-extension APIClient: APIClientProtocol {
-  func getAllCharactersRickAndMorty(page: Int, nameFilter: String? = nil, completion: @escaping (Result<CharactersRickAndMorty, NetworkError>, Int?) -> Void) {
-    performRequest(route: .getAllCharactersRickAndMorty(page: page, nameFilter: nameFilter), completion: completion)
-  }
-  
-  func getCharactersListLastFM(limit: Int, page: Int, completion:@escaping (Result<ArtistsLastFM, NetworkError>, Int?) -> Void) {
-    performRequest(route: .getCharactersListLastFM(limit: limit, page: page), completion: completion)
-  }
-  func getAlbumsListLastFM(characterId: String, limit: Int, completion:@escaping (Result<AlbumsLastFM, NetworkError>, Int?) -> Void) {
-    performRequest(route: .getAlbumsListLastFM(characterId: characterId, limit: limit), completion: completion)
-  }
-  
-  func getCharactersListMarvel(page: Int, completion:@escaping (Result<CharactersListMarvel, NetworkError>, Int?) -> Void) {
-    performRequest(route: .getCharactersListMarvel(page: page), completion: completion)
-  }
-  func getCharacterDetailMarvel(id: Int, completion:@escaping (Result<CharactersListMarvel, NetworkError>, Int?) -> Void) {
-    performRequest(route: .getCharacterDetailMarvel(id: id), completion: completion)
-  }
-  
-}
-
-// MARK: - Private
 private extension APIClient {
-  @discardableResult
-  func performRequest<T: Decodable>(route: APIRouter, decoder: JSONDecoder = JSONDecoder(), completion:@escaping (Result<T, AFError>, Int?) -> Void) -> DataRequest {
-    return APIClient.shared.manager.request(route)
-      .validate(statusCode: 200..<300)
-      .responseDecodable(decoder: decoder) { (response: DataResponse<T, AFError>) in
-        completion(response.result, response.response?.statusCode)
-      }
-  }
-  @discardableResult
-  func performRequestData(route: APIRouter, completion:@escaping (Result<Data?, AFError>, Int?) -> Void) -> DataRequest {
-    return APIClient.shared.manager.request(route)
-      .validate(statusCode: 200..<300)
-      .response { response in
-        completion(response.result, response.response?.statusCode)
-      }
-  }
-  @discardableResult
-  func performMultiPartRequest(route: APIRouter, payload: [String: Any], urlFile: String, completion:@escaping (Result<Data?, AFError>, Int?) -> Void) -> DataRequest {
-    return APIClient.shared.manager.upload(multipartFormData: { (multiPart) in
-      let dataPayload = try? JSONSerialization.data(withJSONObject: payload)
-      multiPart.append(dataPayload!, withName: "payload")
-      multiPart.append(URL(fileURLWithPath: urlFile), withName: "file")
-    }, with: route)
-    .validate(statusCode: 200..<300)
-    .response { response in
-      completion(response.result, response.response?.statusCode)
+    func getBaseURL(for key: EnvironmentService.Keys) -> String {
+      let urlString = EnvironmentService.getValue(for: key)
+      return urlString
     }
-  }
+    func generateURL(for baseKey:EnvironmentService.Keys, path: String) throws -> URL {
+      let baseURL = getBaseURL(for: baseKey)
+      let urlString = baseURL + path
+      guard let url = URL(string: urlString) else {
+        throw CustomNetworkError.unsuppotedURL
+      }
+      return url
+    }
+
+    func getBodyJSONParams(parameters: Parameters) throws -> Data? {
+      do {
+        return try JSONSerialization.data(withJSONObject: parameters, options: [])
+      } catch {
+        throw AFError.parameterEncodingFailed(reason: .jsonEncodingFailed(error: error))
+      }
+    }
+
+    func getBodyFormUrlEncodedParams(parameters: Parameters) -> Data? {
+      guard let postData = parameters.queryString.data(using: .utf8)
+      else { return nil }
+      return postData
+    }
 }
 

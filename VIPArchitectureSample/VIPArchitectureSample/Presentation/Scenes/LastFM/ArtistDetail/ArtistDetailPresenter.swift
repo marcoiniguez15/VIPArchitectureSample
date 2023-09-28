@@ -46,32 +46,10 @@ extension ArtistDetailPresenter: ArtistDetailPresentationLogic {
 // MARK: - Private Zone
 private extension ArtistDetailPresenter {
   
-  func prepareView(data: AlbumsLastFM) {
-    var title = "Top Albums"
-    
-    if let topAlbums = data.topalbums, let albums = topAlbums.album {
-      if let attr = topAlbums.attr, let artist = attr.artist {
-        title += "-" + artist
-      }
-    
-    let viewModels = albums.compactMap { album -> ArtistDetailModel.CellModel in
-        var imageURL = URL(string: "")
-        if let imageArray = album.image {
-            let imageURLs = imageArray.compactMap { (imageDictionary) -> URL? in
-                if let imageSize = imageDictionary.size, imageSize == ArtistsConstants.imageSizeValue,
-                    let imageURLString = imageDictionary.text {
-                    return URL(string: imageURLString)
-                } else if  let imageURLString = imageDictionary.text {
-                    return URL(string: imageURLString)
-                }
-                
-                return nil
-            }
-            imageURL = imageURLs.last
+    func prepareView(data: ArtistDetailEntity) {
+        let viewModels = data.items.compactMap { album -> ArtistDetailModel.CellModel in
+            return ArtistDetailModel.CellModel(title: album.title, rank: album.rank, imageURL: album.imageURL, description: album.description)
         }
-      return ArtistDetailModel.CellModel(title: album.name ?? "Name", rank: String(album.playcount ?? 0), imageURL: imageURL, description:  album.mbid ?? "0")
-      }
-      self.viewController?.displayViewModel(.prepareView(viewModelData: ArtistDetailModel.ViewDataSource(title: title, items: viewModels)))
-    }
+        self.viewController?.displayViewModel(.prepareView(viewModelData: ArtistDetailModel.ViewDataSource(title: data.title, items: viewModels)))
   }
 }

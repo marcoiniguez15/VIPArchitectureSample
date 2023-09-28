@@ -13,8 +13,8 @@
 import UIKit
 
 extension AppInjector {
-  
-  struct CharactersListRickMortyInjector {}
+
+    struct CharactersListRickMortyInjector {}
 }
 
 extension AppInjector.CharactersListRickMortyInjector: CharactersListRickMortyFactorable {}
@@ -22,44 +22,45 @@ extension AppInjector.CharactersListRickMortyInjector: CharactersListRickMortyFa
 protocol CharactersListRickMortyFactorable: CharactersListRickMortyInteractorFactorable, CharactersListRickMortyPresenterFactorable, CharactersListRickMortyRouterFactorable, CharactersListRickMortyServicesFactorable { }
 
 protocol CharactersListRickMortyInteractorFactorable {
-  typealias InteractableFactory = CharactersListRickMortyPresenterFactorable & CharactersListRickMortyServicesFactorable
-  
-  func makeInteractor(factory: InteractableFactory, viewController: CharactersListRickMortyDisplayLogic?, dataSource: CharactersListRickMortyModel.DataSource) -> CharactersListRickMortyInteractable
+    typealias InteractableFactory = CharactersListRickMortyPresenterFactorable & CharactersListRickMortyServicesFactorable
+
+    func makeInteractor(factory: InteractableFactory, viewController: CharactersListRickMortyDisplayLogic?, dataSource: CharactersListRickMortyModel.DataSource) -> CharactersListRickMortyInteractable
 }
 
 protocol CharactersListRickMortyPresenterFactorable {
-  func makePresenter(viewController: CharactersListRickMortyDisplayLogic?) -> CharactersListRickMortyPresentationLogic
+    func makePresenter(viewController: CharactersListRickMortyDisplayLogic?) -> CharactersListRickMortyPresentationLogic
 }
 
 protocol CharactersListRickMortyRouterFactorable {
-  func makeRouter(viewController: UIViewController?) -> CharactersListRickMortyRouting
+    func makeRouter(viewController: UIViewController?) -> CharactersListRickMortyRouting
 }
 
 extension CharactersListRickMortyFactorable {
-  
-  func makeInteractor(factory: InteractableFactory, viewController: CharactersListRickMortyDisplayLogic?, dataSource: CharactersListRickMortyModel.DataSource) -> CharactersListRickMortyInteractable {
-    CharactersListRickMortyInteractor(factory: factory, viewController: viewController, dataSource: dataSource)
-  }
-  
-  func makePresenter(viewController: CharactersListRickMortyDisplayLogic?) -> CharactersListRickMortyPresentationLogic {
-    CharactersListRickMortyPresenter(viewController: viewController)
-  }
-  
-  func makeRouter(viewController: UIViewController?) -> CharactersListRickMortyRouting {
-    CharactersListRickMortyRouter(viewController: viewController)
-  }
+
+    func makeInteractor(factory: InteractableFactory, viewController: CharactersListRickMortyDisplayLogic?, dataSource: CharactersListRickMortyModel.DataSource) -> CharactersListRickMortyInteractable {
+        CharactersListRickMortyInteractor(factory: factory, viewController: viewController, dataSource: dataSource)
+    }
+
+    func makePresenter(viewController: CharactersListRickMortyDisplayLogic?) -> CharactersListRickMortyPresentationLogic {
+        CharactersListRickMortyPresenter(viewController: viewController)
+    }
+
+    func makeRouter(viewController: UIViewController?) -> CharactersListRickMortyRouting {
+        CharactersListRickMortyRouter(viewController: viewController)
+    }
 }
 
 
 // MARK: - Service Factorable
 protocol CharactersListRickMortyServicesFactorable {
-  
-  func makeApiService() -> APIClientProtocol
+
+    func makeFetchCharactersUseCase() -> FetchCharacterListRickMortyUseCaseContract
 }
 
 extension CharactersListRickMortyServicesFactorable {
-  
-  func makeApiService() -> APIClientProtocol {
-    APIClient.shared
-  }
+
+    func makeFetchCharactersUseCase() -> FetchCharacterListRickMortyUseCaseContract {
+        FetchCharacterListRickMortyUseCase()
+    }
 }
+

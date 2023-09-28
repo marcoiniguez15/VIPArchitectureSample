@@ -54,12 +54,12 @@ extension ArtistsListFactorable {
 // MARK: - Service Factorable
 protocol ArtistsListServicesFactorable {
   
-  func makeApiService() -> APIClientProtocol
+  func makeFetchCharactersUseCase() -> FetchArtistsListUseCaseContract
 }
 
 extension ArtistsListServicesFactorable {
   
-  func makeApiService() -> APIClientProtocol {
-    APIClient.shared
+    func makeFetchCharactersUseCase() -> FetchArtistsListUseCaseContract {
+        FetchArtistsListUseCase()
   }
 }

@@ -20,7 +20,7 @@ enum CharacterDetailMarvelModel {
   }
   
   enum Response {
-    case prepareCharactersDetail(data: ResultList)
+    case prepareCharactersDetail(data: CharacterDetailMarvelEntity)
     case showError(model: ErrorModel)
   }
   

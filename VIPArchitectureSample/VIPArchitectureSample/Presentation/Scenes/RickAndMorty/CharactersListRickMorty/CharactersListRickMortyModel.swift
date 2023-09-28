@@ -20,7 +20,7 @@ enum CharactersListRickMortyModel {
   }
   
   enum Response {
-    case prepareCharactersListRickMorty(data: [ResultRickAndMorty])
+    case prepareCharactersListRickMorty(data: [CharactersListRickMortyItemEntity])
     case showError(model: ErrorModel)
   }
   
@@ -47,7 +47,7 @@ enum CharactersListRickMortyModel {
 
   
   struct DataSource {
-    var characterList: [ResultRickAndMorty] = []
+    var characterList: [CharactersListRickMortyItemEntity] = []
     var nameFilter: String? = nil
     var numberPages = 1
   }

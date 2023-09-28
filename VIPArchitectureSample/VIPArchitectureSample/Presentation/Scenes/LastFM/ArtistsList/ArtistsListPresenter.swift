@@ -48,26 +48,11 @@ extension ArtistsListPresenter: ArtistsListPresentationLogic {
 // MARK: - Private Zone
 private extension ArtistsListPresenter {
   
-  func prepareArtistList(data: [Artist]) {
+  func prepareArtistList(data: [ArtistsListItemEntity]) {
     let title = "Top Artists"
     
     let items = data.compactMap { artist -> ArtistsListModel.CellModel in
-        var imageURL = URL(string: "")
-        if let imageArray = artist.image {
-            let imageURLs = imageArray.compactMap { (imageDictionary) -> URL? in
-                if let imageSize = imageDictionary.size, imageSize == ArtistsConstants.imageSizeValue,
-                    let imageURLString = imageDictionary.text {
-                    return URL(string: imageURLString)
-                } else if  let imageURLString = imageDictionary.text {
-                    return URL(string: imageURLString)
-                }
-                
-                return nil
-            }
-            imageURL = imageURLs.last
-        }
-
-      return ArtistsListModel.CellModel(name: artist.name ?? "", imageURL: imageURL)
+        return ArtistsListModel.CellModel(name: artist.name, imageURL: artist.imageURL)
     }
     
     self.viewController?.displayViewModel(.prepareArtistList(viewModelData: ArtistsListModel.ViewDataSource(title: title, items: items)))
