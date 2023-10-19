@@ -48,4 +48,8 @@ extension CharacterListMarvelService: APIEndpoint {
     var contentType: ContentType {
         .formUrlEncoded
     }
+
+    var mockName: String {
+        R.file.characterListMarvelJson()!.path
+    }
 }

@@ -50,4 +50,8 @@ extension ArtistDetailService: APIEndpoint {
     var contentType: ContentType {
         .formUrlEncoded
     }
+
+    var mockName: String {
+        ""
+    }
 }

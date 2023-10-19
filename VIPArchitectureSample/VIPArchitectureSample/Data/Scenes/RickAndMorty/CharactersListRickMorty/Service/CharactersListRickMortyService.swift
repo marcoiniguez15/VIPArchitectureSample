@@ -50,4 +50,8 @@ extension CharactersListRickMortyService: APIEndpoint {
     var contentType: ContentType {
         .formUrlEncoded
     }
+
+    var mockName: String {
+        ""
+    }
 }

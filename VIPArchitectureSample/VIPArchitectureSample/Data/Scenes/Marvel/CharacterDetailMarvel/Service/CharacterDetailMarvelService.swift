@@ -49,4 +49,8 @@ extension CharacterDetailMarvelService: APIEndpoint {
     var contentType: ContentType {
         .formUrlEncoded
     }
+
+    var mockName: String {
+        ""
+    }
 }

@@ -14,7 +14,11 @@ protocol FetchCharacterListMarvelUseCaseContract {
 }
 
 final class FetchCharacterListMarvelUseCase: FetchCharacterListMarvelUseCaseContract {
-    let repository: CharacterListMarvelRepositoryContract =  CharacterListMarvelRepository()
+    var repository: CharacterListMarvelRepositoryContract
+
+    init(repository: CharacterListMarvelRepositoryContract = CharacterListMarvelRepository()) {
+        self.repository = repository
+    }
 
     func execute(_ params: FetchCharacterListMarvelUseCaseParameters) async throws -> CharactersListMarvelEntity {
         do {

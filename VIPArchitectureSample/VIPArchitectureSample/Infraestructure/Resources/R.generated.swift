@@ -17,10 +17,14 @@ struct _R {
   let reuseIdentifier = reuseIdentifier()
 
   var color: color { .init(bundle: bundle) }
+  var file: file { .init(bundle: bundle) }
   var nib: nib { .init(bundle: bundle) }
   var storyboard: storyboard { .init(bundle: bundle) }
 
   func color(bundle: Foundation.Bundle) -> color {
+    .init(bundle: bundle)
+  }
+  func file(bundle: Foundation.Bundle) -> file {
     .init(bundle: bundle)
   }
   func nib(bundle: Foundation.Bundle) -> nib {
@@ -50,6 +54,17 @@ struct _R {
   struct entitlements {
     let comAppleSecurityAppSandbox: Bool = true
     let comAppleSecurityNetworkClient: Bool = true
+  }
+
+  /// This `_R.file` struct is generated, and contains static references to 2 resource files.
+  struct file {
+    let bundle: Foundation.Bundle
+
+    /// Resource file `characterListMarvel.json`.
+    var characterListMarvelJson: RswiftResources.FileResource { .init(name: "characterListMarvel", pathExtension: "json", bundle: bundle, locale: LocaleReference.none) }
+
+    /// Resource file `characterListMarvelError.json`.
+    var characterListMarvelErrorJson: RswiftResources.FileResource { .init(name: "characterListMarvelError", pathExtension: "json", bundle: bundle, locale: LocaleReference.none) }
   }
 
   /// This `_R.nib` struct is generated, and contains static references to 11 nibs.

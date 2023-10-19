@@ -4,8 +4,7 @@ struct CharacterListMarvelRepository: CharacterListMarvelRepositoryContract {
     private let apiClient: APIClientProtocol
     private let marvelCharacterListMapper: MarvelCharacterListMapperContract
 
-
-    init(apiClient: APIClient = APIClient.shared, mapper:MarvelCharacterListMapperContract = MarvelCharacterListMapper()) {
+    init(apiClient: APIClientProtocol = APIClient.shared, mapper:MarvelCharacterListMapperContract = MarvelCharacterListMapper()) {
         self.apiClient = apiClient
         self.marvelCharacterListMapper = mapper
     }

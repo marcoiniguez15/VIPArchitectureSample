@@ -11,9 +11,11 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
+  let appRouter = AppRouter()
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     // Override point for customization after application launch.
+      appRouter.setup()
     setupRootViewController()
     return true
   }
@@ -23,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let navigationController = UINavigationController(rootViewController: vc)
     window = UIWindow.init(frame: UIScreen.main.bounds)
     window?.makeKeyAndVisible()
-    window?.rootViewController = navigationController
+    window?.rootViewController =  appRouter.getMainNavigationController()
   }
 
 }
