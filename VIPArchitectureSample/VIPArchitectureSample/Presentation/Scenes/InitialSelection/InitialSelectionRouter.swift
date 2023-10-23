@@ -61,8 +61,10 @@ private extension InitialSelectionRouter {
     self.viewController?.navigationController?.pushViewController(viewController, animated: true)
   }
   func showMarvelFlow() {
-    let viewController = CharactersListMarvelViewController(factory: AppInjector.CharactersListMarvelInjector(), mainView: CharactersListMarvelView(), dataSource: CharactersListMarvelModel.DataSource())
-    self.viewController?.navigationController?.pushViewController(viewController, animated: true)
+      guard let vc = self.viewController else {
+          return
+      }
+      InitialRouter.shared.routeToMarvelCharactersList(sourceViewController: vc)
   }
   
 }

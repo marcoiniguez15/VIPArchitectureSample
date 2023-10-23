@@ -20,7 +20,8 @@ protocol CharactersListMarvelRouting {
 final class CharactersListMarvelRouter {
   
   private weak var viewController: UIViewController?
-  
+  public var router: MarvelRouter = MarvelRouter.shared
+
   init(viewController: UIViewController?) {
     self.viewController = viewController
   }
@@ -49,22 +50,16 @@ extension CharactersListMarvelRouter: CharactersListMarvelRouting {
 private extension CharactersListMarvelRouter {
   
   func showErrorAlert(viewModel: ErrorModel) {
-    self.viewController?.showAlertWithCompletion(
-      title: viewModel.title,
-      message: viewModel.message,
-      okTitle: viewModel.retryButtonTitle,
-      cancelTitle: nil,
-      completionBlock: { (done) in
-        if done {
-            if let vc = self.viewController as? CharactersListMarvelViewController {
-              vc.errorRetryRequest()
-            }
-        }
-      })
+      guard let vc = self.viewController else {
+          return
+      }
+      router.showError(sourceViewController: vc, model: viewModel)
   }
   
   func showCharacterDetailMarvel(id: Int) {
-    let viewController = CharacterDetailMarvelViewController(factory: AppInjector.CharacterDetailMarvelInjector(), mainView: CharacterDetailMarvelView(), dataSource: CharacterDetailMarvelModel.DataSource(characterId: id))
-    self.viewController?.navigationController?.pushViewController(viewController, animated: true)
+      guard let vc = self.viewController else {
+          return
+      }
+      router.routeToCharacterDetail(sourceViewController: vc, characterId: id)
   }
 }

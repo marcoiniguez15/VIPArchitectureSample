@@ -53,7 +53,6 @@
 		DB425EAE27C541F200FFCCB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB425EAC27C541F200FFCCB5 /* Main.storyboard */; };
 		DB425EB027C541F600FFCCB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB425EAF27C541F600FFCCB5 /* Assets.xcassets */; };
 		DB425EB327C541F600FFCCB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB425EB127C541F600FFCCB5 /* LaunchScreen.storyboard */; };
-		DB425EBE27C541F700FFCCB5 /* VIPArchitectureSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425EBD27C541F700FFCCB5 /* VIPArchitectureSampleTests.swift */; };
 		DB425EC827C541F700FFCCB5 /* VIPArchitectureSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425EC727C541F700FFCCB5 /* VIPArchitectureSampleUITests.swift */; };
 		DB425ECA27C541F700FFCCB5 /* VIPArchitectureSampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425EC927C541F700FFCCB5 /* VIPArchitectureSampleUITestsLaunchTests.swift */; };
 		DB425EDE27C5478200FFCCB5 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425EDD27C5478200FFCCB5 /* R.generated.swift */; };
@@ -184,6 +183,15 @@
 		DB9AAAB12A2E04EA00C50141 /* CodeSmellsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9AAA832A2E04EA00C50141 /* CodeSmellsUseCase.swift */; };
 		DB9AAAB22A2E04EA00C50141 /* DefaultJSONConverterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9AAA852A2E04EA00C50141 /* DefaultJSONConverterUseCase.swift */; };
 		DB9AAAB32A2E04EA00C50141 /* JSONConverterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9AAA862A2E04EA00C50141 /* JSONConverterUseCase.swift */; };
+		DB9D5B0F2AE282B3000DAAA6 /* CharactersListMarvelViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9D5B0E2AE282B3000DAAA6 /* CharactersListMarvelViewControllerTests.swift */; };
+		DB9D5B182AE28D2A000DAAA6 /* CharactersListMarvelRouterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9D5B132AE28405000DAAA6 /* CharactersListMarvelRouterMock.swift */; };
+		DB9D5B192AE28D54000DAAA6 /* CharactersListMarvelInteractorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9D5B112AE283DF000DAAA6 /* CharactersListMarvelInteractorMock.swift */; };
+		DB9D5B1B2AE28DC8000DAAA6 /* CharactersListMarvelInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9D5B1A2AE28DC8000DAAA6 /* CharactersListMarvelInteractorTests.swift */; };
+		DB9D5B1D2AE28E1A000DAAA6 /* CharactersListMarvelPresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9D5B1C2AE28E1A000DAAA6 /* CharactersListMarvelPresenterMock.swift */; };
+		DB9D5B212AE2A025000DAAA6 /* CharactersListMarvelRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9D5B202AE2A025000DAAA6 /* CharactersListMarvelRouterTests.swift */; };
+		DB9D5B232AE2A05D000DAAA6 /* CharactersListMarvelViewControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9D5B222AE2A05D000DAAA6 /* CharactersListMarvelViewControllerMock.swift */; };
+		DB9D5B302AE2B7AB000DAAA6 /* MarvelRouterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9D5B282AE2AC46000DAAA6 /* MarvelRouterMock.swift */; };
+		DBB9D9E22AE6701B0059D7E1 /* CharactersListMarvelPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB9D9E12AE6701B0059D7E1 /* CharactersListMarvelPresenterTests.swift */; };
 		DBBDD1962AE15D7F00A074FB /* characterListMarvelError.json in Resources */ = {isa = PBXBuildFile; fileRef = DBBDD1912AE15D7F00A074FB /* characterListMarvelError.json */; };
 		DBBDD1972AE15D7F00A074FB /* characterListMarvel.json in Resources */ = {isa = PBXBuildFile; fileRef = DBBDD1922AE15D7F00A074FB /* characterListMarvel.json */; };
 		DBBDD1A02AE15D8C00A074FB /* FetchCharacterListMarvelUseCaseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBDD19B2AE15D8C00A074FB /* FetchCharacterListMarvelUseCaseMock.swift */; };
@@ -194,6 +202,12 @@
 		DBBDD1A62AE15DB700A074FB /* FetchCharacterListMarvelUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBDD19F2AE15D8C00A074FB /* FetchCharacterListMarvelUseCaseTests.swift */; };
 		DBBDD1A92AE15DCF00A074FB /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBDD1A82AE15DCF00A074FB /* AppRouter.swift */; };
 		DBBDD1AC2AE15E5400A074FB /* APIClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBDD1AB2AE15E5400A074FB /* APIClientMock.swift */; };
+		DBBDD1B02AE175EA00A074FB /* MarvelRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBDD1AF2AE175EA00A074FB /* MarvelRouter.swift */; };
+		DBBDD1B22AE1762300A074FB /* MarvelFeaturesRoutingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBDD1B12AE1762300A074FB /* MarvelFeaturesRoutingDelegate.swift */; };
+		DBBDD1B52AE17A1100A074FB /* InitialRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBDD1B42AE17A1100A074FB /* InitialRouter.swift */; };
+		DBBDD1B72AE17A2500A074FB /* InitialFeaturesRoutingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBDD1B62AE17A2500A074FB /* InitialFeaturesRoutingDelegate.swift */; };
+		DBBDD1B92AE17A8200A074FB /* AppRouter+InitialFeaturesRoutingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBDD1B82AE17A8200A074FB /* AppRouter+InitialFeaturesRoutingDelegate.swift */; };
+		DBBDD1BB2AE17A9700A074FB /* AppRouter+MarvelFeaturesRoutingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBDD1BA2AE17A9700A074FB /* AppRouter+MarvelFeaturesRoutingDelegate.swift */; };
 		DBE610D32A2E3F5000DABEDC /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE610D22A2E3F5000DABEDC /* SourceEditorExtension.swift */; };
 		DBEEF84E2AC2FB9E0058DAD1 /* CharacterListMarvelRepositoryContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEEF84D2AC2FB9E0058DAD1 /* CharacterListMarvelRepositoryContract.swift */; };
 		DBEEF8512AC310920058DAD1 /* CharacterListMarvelRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEEF8502AC310920058DAD1 /* CharacterListMarvelRepository.swift */; };
@@ -309,7 +323,6 @@
 		DB425EB227C541F600FFCCB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB425EB427C541F600FFCCB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB425EB927C541F700FFCCB5 /* VIPArchitectureSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VIPArchitectureSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB425EBD27C541F700FFCCB5 /* VIPArchitectureSampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPArchitectureSampleTests.swift; sourceTree = "<group>"; };
 		DB425EC327C541F700FFCCB5 /* VIPArchitectureSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VIPArchitectureSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB425EC727C541F700FFCCB5 /* VIPArchitectureSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPArchitectureSampleUITests.swift; sourceTree = "<group>"; };
 		DB425EC927C541F700FFCCB5 /* VIPArchitectureSampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPArchitectureSampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -444,6 +457,15 @@
 		DB9AAA832A2E04EA00C50141 /* CodeSmellsUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeSmellsUseCase.swift; sourceTree = "<group>"; };
 		DB9AAA852A2E04EA00C50141 /* DefaultJSONConverterUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultJSONConverterUseCase.swift; sourceTree = "<group>"; };
 		DB9AAA862A2E04EA00C50141 /* JSONConverterUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONConverterUseCase.swift; sourceTree = "<group>"; };
+		DB9D5B0E2AE282B3000DAAA6 /* CharactersListMarvelViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListMarvelViewControllerTests.swift; sourceTree = "<group>"; };
+		DB9D5B112AE283DF000DAAA6 /* CharactersListMarvelInteractorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListMarvelInteractorMock.swift; sourceTree = "<group>"; };
+		DB9D5B132AE28405000DAAA6 /* CharactersListMarvelRouterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListMarvelRouterMock.swift; sourceTree = "<group>"; };
+		DB9D5B1A2AE28DC8000DAAA6 /* CharactersListMarvelInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListMarvelInteractorTests.swift; sourceTree = "<group>"; };
+		DB9D5B1C2AE28E1A000DAAA6 /* CharactersListMarvelPresenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListMarvelPresenterMock.swift; sourceTree = "<group>"; };
+		DB9D5B202AE2A025000DAAA6 /* CharactersListMarvelRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListMarvelRouterTests.swift; sourceTree = "<group>"; };
+		DB9D5B222AE2A05D000DAAA6 /* CharactersListMarvelViewControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListMarvelViewControllerMock.swift; sourceTree = "<group>"; };
+		DB9D5B282AE2AC46000DAAA6 /* MarvelRouterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelRouterMock.swift; sourceTree = "<group>"; };
+		DBB9D9E12AE6701B0059D7E1 /* CharactersListMarvelPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListMarvelPresenterTests.swift; sourceTree = "<group>"; };
 		DBBDD18F2AE15D7F00A074FB /* CharacterListMarvelRepositoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterListMarvelRepositoryTests.swift; sourceTree = "<group>"; };
 		DBBDD1912AE15D7F00A074FB /* characterListMarvelError.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = characterListMarvelError.json; sourceTree = "<group>"; };
 		DBBDD1922AE15D7F00A074FB /* characterListMarvel.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = characterListMarvel.json; sourceTree = "<group>"; };
@@ -454,6 +476,12 @@
 		DBBDD19F2AE15D8C00A074FB /* FetchCharacterListMarvelUseCaseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchCharacterListMarvelUseCaseTests.swift; sourceTree = "<group>"; };
 		DBBDD1A82AE15DCF00A074FB /* AppRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		DBBDD1AB2AE15E5400A074FB /* APIClientMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClientMock.swift; sourceTree = "<group>"; };
+		DBBDD1AF2AE175EA00A074FB /* MarvelRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelRouter.swift; sourceTree = "<group>"; };
+		DBBDD1B12AE1762300A074FB /* MarvelFeaturesRoutingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelFeaturesRoutingDelegate.swift; sourceTree = "<group>"; };
+		DBBDD1B42AE17A1100A074FB /* InitialRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialRouter.swift; sourceTree = "<group>"; };
+		DBBDD1B62AE17A2500A074FB /* InitialFeaturesRoutingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialFeaturesRoutingDelegate.swift; sourceTree = "<group>"; };
+		DBBDD1B82AE17A8200A074FB /* AppRouter+InitialFeaturesRoutingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppRouter+InitialFeaturesRoutingDelegate.swift"; sourceTree = "<group>"; };
+		DBBDD1BA2AE17A9700A074FB /* AppRouter+MarvelFeaturesRoutingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppRouter+MarvelFeaturesRoutingDelegate.swift"; sourceTree = "<group>"; };
 		DBE610D22A2E3F5000DABEDC /* SourceEditorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceEditorExtension.swift; sourceTree = "<group>"; };
 		DBEEF84D2AC2FB9E0058DAD1 /* CharacterListMarvelRepositoryContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListMarvelRepositoryContract.swift; sourceTree = "<group>"; };
 		DBEEF8502AC310920058DAD1 /* CharacterListMarvelRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListMarvelRepository.swift; sourceTree = "<group>"; };
@@ -907,7 +935,6 @@
 			isa = PBXGroup;
 			children = (
 				DB425EA527C541F200FFCCB5 /* VIPArchitectureSample */,
-				DB425EBC27C541F700FFCCB5 /* VIPArchitectureSampleTests */,
 				DB425EC627C541F700FFCCB5 /* VIPArchitectureSampleUITests */,
 				DB9AAA332A2E049700C50141 /* ChatGPTExtension */,
 				DB425EA427C541F200FFCCB5 /* Products */,
@@ -941,14 +968,6 @@
 				DB425EB127C541F600FFCCB5 /* LaunchScreen.storyboard */,
 			);
 			path = VIPArchitectureSample;
-			sourceTree = "<group>";
-		};
-		DB425EBC27C541F700FFCCB5 /* VIPArchitectureSampleTests */ = {
-			isa = PBXGroup;
-			children = (
-				DB425EBD27C541F700FFCCB5 /* VIPArchitectureSampleTests.swift */,
-			);
-			path = VIPArchitectureSampleTests;
 			sourceTree = "<group>";
 		};
 		DB425EC627C541F700FFCCB5 /* VIPArchitectureSampleUITests */ = {
@@ -1099,6 +1118,7 @@
 		DB425F6F27C6489C00FFCCB5 /* InitialSelection */ = {
 			isa = PBXGroup;
 			children = (
+				DBBDD1B32AE179F300A074FB /* Router */,
 				DB425F8027C6491B00FFCCB5 /* Views */,
 				DB425F7027C648D900FFCCB5 /* InitialSelectionFactorable.swift */,
 				DB425F7127C648D900FFCCB5 /* InitialSelectionPresenter.swift */,
@@ -1219,6 +1239,7 @@
 		DB425FB427C66B3600FFCCB5 /* Marvel */ = {
 			isa = PBXGroup;
 			children = (
+				DBBDD1AE2AE175D600A074FB /* Router */,
 				DB425FDE27C66FD800FFCCB5 /* CharacterDetailMarvel */,
 				DB425FEB27C66FD900FFCCB5 /* CharactersListMarvel */,
 			);
@@ -1261,6 +1282,7 @@
 		DB425FEB27C66FD900FFCCB5 /* CharactersListMarvel */ = {
 			isa = PBXGroup;
 			children = (
+				DB9D5B0D2AE27ED4000DAAA6 /* Tests */,
 				DB425FEC27C66FD900FFCCB5 /* CharactersListMarvelFactorable.swift */,
 				DB425FED27C66FD900FFCCB5 /* CharactersListMarvelViewController.swift */,
 				DB425FEE27C66FD900FFCCB5 /* CharactersListMarvelModel.swift */,
@@ -1533,6 +1555,30 @@
 			path = JSON2Swift;
 			sourceTree = "<group>";
 		};
+		DB9D5B0D2AE27ED4000DAAA6 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				DB9D5B102AE283B1000DAAA6 /* Mocks */,
+				DB9D5B0E2AE282B3000DAAA6 /* CharactersListMarvelViewControllerTests.swift */,
+				DB9D5B1A2AE28DC8000DAAA6 /* CharactersListMarvelInteractorTests.swift */,
+				DB9D5B202AE2A025000DAAA6 /* CharactersListMarvelRouterTests.swift */,
+				DBB9D9E12AE6701B0059D7E1 /* CharactersListMarvelPresenterTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		DB9D5B102AE283B1000DAAA6 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				DB9D5B112AE283DF000DAAA6 /* CharactersListMarvelInteractorMock.swift */,
+				DB9D5B132AE28405000DAAA6 /* CharactersListMarvelRouterMock.swift */,
+				DB9D5B1C2AE28E1A000DAAA6 /* CharactersListMarvelPresenterMock.swift */,
+				DB9D5B222AE2A05D000DAAA6 /* CharactersListMarvelViewControllerMock.swift */,
+				DB9D5B282AE2AC46000DAAA6 /* MarvelRouterMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		DBBDD18D2AE15D7F00A074FB /* Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -1599,6 +1645,8 @@
 			isa = PBXGroup;
 			children = (
 				DBBDD1A82AE15DCF00A074FB /* AppRouter.swift */,
+				DBBDD1B82AE17A8200A074FB /* AppRouter+InitialFeaturesRoutingDelegate.swift */,
+				DBBDD1BA2AE17A9700A074FB /* AppRouter+MarvelFeaturesRoutingDelegate.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -1610,6 +1658,24 @@
 			);
 			name = Mock;
 			path = Network/Mock;
+			sourceTree = "<group>";
+		};
+		DBBDD1AE2AE175D600A074FB /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				DBBDD1AF2AE175EA00A074FB /* MarvelRouter.swift */,
+				DBBDD1B12AE1762300A074FB /* MarvelFeaturesRoutingDelegate.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		DBBDD1B32AE179F300A074FB /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				DBBDD1B42AE17A1100A074FB /* InitialRouter.swift */,
+				DBBDD1B62AE17A2500A074FB /* InitialFeaturesRoutingDelegate.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		DBEEF83E2AC2F80A0058DAD1 /* Presentation */ = {
@@ -2058,6 +2124,7 @@
 				DBEEF8542AC3126A0058DAD1 /* CharacterListMarvelService.swift in Sources */,
 				DB425F4B27C62CCB00FFCCB5 /* UIViewController+AlertController.swift in Sources */,
 				DB2D11F62AC5807C0058E577 /* ArtistsListRepository.swift in Sources */,
+				DBBDD1B52AE17A1100A074FB /* InitialRouter.swift in Sources */,
 				DB425FD327C66E3F00FFCCB5 /* Event.swift in Sources */,
 				DB7D59B127C799370093370A /* ArtistDetailRouter.swift in Sources */,
 				DB2C6EF72AC473770019CC43 /* CharactersListRickMortyEntity.swift in Sources */,
@@ -2066,6 +2133,7 @@
 				DB425F8E27C6543A00FFCCB5 /* ArtistsListPresenter.swift in Sources */,
 				DBBDD1AC2AE15E5400A074FB /* APIClientMock.swift in Sources */,
 				DB7D59B027C799370093370A /* ArtistDetailPresenter.swift in Sources */,
+				DBBDD1B02AE175EA00A074FB /* MarvelRouter.swift in Sources */,
 				DB425FDB27C66E3F00FFCCB5 /* Url.swift in Sources */,
 				DB425EAB27C541F200FFCCB5 /* ViewController.swift in Sources */,
 				DB425FD727C66E3F00FFCCB5 /* Series.swift in Sources */,
@@ -2086,6 +2154,7 @@
 				DB425FFB27C66FD900FFCCB5 /* CharacterDetailMarvelViewController.swift in Sources */,
 				DB2D11F42AC580400058E577 /* ArtistsListRepositoryContract.swift in Sources */,
 				DB2D12022AC586220058E577 /* FetchArtistsListUseCase.swift in Sources */,
+				DBBDD1B72AE17A2500A074FB /* InitialFeaturesRoutingDelegate.swift in Sources */,
 				DB425FD227C66E3F00FFCCB5 /* ItemSeries.swift in Sources */,
 				DB425F2627C62AF100FFCCB5 /* LoaderView.swift in Sources */,
 				DB2C6EFF2AC477C90019CC43 /* CharactersListRickMortyMapper.swift in Sources */,
@@ -2125,17 +2194,20 @@
 				DBEEF8512AC310920058DAD1 /* CharacterListMarvelRepository.swift in Sources */,
 				DB425F5027C62CCB00FFCCB5 /* BaseView.swift in Sources */,
 				DB42600627C66FD900FFCCB5 /* CharactersListMarvelPresenter.swift in Sources */,
+				DBBDD1B22AE1762300A074FB /* MarvelFeaturesRoutingDelegate.swift in Sources */,
 				DB2C6ED92AC462110019CC43 /* CharacterDetailMarvelEntity.swift in Sources */,
 				DB42600127C66FD900FFCCB5 /* CharacterDetailMarvelView.swift in Sources */,
 				DB2D11F02AC57F9C0058E577 /* ArtistDetailEntity.swift in Sources */,
 				DBEEF8562AC313D50058DAD1 /* APIEndpoint.swift in Sources */,
 				DB2C6EFD2AC477C20019CC43 /* CharactersListRickMortyMapperContract.swift in Sources */,
+				DBBDD1B92AE17A8200A074FB /* AppRouter+InitialFeaturesRoutingDelegate.swift in Sources */,
 				DB425F9127C6543A00FFCCB5 /* ArtistsListInteractor.swift in Sources */,
 				DB425FBE27C66BC800FFCCB5 /* CharactersListRickMortyRouter.swift in Sources */,
 				DB2D11EA2AC57EC20058E577 /* ArtistsListItemEntity.swift in Sources */,
 				DB7D59B527C799370093370A /* ArtistDetailModel.swift in Sources */,
 				DB425F7727C648D900FFCCB5 /* InitialSelectionFactorable.swift in Sources */,
 				DB425F6927C645F900FFCCB5 /* AlbumsLastFM.swift in Sources */,
+				DBBDD1BB2AE17A9700A074FB /* AppRouter+MarvelFeaturesRoutingDelegate.swift in Sources */,
 				DB2C6F012AC479370019CC43 /* CharactersListRickMortyRepository.swift in Sources */,
 				DB425FD927C66E3F00FFCCB5 /* ItemStory.swift in Sources */,
 				DB425F6727C6458800FFCCB5 /* ArtistsLastFM.swift in Sources */,
@@ -2166,8 +2238,16 @@
 			files = (
 				DBBDD1A42AE15DAC00A074FB /* CharacterListMarvelServiceTests.swift in Sources */,
 				DBBDD1A52AE15DB000A074FB /* CharacterListMarvelRepositoryTests.swift in Sources */,
-				DB425EBE27C541F700FFCCB5 /* VIPArchitectureSampleTests.swift in Sources */,
+				DB9D5B182AE28D2A000DAAA6 /* CharactersListMarvelRouterMock.swift in Sources */,
+				DB9D5B1D2AE28E1A000DAAA6 /* CharactersListMarvelPresenterMock.swift in Sources */,
+				DB9D5B212AE2A025000DAAA6 /* CharactersListMarvelRouterTests.swift in Sources */,
 				DBBDD1A62AE15DB700A074FB /* FetchCharacterListMarvelUseCaseTests.swift in Sources */,
+				DB9D5B302AE2B7AB000DAAA6 /* MarvelRouterMock.swift in Sources */,
+				DB9D5B1B2AE28DC8000DAAA6 /* CharactersListMarvelInteractorTests.swift in Sources */,
+				DB9D5B192AE28D54000DAAA6 /* CharactersListMarvelInteractorMock.swift in Sources */,
+				DBB9D9E22AE6701B0059D7E1 /* CharactersListMarvelPresenterTests.swift in Sources */,
+				DB9D5B0F2AE282B3000DAAA6 /* CharactersListMarvelViewControllerTests.swift in Sources */,
+				DB9D5B232AE2A05D000DAAA6 /* CharactersListMarvelViewControllerMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2414,6 +2494,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS";
 				PRODUCT_BUNDLE_IDENTIFIER = com.MarcoIO.VIPArchitectureSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -2448,6 +2529,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS";
 				PRODUCT_BUNDLE_IDENTIFIER = com.MarcoIO.VIPArchitectureSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -2471,8 +2553,10 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MARKETING_VERSION = 1.0;
+				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.MarcoIO.VIPArchitectureSampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2492,6 +2576,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MARKETING_VERSION = 1.0;
+				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.MarcoIO.VIPArchitectureSampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;

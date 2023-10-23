@@ -11,6 +11,8 @@ import UIKit
 class AppRouter {
 
   func setup() {
+      MarvelRouter.shared.delegate = self
+      InitialRouter.shared.delegate = self
   }
 }
 
@@ -22,6 +24,4 @@ extension AppRouter {
       return UINavigationController(rootViewController: vc)
   }
 }
-
-
 
