@@ -13,7 +13,7 @@ struct CharacterDetailMarvelRepository: CharacterDetailMarvelRepositoryContract 
     private let marvelCharacterDetailMapper: MarvelCharacterDetailMapperContract
 
 
-    init(apiClient: APIClient = APIClient.shared, mapper:MarvelCharacterDetailMapperContract = MarvelCharacterDetailMapper()) {
+    init(apiClient: APIClientProtocol = APIClient.shared, mapper:MarvelCharacterDetailMapperContract = MarvelCharacterDetailMapper()) {
         self.apiClient = apiClient
         self.marvelCharacterDetailMapper = mapper
     }

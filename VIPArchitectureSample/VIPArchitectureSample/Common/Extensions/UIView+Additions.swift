@@ -7,8 +7,7 @@
 
 import UIKit
 extension UIView {
-  
-  func nibSetup() -> UIView {
+ @objc func nibSetup() -> UIView {
     backgroundColor = .clear
     let view = loadViewFromNib()
     view.frame = bounds

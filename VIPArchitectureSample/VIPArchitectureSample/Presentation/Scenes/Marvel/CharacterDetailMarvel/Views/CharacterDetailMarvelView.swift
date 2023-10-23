@@ -17,7 +17,7 @@ protocol CharacterDetailMarvelViewDelegate where Self: UIViewController {
   
 }
 
-final class CharacterDetailMarvelView: BaseView {
+class CharacterDetailMarvelView: BaseView {
   
   weak var delegate: CharacterDetailMarvelViewDelegate?
   @IBOutlet weak var imageCharacter: UIImageView!

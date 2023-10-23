@@ -20,7 +20,8 @@ protocol CharacterDetailMarvelRouting {
 final class CharacterDetailMarvelRouter {
   
   private weak var viewController: UIViewController?
-  
+  public var router: MarvelRouter = MarvelRouter.shared
+
   init(viewController: UIViewController?) {
     self.viewController = viewController
   }
@@ -47,17 +48,9 @@ extension CharacterDetailMarvelRouter: CharacterDetailMarvelRouting {
 private extension CharacterDetailMarvelRouter {
   
   func showErrorAlert(viewModel: ErrorModel) {
-    self.viewController?.showAlertWithCompletion(
-      title: viewModel.title,
-      message: viewModel.message,
-      okTitle: viewModel.retryButtonTitle,
-      cancelTitle: nil,
-      completionBlock: { (done) in
-        if done {
-            if let vc = self.viewController as? CharacterDetailMarvelViewController {
-              vc.errorRetryRequest()
-            }
-        }
-      })
+      guard let vc = self.viewController else {
+          return
+      }
+      router.showError(sourceViewController: vc, model: viewModel)
   }
 }

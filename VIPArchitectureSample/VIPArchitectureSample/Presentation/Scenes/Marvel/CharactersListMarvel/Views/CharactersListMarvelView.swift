@@ -17,7 +17,7 @@ protocol CharactersListMarvelViewDelegate where Self: UIViewController {
   func nextPage(page:Int)
 }
 
-final class CharactersListMarvelView: BaseView {
+class CharactersListMarvelView: BaseView {
   
   weak var delegate: CharactersListMarvelViewDelegate?
   

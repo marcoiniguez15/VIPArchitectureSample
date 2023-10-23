@@ -29,11 +29,13 @@ final class CharacterDetailMarvelInteractor: CharacterDetailMarvelDataStore {
   
   private var factory: CharacterDetailMarvelInteractorFactorable.InteractableFactory
   private var presenter: CharacterDetailMarvelPresentationLogic
-  
+  var fetchCharacterDetailMarvelUseCase: FetchCharacterDetailMarvelUseCaseContract
+
   init(factory: CharacterDetailMarvelInteractorFactorable.InteractableFactory, viewController: CharacterDetailMarvelDisplayLogic?, dataSource: CharacterDetailMarvelModel.DataSource) {
     self.factory = factory
     self.dataSource = dataSource
     self.presenter = factory.makePresenter(viewController: viewController)
+    self.fetchCharacterDetailMarvelUseCase = factory.makeFetchCharacterUseCase()
   }
 }
 
@@ -58,12 +60,11 @@ extension CharacterDetailMarvelInteractor: CharacterDetailMarvelBusinessLogic {
 private extension CharacterDetailMarvelInteractor {
   
   func prepareCharactersDetail() {
-      let useCase = factory.makeFetchCharacterUseCase()
       LoaderView.toggleUniversalLoadingView(true)
 
       Task { @MainActor in
           do {
-              let model = try await useCase.execute(FetchCharacterDetailMarvelUseCaseParameters(id: dataSource.characterId))
+              let model = try await fetchCharacterDetailMarvelUseCase.execute(FetchCharacterDetailMarvelUseCaseParameters(id: dataSource.characterId))
             LoaderView.toggleUniversalLoadingView(false)
             self.presenter.presentResponse(.prepareCharactersDetail(data: model))
           } catch {

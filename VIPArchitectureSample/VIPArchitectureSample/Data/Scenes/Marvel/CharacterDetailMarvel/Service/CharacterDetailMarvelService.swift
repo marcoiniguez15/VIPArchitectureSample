@@ -51,6 +51,6 @@ extension CharacterDetailMarvelService: APIEndpoint {
     }
 
     var mockName: String {
-        ""
+        R.file.characterListMarvelJson()!.path
     }
 }
