@@ -13,7 +13,7 @@ struct CharactersListRickMortyRepository: CharactersListRickMortyRepositoryContr
     private let mapper: CharactersListRickMortyMapperContract
 
 
-    init(apiClient: APIClient = APIClient.shared, mapper:CharactersListRickMortyMapperContract = CharactersListRickMortyMapper()) {
+    init(apiClient: APIClientProtocol = APIClient.shared, mapper:CharactersListRickMortyMapperContract = CharactersListRickMortyMapper()) {
         self.apiClient = apiClient
         self.mapper = mapper
     }

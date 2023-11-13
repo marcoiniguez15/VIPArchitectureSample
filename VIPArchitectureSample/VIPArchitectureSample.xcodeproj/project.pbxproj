@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,14 @@
 		501D55491E91640C3D245DE6 /* Pods_VIPArchitectureSampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10E8DF25075722ACD28C1FB0 /* Pods_VIPArchitectureSampleTests.framework */; };
 		68D6D2E69207D9308840656E /* Pods_VIPArchitectureSampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BD860186162C452F98D9AE9 /* Pods_VIPArchitectureSampleUITests.framework */; };
 		DB1574742A2F217A00BC72BA /* ChatGPTUnitTestRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1574732A2F217900BC72BA /* ChatGPTUnitTestRepository.swift */; };
+		DB257FFB2AE7FFBD00CF2355 /* characterListRickAndMorty.json in Resources */ = {isa = PBXBuildFile; fileRef = DB257FFA2AE7FFBD00CF2355 /* characterListRickAndMorty.json */; };
+		DB257FFF2AE8001100CF2355 /* characterListRickAndMortyError.json in Resources */ = {isa = PBXBuildFile; fileRef = DB257FFE2AE8001100CF2355 /* characterListRickAndMortyError.json */; };
+		DB2580012AE8003800CF2355 /* CharactersListRickMortyRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2580002AE8003800CF2355 /* CharactersListRickMortyRepositoryTests.swift */; };
+		DB2580032AE8050C00CF2355 /* CharactersListRickMortyServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2580022AE8050C00CF2355 /* CharactersListRickMortyServiceTests.swift */; };
+		DB2580082AE8067900CF2355 /* CharactersListRickMortyRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2580072AE8067900CF2355 /* CharactersListRickMortyRepositoryMock.swift */; };
+		DB25800A2AE806BC00CF2355 /* CharactersListRickMortyEntityMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2580092AE806BC00CF2355 /* CharactersListRickMortyEntityMock.swift */; };
+		DB25800C2AE8073400CF2355 /* FetchCharacterListRickMortyUseCaseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB25800B2AE8073400CF2355 /* FetchCharacterListRickMortyUseCaseMock.swift */; };
+		DB25800E2AE8077C00CF2355 /* FetchCharacterListRickMortyUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB25800D2AE8077C00CF2355 /* FetchCharacterListRickMortyUseCaseTests.swift */; };
 		DB2C6EC22AC4342B0019CC43 /* CharactersListMarvelEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2C6EC12AC4342B0019CC43 /* CharactersListMarvelEntity.swift */; };
 		DB2C6EC42AC434B90019CC43 /* CharactersListMarvelItemEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2C6EC32AC434B90019CC43 /* CharactersListMarvelItemEntity.swift */; };
 		DB2C6EC62AC435590019CC43 /* MarvelCharacterListMapperContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2C6EC52AC435590019CC43 /* MarvelCharacterListMapperContract.swift */; };
@@ -144,8 +152,6 @@
 		DB7D59BB27C79E680093370A /* ArtistDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB7D59B927C79E680093370A /* ArtistDetailTableViewCell.xib */; };
 		DB7D59BD27C79EEA0093370A /* ArtistDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB7D59BC27C79EEA0093370A /* ArtistDetailView.xib */; };
 		DB8A18042A2E0789007B338F /* XcodeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DB178F322A2DF96E0070FBD2 /* XcodeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DB8A18072A2E07CA007B338F /* ChatGPTExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = DB9AAA302A2E049700C50141 /* ChatGPTExtension.appex */; platformFilter = maccatalyst; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		DB9AAA312A2E049700C50141 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB178F302A2DF96E0070FBD2 /* Cocoa.framework */; };
 		DB9AAA322A2E049700C50141 /* XcodeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB178F322A2DF96E0070FBD2 /* XcodeKit.framework */; };
 		DB9AAA882A2E04EA00C50141 /* UnitTestEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9AAA422A2E04E900C50141 /* UnitTestEditorCommand.swift */; };
 		DB9AAA892A2E04EA00C50141 /* ExplainCodeCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9AAA442A2E04E900C50141 /* ExplainCodeCommand.swift */; };
@@ -224,6 +230,8 @@
 		DBBDD1B72AE17A2500A074FB /* InitialFeaturesRoutingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBDD1B62AE17A2500A074FB /* InitialFeaturesRoutingDelegate.swift */; };
 		DBBDD1B92AE17A8200A074FB /* AppRouter+InitialFeaturesRoutingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBDD1B82AE17A8200A074FB /* AppRouter+InitialFeaturesRoutingDelegate.swift */; };
 		DBBDD1BB2AE17A9700A074FB /* AppRouter+MarvelFeaturesRoutingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBDD1BA2AE17A9700A074FB /* AppRouter+MarvelFeaturesRoutingDelegate.swift */; };
+		DBE3D7A32AFBB43000D8B9FF /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE3D7A22AFBB43000D8B9FF /* Cocoa.framework */; };
+		DBE3D7A42AFBB60800D8B9FF /* ChatGPTExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = DB9AAA302A2E049700C50141 /* ChatGPTExtension.appex */; platformFilter = maccatalyst; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		DBE610D32A2E3F5000DABEDC /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE610D22A2E3F5000DABEDC /* SourceEditorExtension.swift */; };
 		DBEEF84E2AC2FB9E0058DAD1 /* CharacterListMarvelRepositoryContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEEF84D2AC2FB9E0058DAD1 /* CharacterListMarvelRepositoryContract.swift */; };
 		DBEEF8512AC310920058DAD1 /* CharacterListMarvelRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEEF8502AC310920058DAD1 /* CharacterListMarvelRepository.swift */; };
@@ -247,7 +255,7 @@
 			remoteGlobalIDString = DB425EA227C541F200FFCCB5;
 			remoteInfo = VIPArchitectureSample;
 		};
-		DB8A18052A2E07BE007B338F /* PBXContainerItemProxy */ = {
+		DBE3D7A52AFBB60800D8B9FF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DB425E9B27C541F200FFCCB5 /* Project object */;
 			proxyType = 1;
@@ -268,13 +276,13 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DB9AAAB62A2E054800C50141 /* Embed Foundation Extensions */ = {
+		DBE3D7A72AFBB60800D8B9FF /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				DB8A18072A2E07CA007B338F /* ChatGPTExtension.appex in Embed Foundation Extensions */,
+				DBE3D7A42AFBB60800D8B9FF /* ChatGPTExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,6 +302,14 @@
 		DB1574732A2F217900BC72BA /* ChatGPTUnitTestRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatGPTUnitTestRepository.swift; sourceTree = "<group>"; };
 		DB178F302A2DF96E0070FBD2 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		DB178F322A2DF96E0070FBD2 /* XcodeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XcodeKit.framework; path = Library/Frameworks/XcodeKit.framework; sourceTree = DEVELOPER_DIR; };
+		DB257FFA2AE7FFBD00CF2355 /* characterListRickAndMorty.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = characterListRickAndMorty.json; sourceTree = "<group>"; };
+		DB257FFE2AE8001100CF2355 /* characterListRickAndMortyError.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = characterListRickAndMortyError.json; sourceTree = "<group>"; };
+		DB2580002AE8003800CF2355 /* CharactersListRickMortyRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListRickMortyRepositoryTests.swift; sourceTree = "<group>"; };
+		DB2580022AE8050C00CF2355 /* CharactersListRickMortyServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListRickMortyServiceTests.swift; sourceTree = "<group>"; };
+		DB2580072AE8067900CF2355 /* CharactersListRickMortyRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListRickMortyRepositoryMock.swift; sourceTree = "<group>"; };
+		DB2580092AE806BC00CF2355 /* CharactersListRickMortyEntityMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListRickMortyEntityMock.swift; sourceTree = "<group>"; };
+		DB25800B2AE8073400CF2355 /* FetchCharacterListRickMortyUseCaseMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchCharacterListRickMortyUseCaseMock.swift; sourceTree = "<group>"; };
+		DB25800D2AE8077C00CF2355 /* FetchCharacterListRickMortyUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchCharacterListRickMortyUseCaseTests.swift; sourceTree = "<group>"; };
 		DB2C6EC12AC4342B0019CC43 /* CharactersListMarvelEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListMarvelEntity.swift; sourceTree = "<group>"; };
 		DB2C6EC32AC434B90019CC43 /* CharactersListMarvelItemEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListMarvelItemEntity.swift; sourceTree = "<group>"; };
 		DB2C6EC52AC435590019CC43 /* MarvelCharacterListMapperContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelCharacterListMapperContract.swift; sourceTree = "<group>"; };
@@ -514,6 +530,7 @@
 		DBBDD1B62AE17A2500A074FB /* InitialFeaturesRoutingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialFeaturesRoutingDelegate.swift; sourceTree = "<group>"; };
 		DBBDD1B82AE17A8200A074FB /* AppRouter+InitialFeaturesRoutingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppRouter+InitialFeaturesRoutingDelegate.swift"; sourceTree = "<group>"; };
 		DBBDD1BA2AE17A9700A074FB /* AppRouter+MarvelFeaturesRoutingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppRouter+MarvelFeaturesRoutingDelegate.swift"; sourceTree = "<group>"; };
+		DBE3D7A22AFBB43000D8B9FF /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		DBE610D22A2E3F5000DABEDC /* SourceEditorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceEditorExtension.swift; sourceTree = "<group>"; };
 		DBEEF84D2AC2FB9E0058DAD1 /* CharacterListMarvelRepositoryContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListMarvelRepositoryContract.swift; sourceTree = "<group>"; };
 		DBEEF8502AC310920058DAD1 /* CharacterListMarvelRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListMarvelRepository.swift; sourceTree = "<group>"; };
@@ -553,7 +570,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB9AAA312A2E049700C50141 /* Cocoa.framework in Frameworks */,
+				DBE3D7A32AFBB43000D8B9FF /* Cocoa.framework in Frameworks */,
 				DB9AAA322A2E049700C50141 /* XcodeKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -579,6 +596,7 @@
 		59E3114621AFD1BE96763C9F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DBE3D7A22AFBB43000D8B9FF /* Cocoa.framework */,
 				22F1B4A380D11BF833B9D21E /* Pods_VIPArchitectureSample.framework */,
 				10E8DF25075722ACD28C1FB0 /* Pods_VIPArchitectureSampleTests.framework */,
 				1BD860186162C452F98D9AE9 /* Pods_VIPArchitectureSampleUITests.framework */,
@@ -586,6 +604,68 @@
 				DB178F322A2DF96E0070FBD2 /* XcodeKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DB257FF62AE7FEF600CF2355 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				DB257FF92AE7FF3600CF2355 /* Mocks */,
+				DB257FF82AE7FF0500CF2355 /* Service */,
+				DB257FF72AE7FEFD00CF2355 /* Repository */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		DB257FF72AE7FEFD00CF2355 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				DB2580002AE8003800CF2355 /* CharactersListRickMortyRepositoryTests.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		DB257FF82AE7FF0500CF2355 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				DB2580022AE8050C00CF2355 /* CharactersListRickMortyServiceTests.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		DB257FF92AE7FF3600CF2355 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				DB257FFA2AE7FFBD00CF2355 /* characterListRickAndMorty.json */,
+				DB257FFE2AE8001100CF2355 /* characterListRickAndMortyError.json */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		DB2580042AE8064B00CF2355 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				DB2580062AE8065A00CF2355 /* UseCases */,
+				DB2580052AE8065000CF2355 /* Mocks */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		DB2580052AE8065000CF2355 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				DB2580072AE8067900CF2355 /* CharactersListRickMortyRepositoryMock.swift */,
+				DB2580092AE806BC00CF2355 /* CharactersListRickMortyEntityMock.swift */,
+				DB25800B2AE8073400CF2355 /* FetchCharacterListRickMortyUseCaseMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		DB2580062AE8065A00CF2355 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				DB25800D2AE8077C00CF2355 /* FetchCharacterListRickMortyUseCaseTests.swift */,
+			);
+			path = UseCases;
 			sourceTree = "<group>";
 		};
 		DB2C6EBE2AC433480019CC43 /* Model */ = {
@@ -712,6 +792,7 @@
 		DB2C6EEB2AC4727D0019CC43 /* CharactersListRickMorty */ = {
 			isa = PBXGroup;
 			children = (
+				DB2580042AE8064B00CF2355 /* Tests */,
 				DB2C6EEF2AC472A30019CC43 /* UseCases */,
 				DB2C6EEE2AC4729D0019CC43 /* Entity */,
 				DB2C6EED2AC472940019CC43 /* Repository */,
@@ -722,6 +803,7 @@
 		DB2C6EEC2AC472850019CC43 /* CharactersListRickMorty */ = {
 			isa = PBXGroup;
 			children = (
+				DB257FF62AE7FEF600CF2355 /* Tests */,
 				DB2C6EF32AC472C80019CC43 /* Model */,
 				DB2C6EF22AC472C10019CC43 /* Mapper */,
 				DB2C6EF12AC472BA0019CC43 /* Service */,
@@ -1940,12 +2022,12 @@
 				DB425EA027C541F200FFCCB5 /* Frameworks */,
 				DB425EA127C541F200FFCCB5 /* Resources */,
 				80A7D11E07E951BC4AC8DBA2 /* [CP] Embed Pods Frameworks */,
-				DB9AAAB62A2E054800C50141 /* Embed Foundation Extensions */,
+				DBE3D7A72AFBB60800D8B9FF /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				DB8A18062A2E07BE007B338F /* PBXTargetDependency */,
+				DBE3D7A62AFBB60800D8B9FF /* PBXTargetDependency */,
 			);
 			name = VIPArchitectureSample;
 			productName = VIPArchitectureSample;
@@ -2036,7 +2118,7 @@
 				};
 			};
 			buildConfigurationList = DB425E9E27C541F200FFCCB5 /* Build configuration list for PBXProject "VIPArchitectureSample" */;
-			compatibilityVersion = "Xcode 13.0";
+			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -2065,6 +2147,8 @@
 				DBBDD1972AE15D7F00A074FB /* characterListMarvel.json in Resources */,
 				DB425F8227C6492E00FFCCB5 /* InitialSelectionView.xib in Resources */,
 				DB425EB327C541F600FFCCB5 /* LaunchScreen.storyboard in Resources */,
+				DB257FFF2AE8001100CF2355 /* characterListRickAndMortyError.json in Resources */,
+				DB257FFB2AE7FFBD00CF2355 /* characterListRickAndMorty.json in Resources */,
 				DB425FFE27C66FD900FFCCB5 /* CharacterDetailMarvelView.xib in Resources */,
 				DB425F9627C6545200FFCCB5 /* ArtistsListView.xib in Resources */,
 				DB425EB027C541F600FFCCB5 /* Assets.xcassets in Resources */,
@@ -2257,6 +2341,7 @@
 				DB425FDB27C66E3F00FFCCB5 /* Url.swift in Sources */,
 				DB425EAB27C541F200FFCCB5 /* ViewController.swift in Sources */,
 				DB425FD727C66E3F00FFCCB5 /* Series.swift in Sources */,
+				DB2580082AE8067900CF2355 /* CharactersListRickMortyRepositoryMock.swift in Sources */,
 				DB425FF827C66FD900FFCCB5 /* CharacterDetailMarvelPresenter.swift in Sources */,
 				DB425F4F27C62CCB00FFCCB5 /* BaseViewController.swift in Sources */,
 				DB7D59B227C799370093370A /* ArtistDetailViewController.swift in Sources */,
@@ -2343,8 +2428,10 @@
 				DB7D59B327C799370093370A /* ArtistDetailInteractor.swift in Sources */,
 				DB425FFA27C66FD900FFCCB5 /* CharacterDetailMarvelRouter.swift in Sources */,
 				DB425FD127C66E3F00FFCCB5 /* ItemComic.swift in Sources */,
+				DB25800C2AE8073400CF2355 /* FetchCharacterListRickMortyUseCaseMock.swift in Sources */,
 				DB2D11FC2AC583400058E577 /* ArtistDetailRepository.swift in Sources */,
 				DB425F7927C648D900FFCCB5 /* InitialSelectionRouter.swift in Sources */,
+				DB25800A2AE806BC00CF2355 /* CharactersListRickMortyEntityMock.swift in Sources */,
 				DB2D11EC2AC57F0E0058E577 /* ArtistsListEntity.swift in Sources */,
 				DB2D11F82AC580C40058E577 /* ArtistsListMapperContract.swift in Sources */,
 				DB42600727C66FD900FFCCB5 /* CharactersListMarvelRouter.swift in Sources */,
@@ -2365,12 +2452,15 @@
 				DBBDD1A52AE15DB000A074FB /* CharacterListMarvelRepositoryTests.swift in Sources */,
 				DBB9D9E62AE696F20059D7E1 /* CharacterDetailMarvelInteractorMock.swift in Sources */,
 				DBB9D9EA2AE697210059D7E1 /* CharacterDetailMarvelPresenterMock.swift in Sources */,
+				DB2580012AE8003800CF2355 /* CharactersListRickMortyRepositoryTests.swift in Sources */,
 				DBB9D9EE2AE697590059D7E1 /* CharacterDetailMarvelViewControllerTests.swift in Sources */,
 				DBB9DA112AE6BE980059D7E1 /* CharacterDetailMarvelRepositoryTests.swift in Sources */,
 				DB9D5B182AE28D2A000DAAA6 /* CharactersListMarvelRouterMock.swift in Sources */,
 				DB9D5B1D2AE28E1A000DAAA6 /* CharactersListMarvelPresenterMock.swift in Sources */,
+				DB25800E2AE8077C00CF2355 /* FetchCharacterListRickMortyUseCaseTests.swift in Sources */,
 				DBB9DA132AE6BEAC0059D7E1 /* CharacterDetailMarvelServiceTests.swift in Sources */,
 				DB9D5B212AE2A025000DAAA6 /* CharactersListMarvelRouterTests.swift in Sources */,
+				DB2580032AE8050C00CF2355 /* CharactersListRickMortyServiceTests.swift in Sources */,
 				DBB9D9F72AE6B2880059D7E1 /* CharacterDetailMarvelInteractorTests.swift in Sources */,
 				DBBDD1A62AE15DB700A074FB /* FetchCharacterListMarvelUseCaseTests.swift in Sources */,
 				DBB9DA0B2AE6BCE30059D7E1 /* FetchCharacterDetailMarvelUseCaseTests.swift in Sources */,
@@ -2452,11 +2542,11 @@
 			target = DB425EA227C541F200FFCCB5 /* VIPArchitectureSample */;
 			targetProxy = DB425EC427C541F700FFCCB5 /* PBXContainerItemProxy */;
 		};
-		DB8A18062A2E07BE007B338F /* PBXTargetDependency */ = {
+		DBE3D7A62AFBB60800D8B9FF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			platformFilter = maccatalyst;
 			target = DB9AAA2F2A2E049700C50141 /* ChatGPTExtension */;
-			targetProxy = DB8A18052A2E07BE007B338F /* PBXContainerItemProxy */;
+			targetProxy = DBE3D7A52AFBB60800D8B9FF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -2785,6 +2875,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -2815,6 +2907,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};

@@ -52,6 +52,6 @@ extension CharactersListRickMortyService: APIEndpoint {
     }
 
     var mockName: String {
-        ""
+        R.file.characterListRickAndMortyJson()!.path
     }
 }

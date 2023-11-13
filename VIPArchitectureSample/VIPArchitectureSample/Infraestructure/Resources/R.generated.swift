@@ -56,7 +56,7 @@ struct _R {
     let comAppleSecurityNetworkClient: Bool = true
   }
 
-  /// This `_R.file` struct is generated, and contains static references to 2 resource files.
+  /// This `_R.file` struct is generated, and contains static references to 4 resource files.
   struct file {
     let bundle: Foundation.Bundle
 
@@ -65,6 +65,12 @@ struct _R {
 
     /// Resource file `characterListMarvelError.json`.
     var characterListMarvelErrorJson: RswiftResources.FileResource { .init(name: "characterListMarvelError", pathExtension: "json", bundle: bundle, locale: LocaleReference.none) }
+
+    /// Resource file `characterListRickAndMorty.json`.
+    var characterListRickAndMortyJson: RswiftResources.FileResource { .init(name: "characterListRickAndMorty", pathExtension: "json", bundle: bundle, locale: LocaleReference.none) }
+
+    /// Resource file `characterListRickAndMortyError.json`.
+    var characterListRickAndMortyErrorJson: RswiftResources.FileResource { .init(name: "characterListRickAndMortyError", pathExtension: "json", bundle: bundle, locale: LocaleReference.none) }
   }
 
   /// This `_R.nib` struct is generated, and contains static references to 11 nibs.

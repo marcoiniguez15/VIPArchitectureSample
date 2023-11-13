@@ -22,7 +22,11 @@ protocol FetchCharacterListRickMortyUseCaseContract {
 }
 
 final class FetchCharacterListRickMortyUseCase: FetchCharacterListRickMortyUseCaseContract {
-    let repository: CharactersListRickMortyRepositoryContract =  CharactersListRickMortyRepository()
+    var repository: CharactersListRickMortyRepositoryContract
+
+    init(repository: CharactersListRickMortyRepositoryContract = CharactersListRickMortyRepository()) {
+        self.repository = repository
+    }
 
     func execute(_ params: FetchCharacterListRickMortyUseCaseParameters) async throws -> CharactersListRickMortyEntity {
         do {
